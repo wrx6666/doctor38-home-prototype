@@ -1,0 +1,15 @@
+audit-screens/
+audit-screens-after/
+audit-screens-latest/
+*-desktop.png
+*-mobile.png
+services-fixed.png
+services-no-search.png
+services-refined.png
+comparison-desktop.png
+implementation-desktop-1440.png
+implementation-desktop.png
+implementation-mobile.png
+*.log
+.DS_Store
+Thumbs.db

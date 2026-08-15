@@ -1,0 +1,221 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Прием гинеколога - Добрый Доктор</title>
+  <meta name="description" content="Прием гинеколога в медицинском центре Добрый Доктор в Иркутске. Консультация, осмотр, диагностика и запись онлайн.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-line">
+      <a class="brand" href="index.html" aria-label="Добрый Доктор">
+        <img src="assets/logo.webp" alt="Добрый Доктор">
+      </a>
+
+      <nav class="main-nav" aria-label="Основная навигация">
+        <a href="services.html">Услуги</a>
+        <a href="#price">Цены</a>
+        <a href="doctors.html">Врачи</a>
+        <a href="about.html">О клинике</a>
+        <a href="contacts.html">Контакты</a>
+        <a href="documents.html">Документы</a>
+      </nav>
+
+      <div class="header-contact">
+        <a class="phone" href="tel:+73952232303">
+          <i class="fa-solid fa-phone"></i>
+          <span>
+            <b>+7 (3952) 23-23-03</b>
+            <small>Пн-сб: по записи</small>
+          </span>
+        </a>
+        <a class="button button-primary" href="appointment.html">Записаться онлайн</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="service-detail-hero">
+      <div class="shell service-detail-grid">
+        <div>
+          <a class="back-link" href="gynecology.html"><i class="fa-solid fa-arrow-left"></i> Гинекология</a>
+          <p class="eyebrow">Услуга</p>
+          <h1>Прием гинеколога</h1>
+          <p class="hero-lead">Консультация, осмотр и понятный маршрут обследования для профилактики, диагностики и контроля женского здоровья.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="appointment.html"><i class="fa-regular fa-calendar-plus"></i> Записаться на прием</a>
+            <a class="button button-secondary" href="tel:+73952232303">Позвонить</a>
+          </div>
+        </div>
+
+        <aside class="detail-appointment-card" id="price">
+          <span class="small-label">Стоимость</span>
+          <b>Уточнить у администратора</b>
+          <p>Цена зависит от формата приема и дополнительных исследований. Администратор подскажет актуальную стоимость при записи.</p>
+          <a class="button button-primary" href="appointment.html">Оставить заявку</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="detail-body">
+      <div class="shell detail-layout">
+        <aside class="direction-nav" aria-label="Навигация по услуге">
+          <a class="active" href="#about-service">Об услуге</a>
+          <a href="#included">Что входит</a>
+          <a href="#doctor">Врач</a>
+          <a href="#prepare">Подготовка</a>
+          <a href="#faq">Вопросы</a>
+        </aside>
+
+        <div class="direction-content">
+          <section class="direction-section" id="about-service">
+            <div class="group-head">
+              <div>
+                <p class="eyebrow">Когда нужен прием</p>
+                <h2>Не только при жалобах</h2>
+              </div>
+            </div>
+            <div class="reason-grid">
+              <div><i class="fa-regular fa-calendar-check"></i><b>Плановый осмотр</b><span>Профилактический визит и контроль состояния здоровья.</span></div>
+              <div><i class="fa-solid fa-notes-medical"></i><b>Есть симптомы</b><span>Дискомфорт, боли, нарушения цикла или другие изменения.</span></div>
+              <div><i class="fa-solid fa-shield-heart"></i><b>Контрацепция</b><span>Подбор метода и обсуждение противопоказаний.</span></div>
+              <div><i class="fa-solid fa-vial-circle-check"></i><b>Анализы и УЗИ</b><span>Расшифровка результатов и дальнейший план действий.</span></div>
+            </div>
+          </section>
+
+          <section class="direction-section" id="included">
+            <div class="group-head">
+              <div>
+                <p class="eyebrow">В прием входит</p>
+                <h2>Как проходит консультация</h2>
+              </div>
+            </div>
+            <div class="steps">
+              <div><b>1</b><span>Врач уточняет жалобы, анамнез и цель визита.</span></div>
+              <div><b>2</b><span>Проводит осмотр и при необходимости рекомендует обследования.</span></div>
+              <div><b>3</b><span>Объясняет результаты и дает понятные рекомендации.</span></div>
+            </div>
+          </section>
+
+          <section class="direction-section split-section" id="doctor">
+            <div>
+              <p class="eyebrow">Специалист</p>
+              <h2>Карточка врача</h2>
+              <p>В финальной версии здесь будет реальный врач: фото, стаж, специализация, образование и ближайшие слоты записи.</p>
+            </div>
+            <a class="doctor-placeholder" href="doctors.html">
+              <i class="fa-regular fa-image"></i>
+              <span>Здесь будет фото и расписание врача</span>
+            </a>
+          </section>
+
+          <section class="direction-section" id="prepare">
+            <div class="group-head">
+              <div>
+                <p class="eyebrow">Подготовка</p>
+                <h2>Что взять с собой</h2>
+              </div>
+            </div>
+            <div class="check-list">
+              <span><i class="fa-solid fa-check"></i> Паспорт и медицинские документы, если они есть.</span>
+              <span><i class="fa-solid fa-check"></i> Результаты прошлых анализов, УЗИ и выписки.</span>
+              <span><i class="fa-solid fa-check"></i> Список препаратов, которые принимаете сейчас.</span>
+            </div>
+          </section>
+
+          <section class="direction-section" id="faq">
+            <div class="group-head">
+              <div>
+                <p class="eyebrow">FAQ</p>
+                <h2>Частые вопросы</h2>
+              </div>
+            </div>
+            <div class="faq-list">
+              <details open>
+                <summary>Можно ли прийти на первый прием без анализов?</summary>
+                <p>Да. Врач определит, какие обследования действительно нужны после консультации.</p>
+              </details>
+              <details>
+                <summary>Можно ли сразу сделать УЗИ?</summary>
+                <p>Это зависит от расписания и показаний. Лучше уточнить возможность совмещенного визита при записи.</p>
+              </details>
+              <details>
+                <summary>Как выбрать филиал?</summary>
+                <p>Администратор подскажет ближайший филиал и доступное время приема.</p>
+              </details>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-cta">
+      <div class="shell service-cta-grid">
+        <div>
+          <p class="eyebrow">Запись</p>
+          <h2>Запишитесь на прием или уточните, какой формат консультации подойдет</h2>
+        </div>
+        <div class="service-cta-actions">
+          <a class="button button-primary" href="appointment.html">Записаться онлайн</a>
+          <a class="button button-secondary" href="tel:+73952232303">Позвонить</a>
+        </div>
+      </div>
+      <div class="shell legal-note light">Имеются противопоказания. Необходима консультация специалиста.</div>
+    </section>
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div class="footer-brand">
+        <p>Многопрофильный медицинский центр в Иркутске для взрослых, детей и организаций.</p>
+        <a class="footer-phone" href="tel:+73952232303"><i class="fa-solid fa-phone"></i> +7 (3952) 23-23-03</a>
+      </div>
+
+      <nav class="footer-column" aria-label="Разделы сайта">
+        <b>Разделы</b>
+        <a href="services.html">Услуги</a>
+        <a href="prices.html">Цены</a>
+        <a href="doctors.html">Врачи</a>
+        <a href="about.html">О клинике</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+
+      <nav class="footer-column" aria-label="Популярные направления">
+        <b>Направления</b>
+        <a href="gynecology.html">Гинекология</a>
+        <a href="services.html#diagnostics">Диагностика</a>
+        <a href="services.html#children">Детям</a>
+        <a href="services.html#beauty">Косметология</a>
+        <a href="services.html#business">Организациям</a>
+      </nav>
+
+      <div class="footer-column footer-branches">
+        <b>Филиалы</b>
+        <a href="contacts.html#gavrilova"><span>ул. Гаврилова, 4</span><small>ост. «Филармония»</small></a>
+        <a href="contacts.html#lermontova"><span>ул. Лермонтова, 69</span><small>ост. «Лермонтова»</small></a>
+      </div>
+
+      <div class="footer-column footer-actions">
+        <b>Пациентам</b>
+        <a href="appointment.html">Записаться онлайн</a>
+        <a href="documents.html">Документы и лицензии</a>
+        <a href="mailto:doktor.dobry2016@yandex.ru">doktor.dobry2016@yandex.ru</a>
+      </div>
+    </div>
+
+    <div class="shell footer-bottom">
+      <span>Лицензия ЛО-38-01-003181 от 20.12.2016</span>
+      <span>Имеются противопоказания. Необходима консультация специалиста.</span>
+    </div>
+  </footer>
+
+</body>
+</html>
+
