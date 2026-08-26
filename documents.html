@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=photos1">
 </head>
 <body>
   <header class="site-header">
@@ -19,11 +19,34 @@
       </a>
 
       <nav class="main-nav" aria-label="Основная навигация">
-        <a href="services.html">Услуги</a>
+        <div class="nav-item">
+          <a href="services.html">Услуги</a>
+          <div class="nav-dropdown">
+            <a href="doctors.html"><b>Прием врачей</b><span>Специалисты для взрослых и детей</span></a>
+            <a href="services.html"><b>Диагностика</b><span>УЗИ, анализы и подготовка</span></a>
+            <a href="services.html"><b>Детям</b><span>Педиатрия, справки, вакцинация</span></a>
+            <a href="gynecology.html"><b>Косметология</b><span>Уходовые и аппаратные процедуры</span></a>
+            <a href="services.html"><b>Организациям</b><span>Медосмотры и корпоративные программы</span></a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="doctors.html">Врачи</a>
+          <div class="nav-dropdown nav-dropdown-compact">
+            <a href="doctors.html?specialty=gynecology"><b>Гинекологи</b><span>Женское здоровье</span></a>
+            <a href="doctors.html?specialty=therapy"><b>Терапевты</b><span>Первичный прием</span></a>
+            <a href="doctors.html?specialty=pediatrics"><b>Педиатры</b><span>Для детей</span></a>
+            <a href="doctors.html?specialty=diagnostics"><b>Врачи УЗИ</b><span>Диагностика</span></a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="contacts.html">Контакты</a>
+          <div class="nav-dropdown nav-dropdown-contacts">
+            <a href="contacts.html#gavrilova"><b>ул. Гаврилова, 4</b><span>ост. «Филармония»</span></a>
+            <a href="contacts.html#lermontova"><b>ул. Лермонтова, 69</b><span>ост. «Лермонтова»</span></a>
+          </div>
+        </div>
         <a href="prices.html">Цены</a>
-        <a href="doctors.html">Врачи</a>
         <a href="about.html">О клинике</a>
-        <a href="contacts.html">Контакты</a>
         <a class="is-active" href="documents.html">Документы</a>
       </nav>
 
@@ -55,55 +78,306 @@
     <section class="documents-page">
       <div class="shell documents-page-grid">
         <aside class="documents-sidebar" aria-label="Разделы документов">
-          <a class="active" href="#licenses"><i class="fa-solid fa-shield-heart"></i> Лицензии</a>
-          <a href="#patients"><i class="fa-regular fa-file-lines"></i> Пациентам</a>
-          <a href="#organizations"><i class="fa-solid fa-briefcase-medical"></i> Организациям</a>
+          <a class="active" href="#all-documents" data-doc-filter="all"><i class="fa-solid fa-layer-group"></i> Все</a>
+          <a href="#contracts" data-doc-filter="contracts">Договоры</a>
+          <a href="#licenses" data-doc-filter="licenses">Лицензии</a>
+          <a href="#price-docs" data-doc-filter="price-docs">Прайсы</a>
+          <a href="#patient-info" data-doc-filter="patient-info">Налоговые вычеты</a>
+          <a href="#ultrasound-prep" data-doc-filter="ultrasound-prep,internal-rules,admission-regulations">Подготовка к приему</a>
+          <a href="#schedule-docs" data-doc-filter="schedule-docs">Расписание</a>
+          <a href="#legal-docs" data-doc-filter="legal-docs,personal-data-policy,federal-laws,government-resolutions,ethics-code,quality-criteria,medicine-lists,property-docs,organizations">Правовая информация</a>
           <a href="#contacts-docs"><i class="fa-regular fa-envelope"></i> Запросить документ</a>
         </aside>
 
         <div class="documents-content">
-          <section class="document-group" id="licenses">
+          <section class="document-group" id="contracts">
             <div class="group-head">
               <div>
-                <p class="eyebrow">Раздел</p>
-                <h2>Лицензии и сертификаты</h2>
+                <p class="eyebrow">Пациентам</p>
+                <h2>Договоры на оказание платных медицинских услуг</h2>
               </div>
             </div>
             <div class="document-file-grid">
-              <a class="document-file" href="https://doctor38.ru/dokumenty-i-sertifikaty">
-                <i class="fa-regular fa-file-pdf"></i>
-                <span><b>Лицензия на медицинскую деятельность</b><small>PDF, будет подключен реальный файл</small></span>
+              <a class="document-file" href="https://docs.yandex.ru/docs/view?url=ya-browser%3A%2F%2F4DT1uXEPRrJRXlUFoewruPC6PFWwzjW0BeF6w2FHl-yK4PRsCUh0Z00Od8IFuR1Ta7s8hGED3eY7fhYQYdjl3t4qnHJiOHxNhzso-23MvOFaJtDaCI5_1VkRzJza7JrO9vKZXfFM5p3Vr_zvtL5HOw%3D%3D%3Fsign%3D-LA54uNI5NaYtQq7RhmwUKe3AS15WHWnPyhcn4NKBJw%3D&name=ebwc8avxlklxnmjyq266h92tzi2yfp5j.docx&nosw=1" target="_blank" rel="noopener">
+                <i class="fa-regular fa-file-word"></i>
+                <span><b>ДД договор на оказание платных медицинских услуг (дети)</b><small>DOCX, откроется с сайта клиники</small></span>
               </a>
-              <a class="document-file" href="https://doctor38.ru/dokumenty-i-sertifikaty">
-                <i class="fa-regular fa-file-pdf"></i>
-                <span><b>Приложения к лицензии</b><small>Список разрешенных медицинских работ</small></span>
+              <a class="document-file" href="https://docs.yandex.ru/docs/view?url=ya-browser%3A%2F%2F4DT1uXEPRrJRXlUFoewruAAQKpxh-rrBv3BabFip8tJCxSNg_aFsqDWTQLsyyU4gWvj9p0vfd252n5AeAbsFS0P0WgFPrkKPtQzsU7-zLxEqbsOzQsB89ooHmS20DOBqfILmMSWLNdBqQMxbWo9a2g%3D%3D%3Fsign%3DCHatoh1UN27CpFX_CfkCLVgj9Ba6bElquQcogelvrZk%3D&name=ug7r3dp3v18e4b3ht00juir6clekydwq.docx&nosw=1" target="_blank" rel="noopener">
+                <i class="fa-regular fa-file-word"></i>
+                <span><b>ДД договор на оказание платных медицинских услуг</b><small>DOCX, откроется с сайта клиники</small></span>
               </a>
-              <a class="document-file" href="https://doctor38.ru/dokumenty-i-sertifikaty">
-                <i class="fa-regular fa-file-pdf"></i>
-                <span><b>Сертификаты и регистрационные документы</b><small>Блок под документы клиники</small></span>
+              <a class="document-file" href="https://docs.yandex.ru/docs/view?url=ya-browser%3A%2F%2F4DT1uXEPRrJRXlUFoewruPQS-92VTElevDNA9qGhxteQYnY8ci7eKDbxYz68EQ19wI4uO2hxNuDXLVEqZ5vnbX72kHV4urLU8kMy5XIeBLaU43XgwVfG5MQ862cwwHVGLUTod4BOd76MLp5OqH9ziw%3D%3D%3Fsign%3DmbZ3fROx3to_H_csQkvHlxTowOvVNL4BRtU6df9OViE%3D&name=g2i2xcfadgkpz6i7gstm2fen5iw41qnv.docx&nosw=1" target="_blank" rel="noopener">
+                <i class="fa-regular fa-file-word"></i>
+                <span><b>АМУ договор на оказание платных медицинских услуг</b><small>DOCX, откроется с сайта клиники</small></span>
+              </a>
+              <a class="document-file" href="https://docs.yandex.ru/docs/view?url=ya-browser%3A%2F%2F4DT1uXEPRrJRXlUFoewruHg1Su5V_myPJ1_QTfR7nAxwIooWQqPDmDpEbQ-2JOy8JYragxp0IgN0i-1mQ_Tb-cq2LL-HeZQKe7KMOPd-ricRyQVzy29N1rKWPBUguHggaWvsAW61SYctfVyast_n0Q%3D%3D%3Fsign%3De8hMfr2nFcfcbXfuaRb9TYyqNz0W9H-VfJ0JGdka3cM%3D&name=nkksnpd029ghc749zrx8x7f7olrnd1cq.docx&nosw=1" target="_blank" rel="noopener">
+                <i class="fa-regular fa-file-word"></i>
+                <span><b>АМУ договор на оказание платных медицинских услуг (дети)</b><small>DOCX, откроется с сайта клиники</small></span>
               </a>
             </div>
           </section>
 
-          <section class="document-group" id="patients">
+          <section class="document-group" id="licenses">
             <div class="group-head">
               <div>
-                <p class="eyebrow">Пациентам</p>
-                <h2>Правила и согласия</h2>
+                <p class="eyebrow">Лицензии</p>
+                <h2>Лицензии</h2>
               </div>
             </div>
             <div class="document-file-grid">
-              <a class="document-file" href="#">
-                <i class="fa-regular fa-clipboard"></i>
-                <span><b>Правила записи и приема</b><small>Что взять с собой и как подготовиться</small></span>
+              <a class="document-file" href="assets/documents/licenses-dd-amu-2025.pdf" target="_blank" rel="noopener">
+                <i class="fa-regular fa-file-pdf"></i>
+                <span><b>Лицензия Добрый Доктор 2025</b><small>PDF, лицензия на медицинскую деятельность</small></span>
               </a>
-              <a class="document-file" href="#">
-                <i class="fa-regular fa-clipboard"></i>
-                <span><b>Согласие на обработку персональных данных</b><small>Форма для пациента</small></span>
+              <a class="document-file" href="assets/documents/licenses-dd-amu-2025.pdf" target="_blank" rel="noopener">
+                <i class="fa-regular fa-file-pdf"></i>
+                <span><b>Лицензия АМУ Добрый доктор</b><small>PDF, тот же файл с лицензиями</small></span>
               </a>
-              <a class="document-file" href="#">
-                <i class="fa-regular fa-clipboard"></i>
-                <span><b>Информированное добровольное согласие</b><small>Шаблон для медицинских услуг</small></span>
+            </div>
+          </section>
+
+          <section class="document-group" id="patient-info">
+            <div class="group-head">
+              <div>
+                <p class="eyebrow">Пациентам</p>
+                <h2>Заявление для оформления налоговых вычетов</h2>
+              </div>
+            </div>
+            <div class="document-file-grid">
+              <a class="document-file" href="https://docs.yandex.ru/docs/view?url=ya-browser%3A%2F%2F4DT1uXEPRrJRXlUFoewruLfHgiEkDzApk9NaYrSx9qlD3nBj2o_w5RoZcXSZTeieYIJnXB3Gk8LGseJyEyGSo3cYvD8KYG8HBmTDGFX1BZYRm81X1Fi6ZbZu2rvbEycw-whfKLvPrDeXYNjYeZCDtw%3D%3D%3Fsign%3Dyl_i8vYfYeVIZRkcvzl3UqnL7zGQlaUG2nMJ9DFxM-U%3D&name=819q5xvsj9przk3plo1df615f0q7bgtt.docx&nosw=1" target="_blank" rel="noopener">
+                <i class="fa-regular fa-file-word"></i>
+                <span><b>Заявление для оформления налоговых вычетов</b><small>DOCX, откроется с сайта клиники</small></span>
+              </a>
+              <a class="document-file" href="https://docs.yandex.ru/docs/view?url=ya-browser%3A%2F%2F4DT1uXEPRrJRXlUFoewruO7bp26P5TokFy09A9UjWnYvfOJkwrtTjgfuNBHf6-Uof7yZrY_7OhuGyml9jAGKCN-rzJF_NbgLKxSqpLkemZA5ElJy9YJ1u5dCxuFSJwg-QqjXwQiIssNFeIaHtjaNFA%3D%3D%3Fsign%3DkmHawsqUZOOU5YgcvdtyllF9Q9Lrn5PRup1uEK_rM1o%3D&name=n4w2n0wjqoq0bykkezulyokfprishrje.docx&nosw=1" target="_blank" rel="noopener">
+                <i class="fa-regular fa-file-word"></i>
+                <span><b>Заявление для оформления налоговых вычетов на родственников</b><small>DOCX, откроется с сайта клиники</small></span>
+              </a>
+            </div>
+          </section>
+
+          <section class="document-group" id="ultrasound-prep">
+            <div class="group-head">
+              <div>
+                <p class="eyebrow">Пациентам</p>
+                <h2>Подготовка перед УЗИ</h2>
+              </div>
+            </div>
+            <div class="document-file-grid">
+              <a class="document-file" href="https://docs.yandex.ru/docs/view?url=ya-browser%3A%2F%2F4DT1uXEPRrJRXlUFoewruEUNkia4LAbv89MP4VVult6U8wFL3eilLfAZGVMamjKWgBbEAmXgxI9qOsUfnfqwOiL1h1Qb4fqe3IBERI-m8eQ5VpXbo19eo_uZxHcZ44R_Mjo-SaJCw_GWF3wmXxQFQg%3D%3D%3Fsign%3DtMwqee9mbIsSKudB2aq_h17ZcCZpydRDLAqt-zohOtw%3D&name=fcg1vlydyvvn6ynislg2jntxnkk38ib2.docx&nosw=1" target="_blank" rel="noopener">
+                <i class="fa-regular fa-file-word"></i>
+                <span><b>Подготовка перед УЗИ</b><small>DOCX, памятка для пациента перед диагностикой</small></span>
+              </a>
+            </div>
+          </section>
+
+          <section class="document-group" id="internal-rules">
+            <div class="group-head">
+              <div>
+                <p class="eyebrow">Пациентам</p>
+                <h2>Правила внутреннего распорядка</h2>
+              </div>
+            </div>
+            <div class="document-file-grid">
+              <a class="document-file" href="https://docs.yandex.ru/docs/view?url=ya-browser%3A%2F%2F4DT1uXEPRrJRXlUFoewruJsZcl7uyQOiUnaWHuw8b3BDG8rJx4-Ar6bdFHLgwyVlVL_lDbCQGm9VsjUr3maj9gDdl4NvEmnVZmFJLvZtAcBP8Gim3pJxPl0YIMwRDrsJ5Ct3l-uj9U6UoqZL_NtP_A%3D%3D%3Fsign%3DRwEmRMaisJ8G4Ri5mePS0hTcuERVeM3j4_4uToBRR8U%3D&name=geaq9tazzfv2xcefmzfoon5rgzjxspq5.docx&nosw=1" target="_blank" rel="noopener">
+                <i class="fa-regular fa-file-word"></i>
+                <span><b>Правила внутреннего распорядка на Гаврилова</b><small>DOCX, откроется с сайта клиники</small></span>
+              </a>
+              <a class="document-file" href="https://docs.yandex.ru/docs/view?url=ya-browser%3A%2F%2F4DT1uXEPRrJRXlUFoewruP6W8XlEeOQ_6lxHSzadxPFlEqdSI8ITfCWvBqyEZzFxvS3fOcCjiwxlh7-Ab8yakW63G_XFuOQBYPU7uY8ZfsrxEO4QKknpF-lGZiTuDPu7ap1epEMePKUI-b5jDgV63Q%3D%3D%3Fsign%3D8jdvaHpYvrVgbC1VTt04krMk_YQqrOd1gbnIJGnY52s%3D&name=geaq9tazzfv2xcefmzfoon5rgzjxspq5.docx&nosw=1" target="_blank" rel="noopener">
+                <i class="fa-regular fa-file-word"></i>
+                <span><b>Правила внутреннего распорядка 1</b><small>DOCX, откроется с сайта клиники</small></span>
+              </a>
+            </div>
+          </section>
+
+          <section class="document-group" id="admission-regulations">
+            <div class="group-head">
+              <div>
+                <p class="eyebrow">Пациентам</p>
+                <h2>Регламент оформления пакета документов при приеме пациентов</h2>
+              </div>
+            </div>
+            <div class="document-file-grid">
+              <a class="document-file" href="https://docs.yandex.ru/docs/view?url=ya-browser%3A%2F%2F4DT1uXEPRrJRXlUFoewruNnNAwl-Sp4Ww4awhS8_FsB439UWKhgt7Q_I8t3Jt4sk-B3SlQdlexkly9fl3_A0h6-LJrM7_Z5y2qLvzpDbOOt3ClDjWEHHCsQBJ01Ot1xLfvjbD2MYXmzTNDjnPbbULA%3D%3D%3Fsign%3DGpjqQ_Qcwl6PTacY2d20jNFph-vp6RF8Jsped9BPF4E%3D&name=9ytum7qekrfvhd891iyzooh61y2gcxs6.docx&nosw=1" target="_blank" rel="noopener">
+                <i class="fa-regular fa-file-word"></i>
+                <span><b>Регламент оформления пакета документов при приеме пациентов</b><small>DOCX, откроется с сайта клиники</small></span>
+              </a>
+            </div>
+          </section>
+
+          <section class="document-group" id="legal-docs">
+            <div class="group-head">
+              <div>
+                <p class="eyebrow">Правовая база</p>
+                <h2>Закон о защите прав потребителей</h2>
+              </div>
+            </div>
+            <div class="document-file-grid">
+              <a class="document-file" href="assets/documents/consumer-rights-law.pdf" target="_blank" rel="noopener">
+                <i class="fa-regular fa-file-pdf"></i>
+                <span><b>Закон о защите прав потребителей</b><small>PDF, правовая информация для пациентов</small></span>
+              </a>
+            </div>
+          </section>
+
+          <section class="document-group" id="personal-data-policy">
+            <div class="group-head">
+              <div>
+                <p class="eyebrow">Правовая база</p>
+                <h2>Политика в отношении обработки персональных данных</h2>
+              </div>
+            </div>
+            <div class="document-file-grid">
+              <a class="document-file" href="https://docs.yandex.ru/docs/view?url=ya-browser%3A%2F%2F4DT1uXEPRrJRXlUFoewruD83pqChX49o8s2MnnktkHyLNxcNH3dnripe0OFELprLOP5k2V_LFUBpS39BTLP3KLSlPw1hfRmxTGzeOX3y1AlxC_MYGJ_FdARWr59xK4QVhHYyPAyZMF-Ex3kJiiWBtg%3D%3D%3Fsign%3D7MYd7PP93CikblSGezjMST0dxw4V1qM2Lh3lE7EarBc%3D&name=q64qx9ci48k8ooensi1rt1m2dkeal03h.docx&nosw=1" target="_blank" rel="noopener">
+                <i class="fa-regular fa-file-word"></i>
+                <span><b>Политика в отношении обработки персональных данных</b><small>DOCX, откроется с сайта клиники</small></span>
+              </a>
+            </div>
+          </section>
+
+          <section class="document-group" id="federal-laws">
+            <div class="group-head">
+              <div>
+                <p class="eyebrow">Правовая база</p>
+                <h2>Федеральные законы</h2>
+              </div>
+            </div>
+            <div class="document-file-grid">
+              <a class="document-file" href="assets/documents/federal-law-health-protection-basics.pdf" target="_blank" rel="noopener">
+                <i class="fa-regular fa-file-pdf"></i>
+                <span><b>ФЗ об основах охраны здоровья граждан РФ</b><small>PDF, официальный федеральный закон</small></span>
+              </a>
+              <a class="document-file" href="assets/documents/federal-law-oms.pdf" target="_blank" rel="noopener">
+                <i class="fa-regular fa-file-pdf"></i>
+                <span><b>ФЗ об обязательном медицинском страховании</b><small>PDF, официальный федеральный закон</small></span>
+              </a>
+            </div>
+          </section>
+
+          <section class="document-group" id="government-resolutions">
+            <div class="group-head">
+              <div>
+                <p class="eyebrow">Правовая база</p>
+                <h2>Постановление правительства</h2>
+              </div>
+            </div>
+            <div class="document-file-grid">
+              <a class="document-file" href="assets/documents/government-resolution-io-1269-pp.pdf" target="_blank" rel="noopener">
+                <i class="fa-regular fa-file-pdf"></i>
+                <span><b>Постановление правительства ИО N 1269-пп</b><small>PDF, официальный нормативный документ</small></span>
+              </a>
+              <a class="document-file" href="assets/documents/government-resolution-2353.pdf" target="_blank" rel="noopener">
+                <i class="fa-regular fa-file-pdf"></i>
+                <span><b>Постановление правительства N 2353</b><small>PDF, официальный нормативный документ</small></span>
+              </a>
+            </div>
+          </section>
+
+          <section class="document-group" id="ethics-code">
+            <div class="group-head">
+              <div>
+                <p class="eyebrow">Правовая база</p>
+                <h2>Кодекс этики</h2>
+              </div>
+            </div>
+            <div class="document-file-grid">
+              <a class="document-file" href="https://docviewer.yandex.ru/?url=ya-browser%3A%2F%2F4DT1uXEPRrJRXlUFoewruBtBjdrxhduiNaTAaNzc97s04LK0qi0gCuEJi76HPkuED1clKr9e-HW9Sh1dkNK1GRzfmCfMzwO4Vq5BkO4KvnUr3Xv5CfZHi0tG0rrjgyfbqpMWt4yioUgrzb9Z4hITGg%3D%3D%3Fsign%3DFl6rDsGsUzFS2AgxQa7AO0FIoypJTEZys0JU3miHIBs%3D&name=yumqorecgdtow3267wgzr7pplgsj6kmu.doc" target="_blank" rel="noopener">
+                <i class="fa-regular fa-file-word"></i>
+                <span><b>Кодекс этики АМУ</b><small>DOC, откроется с сайта клиники</small></span>
+              </a>
+              <a class="document-file" href="https://docviewer.yandex.ru/?url=ya-browser%3A%2F%2F4DT1uXEPRrJRXlUFoewruKpfxuWkPzYpnphM90V9s0csL2doW9RyA06WxkkspTLobLmDcYEOgScr3y8aylj7i-__ror1B0SYCyB228U8QLezujAaSMdBOszntulkD-w6AkhrK4z91kv26d6y-D_YPg%3D%3D%3Fsign%3D9sXLoKkwpY9D_qkLFDTbe4cRT3y1-Wo-WbNwCzk8obo%3D&name=99w2g37rgfvo6jbh5s316mg7cxhiedtv.doc" target="_blank" rel="noopener">
+                <i class="fa-regular fa-file-word"></i>
+                <span><b>Кодекс этики ДД</b><small>DOC, откроется с сайта клиники</small></span>
+              </a>
+            </div>
+          </section>
+
+          <section class="document-group" id="quality-criteria">
+            <div class="group-head">
+              <div>
+                <p class="eyebrow">Правовая база</p>
+                <h2>Критерии доступности и качества медицинской помощи</h2>
+              </div>
+            </div>
+            <div class="document-file-grid">
+              <a class="document-file" href="assets/documents/medical-care-quality-accessibility.pdf" target="_blank" rel="noopener">
+                <i class="fa-regular fa-file-pdf"></i>
+                <span><b>Критерии доступности и качества медицинской помощи</b><small>PDF, официальный информационный документ</small></span>
+              </a>
+            </div>
+          </section>
+
+          <section class="document-group" id="medicine-lists">
+            <div class="group-head">
+              <div>
+                <p class="eyebrow">Правовая база</p>
+                <h2>Перечни лекарственных препаратов</h2>
+              </div>
+            </div>
+            <div class="document-file-grid">
+              <a class="document-file" href="assets/documents/medicine-benefit-categories-list.pdf" target="_blank" rel="noopener">
+                <i class="fa-regular fa-file-pdf"></i>
+                <span><b>Перечень лекарственных препаратов для отдельных категорий граждан</b><small>PDF, отпуск населению по группам и категориям заболеваний</small></span>
+              </a>
+              <a class="document-file" href="assets/documents/vital-essential-medicines-2024-2025.pdf" target="_blank" rel="noopener">
+                <i class="fa-regular fa-file-pdf"></i>
+                <span><b>Перечень жизненно необходимых и важнейших лекарственных препаратов</b><small>PDF, для медицинского применения на 2024-2025 год</small></span>
+              </a>
+            </div>
+          </section>
+
+          <section class="document-group" id="property-docs">
+            <div class="group-head">
+              <div>
+                <p class="eyebrow">Помещения</p>
+                <h2>Сведения из ЕГРН</h2>
+              </div>
+            </div>
+            <div class="document-file-grid">
+              <a class="document-file" href="assets/documents/egrn-gavrilova.pdf" target="_blank" rel="noopener">
+                <i class="fa-regular fa-file-pdf"></i>
+                <span><b>ЕГРН: ул. Гаврилова</b><small>PDF, сведения из Единого государственного реестра недвижимости</small></span>
+              </a>
+            </div>
+          </section>
+
+          <section class="document-group" id="price-docs">
+            <div class="group-head">
+              <div>
+                <p class="eyebrow">Стоимость</p>
+                <h2>Прайс</h2>
+              </div>
+            </div>
+            <div class="document-file-grid">
+              <a class="document-file" href="https://docviewer.yandex.ru/?url=ya-browser%3A%2F%2F4DT1uXEPRrJRXlUFoewruAqheAQVGaCwwUJ7DjSAhf_mI3ew5uN9vg_tad0AHKyYPIuzH3rK7Y5Mphcaodoyr3XD2_CZpq2MT7HCKjIHSf4CQheUtB6mJZ08ITSamXFye9TUG2k87twnVqm9WY6-Pg%3D%3D%3Fsign%3DF54tRI0-NqwC7tXkbWIk9zBVcEj8m3fTmPC4EnLabYQ%3D&name=7muv7zxa0wm0mood09sddd6h65ouh5fm.xlsx" target="_blank" rel="noopener">
+                <i class="fa-regular fa-file-excel"></i>
+                <span><b>Прайс анализы Лукалаб</b><small>XLSX, откроется с сайта клиники</small></span>
+              </a>
+              <a class="document-file" href="https://docs.yandex.ru/docs/view?url=ya-browser%3A%2F%2F4DT1uXEPRrJRXlUFoewruDRhGN093n1km8n8X9SutuYgZn2pVni3HqTLnJ5FW8r0XxOmeuwPdxekwHQVtZknHZTn9DRjn43OahROJRdIHIvY33yLxmm7pXk11eX29SyeEqP9u1GqjT-BfmJEs-Pk_A%3D%3D%3Fsign%3DkJsFhE0fVgPdSmyW5Zb2Aq6dPAeMrZgpcPYxzdJNL0k%3D&name=bo4tgqukw7hsbs10n5xugqnsvp05zd3s.xlsx&nosw=1" target="_blank" rel="noopener">
+                <i class="fa-regular fa-file-excel"></i>
+                <span><b>Прайс Добрый Доктор 2026</b><small>XLSX, откроется с сайта клиники</small></span>
+              </a>
+              <a class="document-file" href="https://docs.yandex.ru/docs/view?url=ya-browser%3A%2F%2F4DT1uXEPRrJRXlUFoewruDFCW-kil3X0LwJLNOFOM8SSyusLpEFW1qHChInHtKJjhLkA2OWHY0eGgwMDC-T4-MVWXe-PeP1kFdsz67fYb8sxkPamd4yyZFMhJ1ZpppXnKVCv03Ff75gpE5PHRdeRnA%3D%3D%3Fsign%3Dptj1FBLJtGBIm5doTml3gJKpasChZAe_nYDP3ktjZ5A%3D&name=w2a6b31kzsvdi0bygpyl2sfucwv30pi5.xlsx&nosw=1" target="_blank" rel="noopener">
+                <i class="fa-regular fa-file-excel"></i>
+                <span><b>Прайс косметологических услуг</b><small>XLSX, откроется с сайта клиники</small></span>
+              </a>
+            </div>
+          </section>
+
+          <section class="document-group" id="schedule-docs">
+            <div class="group-head">
+              <div>
+                <p class="eyebrow">Расписание</p>
+                <h2>Расписание и график врачей</h2>
+              </div>
+            </div>
+            <div class="document-file-grid">
+              <a class="document-file" href="https://docviewer.yandex.ru/?url=ya-browser%3A%2F%2F4DT1uXEPRrJRXlUFoewruGW6mrfLh7Fr3lOGItdulDS6tPzUp1KWhgoL0c-jnNENT4GseqHcZbKE3Iu4nLbMnQAta1QCWqoomVO8Ob_Fc_lRR-HSzBAJdfNNOGeqP6N8g9QMEVs1eqfPVBda-mk8JA%3D%3D%3Fsign%3DvJ3NB4Fo1f6-1FXQ75RYquXHdXaHccnPuQQ5mlDrXn8%3D&name=o18qqqizode1y2ack66ud3eygs987l0p.doc" target="_blank" rel="noopener">
+                <i class="fa-regular fa-file-word"></i>
+                <span><b>График личного приема</b><small>DOC, откроется с сайта клиники</small></span>
+              </a>
+              <a class="document-file" href="https://docs.yandex.ru/docs/view?url=ya-browser%3A%2F%2F4DT1uXEPRrJRXlUFoewruOHmVRWIBp5Tqyfl0YdO6bTIgDdZFDzOeDV7gcWjkSevVCSeWgXSMduDP-1bsBhei7DQxDHlXh2uGopL5xtHMtGCOi-G6Wb-w2Des5AapsPkYWDtmp09OjlWxSNjtsKw4A%3D%3D%3Fsign%3D4MeDD67pkcHwfaEoLnifRdDYvOXEWHqYTQddJ3qGuIE%3D&name=hm8e3b06wwkzgbntl75r3kwflll0tv65.DOCX&nosw=1" target="_blank" rel="noopener">
+                <i class="fa-regular fa-file-word"></i>
+                <span><b>Расписание врачей</b><small>DOCX, откроется с сайта клиники</small></span>
               </a>
             </div>
           </section>
@@ -112,17 +386,13 @@
             <div class="group-head">
               <div>
                 <p class="eyebrow">Организациям</p>
-                <h2>Для корпоративных клиентов</h2>
+                <h2>План мероприятий по охране труда на 2025 год</h2>
               </div>
             </div>
             <div class="document-file-grid">
-              <a class="document-file" href="#">
-                <i class="fa-solid fa-briefcase-medical"></i>
-                <span><b>Порядок проведения медосмотров</b><small>Для сотрудников и водителей</small></span>
-              </a>
-              <a class="document-file" href="#">
-                <i class="fa-solid fa-briefcase-medical"></i>
-                <span><b>Реквизиты для договора</b><small>Блок под юридические данные</small></span>
+              <a class="document-file" href="https://docs.yandex.ru/docs/view?url=ya-browser%3A%2F%2F4DT1uXEPRrJRXlUFoewruNvBdxgSmhPhxuCLUKlPBvNv9p1foQSkkNmHekyny4ZbRu3IBW_I3uv5_49sLOeAtZC687JAMoMqr7hPfG_iSvXhYl-rDjXgugzBi-sCq3O-vpsWpa1uH1vO98a6cCHBZA%3D%3D%3Fsign%3DcvlDJvTNFHfDRVl-jv79ntlxkOqLEEd5cISNC4CQB6s%3D&name=hgkcg84jrlzz27gw9lvhvpwm83ioqbln.docx&nosw=1" target="_blank" rel="noopener">
+                <i class="fa-regular fa-file-word"></i>
+                <span><b>План мероприятий по охране труда на 2025 год</b><small>DOCX, откроется с сайта клиники</small></span>
               </a>
             </div>
           </section>
@@ -190,6 +460,71 @@
     </div>
   </footer>
 
+  <script>
+    const documentFilterLinks = document.querySelectorAll('[data-doc-filter]');
+    const documentGroups = document.querySelectorAll('.document-group');
+
+    function formatDocumentCount(count) {
+      const lastDigit = count % 10;
+      const lastTwoDigits = count % 100;
+
+      if (lastDigit === 1 && lastTwoDigits !== 11) {
+        return `${count} документ`;
+      }
+
+      if (lastDigit >= 2 && lastDigit <= 4 && (lastTwoDigits < 12 || lastTwoDigits > 14)) {
+        return `${count} документа`;
+      }
+
+      return `${count} документов`;
+    }
+
+    documentGroups.forEach((group) => {
+      const heading = group.querySelector('.group-head h2');
+      const count = group.querySelectorAll('.document-file').length;
+
+      if (heading && count > 0) {
+        const counter = document.createElement('span');
+        counter.className = 'document-count';
+        counter.textContent = formatDocumentCount(count);
+        heading.append(counter);
+      }
+    });
+
+    function getFilterIds(filter) {
+      return (filter || 'all').split(',').map((id) => id.trim()).filter(Boolean);
+    }
+
+    function showDocumentGroup(filter) {
+      const normalizedFilter = filter || 'all';
+      const filterIds = getFilterIds(normalizedFilter);
+      const isAll = normalizedFilter === 'all';
+
+      documentGroups.forEach((group) => {
+        group.classList.toggle('is-hidden', !isAll && !filterIds.includes(group.id));
+      });
+
+      documentFilterLinks.forEach((link) => {
+        link.classList.toggle('active', link.dataset.docFilter === normalizedFilter);
+      });
+    }
+
+    documentFilterLinks.forEach((link) => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        const filter = link.dataset.docFilter;
+
+        showDocumentGroup(filter);
+        history.replaceState(null, '', filter === 'all' ? 'documents.html' : link.getAttribute('href'));
+      });
+    });
+
+    const initialFilter = location.hash ? location.hash.slice(1) : 'all';
+    const initialLink = Array.from(documentFilterLinks).find((link) => getFilterIds(link.dataset.docFilter).includes(initialFilter));
+    showDocumentGroup(initialLink ? initialLink.dataset.docFilter : 'all');
+  </script>
+
 </body>
 </html>
+
 

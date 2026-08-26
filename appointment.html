@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=photos1">
 </head>
 <body>
   <header class="site-header">
@@ -19,11 +19,34 @@
       </a>
 
       <nav class="main-nav" aria-label="Основная навигация">
-        <a href="services.html">Услуги</a>
+        <div class="nav-item">
+          <a href="services.html">Услуги</a>
+          <div class="nav-dropdown">
+            <a href="doctors.html"><b>Прием врачей</b><span>Специалисты для взрослых и детей</span></a>
+            <a href="services.html"><b>Диагностика</b><span>УЗИ, анализы и подготовка</span></a>
+            <a href="services.html"><b>Детям</b><span>Педиатрия, справки, вакцинация</span></a>
+            <a href="gynecology.html"><b>Косметология</b><span>Уходовые и аппаратные процедуры</span></a>
+            <a href="services.html"><b>Организациям</b><span>Медосмотры и корпоративные программы</span></a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="doctors.html">Врачи</a>
+          <div class="nav-dropdown nav-dropdown-compact">
+            <a href="doctors.html?specialty=gynecology"><b>Гинекологи</b><span>Женское здоровье</span></a>
+            <a href="doctors.html?specialty=therapy"><b>Терапевты</b><span>Первичный прием</span></a>
+            <a href="doctors.html?specialty=pediatrics"><b>Педиатры</b><span>Для детей</span></a>
+            <a href="doctors.html?specialty=diagnostics"><b>Врачи УЗИ</b><span>Диагностика</span></a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="contacts.html">Контакты</a>
+          <div class="nav-dropdown nav-dropdown-contacts">
+            <a href="contacts.html#gavrilova"><b>ул. Гаврилова, 4</b><span>ост. «Филармония»</span></a>
+            <a href="contacts.html#lermontova"><b>ул. Лермонтова, 69</b><span>ост. «Лермонтова»</span></a>
+          </div>
+        </div>
         <a href="prices.html">Цены</a>
-        <a href="doctors.html">Врачи</a>
         <a href="about.html">О клинике</a>
-        <a href="contacts.html">Контакты</a>
         <a href="documents.html">Документы</a>
       </nav>
 
@@ -258,4 +281,5 @@
   </script>
 </body>
 </html>
+
 

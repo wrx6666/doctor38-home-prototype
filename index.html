@@ -9,7 +9,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('has-scroll-reveal');</script>
+  <link rel="stylesheet" href="styles.css?v=photos1">
 </head>
 <body>
   <header class="site-header">
@@ -19,11 +20,34 @@
       </a>
 
       <nav class="main-nav" aria-label="Основная навигация">
-        <a href="services.html">Услуги</a>
+        <div class="nav-item">
+          <a href="services.html">Услуги</a>
+          <div class="nav-dropdown">
+            <a href="doctors.html"><b>Прием врачей</b><span>Специалисты для взрослых и детей</span></a>
+            <a href="services.html"><b>Диагностика</b><span>УЗИ, анализы и подготовка</span></a>
+            <a href="services.html"><b>Детям</b><span>Педиатрия, справки, вакцинация</span></a>
+            <a href="gynecology.html"><b>Косметология</b><span>Уходовые и аппаратные процедуры</span></a>
+            <a href="services.html"><b>Организациям</b><span>Медосмотры и корпоративные программы</span></a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="doctors.html">Врачи</a>
+          <div class="nav-dropdown nav-dropdown-compact">
+            <a href="doctors.html?specialty=gynecology"><b>Гинекологи</b><span>Женское здоровье</span></a>
+            <a href="doctors.html?specialty=therapy"><b>Терапевты</b><span>Первичный прием</span></a>
+            <a href="doctors.html?specialty=pediatrics"><b>Педиатры</b><span>Для детей</span></a>
+            <a href="doctors.html?specialty=diagnostics"><b>Врачи УЗИ</b><span>Диагностика</span></a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="contacts.html">Контакты</a>
+          <div class="nav-dropdown nav-dropdown-contacts">
+            <a href="contacts.html#gavrilova"><b>ул. Гаврилова, 4</b><span>ост. «Филармония»</span></a>
+            <a href="contacts.html#lermontova"><b>ул. Лермонтова, 69</b><span>ост. «Лермонтова»</span></a>
+          </div>
+        </div>
         <a href="prices.html">Цены</a>
-        <a href="doctors.html">Врачи</a>
         <a href="about.html">О клинике</a>
-        <a href="contacts.html">Контакты</a>
         <a href="documents.html">Документы</a>
       </nav>
 
@@ -47,30 +71,30 @@
       </div>
 
       <div class="shell hero-grid">
-        <aside class="proof-rail" aria-label="Ключевые факты о клинике">
-          <div class="proof-item">
+        <aside class="proof-rail" aria-label="Ключевые факты о клинике" data-reveal>
+          <div class="proof-item" data-reveal-item>
             <i class="fa-regular fa-calendar-check"></i>
             <b>С 2001 года</b>
             <span>помогаем пациентам в Иркутске</span>
           </div>
-          <div class="proof-item">
+          <div class="proof-item" data-reveal-item>
             <i class="fa-solid fa-user-doctor"></i>
             <b>20+ врачей</b>
             <span>разных специальностей</span>
           </div>
-          <div class="proof-item">
+          <div class="proof-item" data-reveal-item>
             <i class="fa-regular fa-star"></i>
             <b>10 000+</b>
             <span>обращений пациентов</span>
           </div>
-          <div class="proof-item">
+          <div class="proof-item" data-reveal-item>
             <i class="fa-solid fa-location-dot"></i>
             <b>2 филиала</b>
             <span>на правом и левом берегу</span>
           </div>
         </aside>
 
-        <div class="hero-copy">
+        <div class="hero-copy" data-reveal>
           <p class="eyebrow">Медицинский центр в Иркутске</p>
           <h1>Добрый Доктор - клиника для взрослых, детей и организаций</h1>
           <p class="hero-lead">Прием врачей, УЗИ, лабораторные исследования, косметология, чекапы и медицинские осмотры в двух филиалах города.</p>
@@ -88,12 +112,10 @@
         </div>
       </div>
 
-      <div class="shell branch-panel">
+      <div class="shell branch-panel" data-reveal>
         <div class="branch-title">Выберите удобный филиал</div>
         <a class="branch" href="contacts.html#gavrilova">
-          <span class="photo-placeholder branch-photo" aria-hidden="true">
-            <i class="fa-regular fa-image"></i>
-          </span>
+          <img class="branch-photo" src="assets/branch-gavrilova.png" alt="">
           <span>
             <b>ул. Гаврилова, 4</b>
             <small>ост. «Филармония»</small>
@@ -101,9 +123,7 @@
           <em>Открыто</em>
         </a>
         <a class="branch" href="contacts.html#lermontova">
-          <span class="photo-placeholder branch-photo" aria-hidden="true">
-            <i class="fa-regular fa-image"></i>
-          </span>
+          <img class="branch-photo" src="assets/branch-lermontova.png" alt="">
           <span>
             <b>ул. Лермонтова, 69</b>
             <small>ост. «Лермонтова»</small>
@@ -119,7 +139,7 @@
 
     <section class="paths" id="services">
       <div class="shell">
-        <div class="section-head">
+        <div class="section-head" data-reveal>
           <div>
             <p class="eyebrow">Навигация по задачам</p>
             <h2>Выберите, что вас интересует</h2>
@@ -127,7 +147,7 @@
         </div>
 
         <div class="path-grid">
-          <a class="path-card" href="https://doctor38.ru/services/priem-vrachey/">
+          <a class="path-card" href="doctors.html" data-reveal>
             <img src="assets/card-doctor.png" alt="">
             <span class="path-icon"><i class="fa-solid fa-stethoscope"></i></span>
             <h3>Нужен врач</h3>
@@ -135,7 +155,7 @@
             <i class="fa-solid fa-arrow-right path-arrow"></i>
           </a>
 
-          <a class="path-card" href="https://doctor38.ru/services/ultrazvukovaya-diagnostika/">
+          <a class="path-card" href="services.html#diagnostics" data-reveal>
             <img src="assets/ultrasound.webp" alt="">
             <span class="path-icon blue"><i class="fa-solid fa-desktop"></i></span>
             <h3>Нужна диагностика</h3>
@@ -143,7 +163,7 @@
             <i class="fa-solid fa-arrow-right path-arrow"></i>
           </a>
 
-          <a class="path-card" href="https://doctor38.ru/services/dlya-detey/">
+          <a class="path-card" href="services.html#children" data-reveal>
             <img src="assets/card-child.png" alt="">
             <span class="path-icon cyan"><i class="fa-solid fa-child-reaching"></i></span>
             <h3>Для ребенка</h3>
@@ -151,7 +171,7 @@
             <i class="fa-solid fa-arrow-right path-arrow"></i>
           </a>
 
-          <a class="path-card" href="https://doctor38.ru/services/organizatsiyam/">
+          <a class="path-card" href="services.html#business" data-reveal>
             <img src="assets/card-corporate.png" alt="">
             <span class="path-icon ink"><i class="fa-solid fa-briefcase-medical"></i></span>
             <h3>Для организации</h3>
@@ -159,7 +179,7 @@
             <i class="fa-solid fa-arrow-right path-arrow"></i>
           </a>
 
-          <a class="path-card" href="https://doctor38.ru/services/kosmetologiya/">
+          <a class="path-card" href="gynecology.html#cosmetology" data-reveal>
             <img src="assets/card-cosmetology.png" alt="">
             <span class="path-icon teal"><i class="fa-solid fa-spa"></i></span>
             <h3>Косметология</h3>
@@ -167,7 +187,7 @@
             <i class="fa-solid fa-arrow-right path-arrow"></i>
           </a>
 
-          <a class="path-card" href="https://doctor38.ru/services/programmy-polnoy-diagnostiki-chekapy/">
+          <a class="path-card" href="prices.html#checkups" data-reveal>
             <img src="assets/card-checkup.png" alt="">
             <span class="path-icon green"><i class="fa-regular fa-heart"></i></span>
             <h3>Чекапы</h3>
@@ -180,45 +200,43 @@
 
     <section class="appointment" id="prices">
       <div class="shell appointment-grid">
-        <div>
-          <p class="eyebrow">Запись без лишних шагов</p>
-          <h2>Опишите задачу - администратор подскажет врача, филиал и ближайшее время</h2>
+        <div class="appointment-copy" data-reveal>
+          <p class="eyebrow">Свяжемся с вами</p>
+          <h2>Оставьте телефон - администратор подберет врача, филиал и удобное время</h2>
+          <div class="appointment-tags" aria-label="Популярные причины обращения">
+            <span>Прием врача</span>
+            <span>УЗИ</span>
+            <span>Косметология</span>
+            <span>Чекап</span>
+          </div>
         </div>
-        <form class="appointment-form" action="appointment.html">
+        <form class="appointment-form" action="appointment.html" data-reveal>
           <label>
-            <span>Что нужно</span>
-            <select>
-              <option>Прием врача</option>
-              <option>УЗИ или диагностика</option>
-              <option>Косметология</option>
-              <option>Чекап</option>
-            </select>
-          </label>
-          <label>
-            <span>Филиал</span>
-            <select>
-              <option>Гаврилова, 4</option>
-              <option>Лермонтова, 69</option>
-            </select>
+            <span>Ваше имя</span>
+            <input type="text" placeholder="Как к вам обращаться">
           </label>
           <label>
             <span>Телефон</span>
             <input type="tel" placeholder="+7 ___ ___-__-__">
           </label>
-          <button class="button button-primary" type="submit">Оставить заявку</button>
+          <label class="appointment-consent">
+            <input type="checkbox" checked>
+            <span>Согласен на обработку персональных данных</span>
+          </label>
+          <button class="button button-primary" type="submit">Отправить</button>
         </form>
       </div>
     </section>
 
     <section class="about" id="about">
       <div class="shell about-grid">
-        <div class="about-photo">
+        <div class="about-photo" data-reveal>
           <div class="photo-placeholder clinic-photo">
             <i class="fa-regular fa-image"></i>
             <span>Здесь будет фото клиники</span>
           </div>
         </div>
-        <div class="about-copy">
+        <div class="about-copy" data-reveal>
           <p class="eyebrow">О клинике</p>
           <h2>Комплексная помощь рядом с домом</h2>
           <p>«Добрый Доктор» - многопрофильный медицинский центр в Иркутске. Клиника принимает частных пациентов и корпоративных клиентов, совмещая консультации специалистов, диагностику, процедуры и профилактические программы.</p>
@@ -279,6 +297,29 @@
     </div>
   </footer>
 
+  <script>
+    (() => {
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const revealItems = document.querySelectorAll('[data-reveal], [data-reveal-item]');
+
+      if (reduceMotion || !('IntersectionObserver' in window)) {
+        revealItems.forEach((item) => item.classList.add('is-visible'));
+        return;
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle('is-visible', entry.isIntersecting);
+        });
+      }, {
+        threshold: 0.16,
+        rootMargin: '-7% 0px -10% 0px'
+      });
+
+      revealItems.forEach((item) => observer.observe(item));
+    })();
+  </script>
 </body>
 </html>
+
 
