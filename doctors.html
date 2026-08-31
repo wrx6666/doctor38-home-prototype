@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ru">
 <head>
   <meta charset="utf-8">
@@ -23,10 +23,12 @@
           <a href="services.html">Услуги</a>
           <div class="nav-dropdown">
             <a href="doctors.html"><b>Прием врачей</b><span>Специалисты для взрослых и детей</span></a>
-            <a href="services.html"><b>Диагностика</b><span>УЗИ, анализы и подготовка</span></a>
-            <a href="services.html"><b>Детям</b><span>Педиатрия, справки, вакцинация</span></a>
-            <a href="gynecology.html"><b>Косметология</b><span>Уходовые и аппаратные процедуры</span></a>
-            <a href="services.html"><b>Организациям</b><span>Медосмотры и корпоративные программы</span></a>
+            <a href="diagnostics.html"><b>Диагностика</b><span>УЗИ, анализы и подготовка</span></a>
+            <a href="children.html"><b>Детям</b><span>Педиатрия, справки, вакцинация</span></a>
+            <a href="checkups.html"><b>Чекапы</b><span>Комплексные программы диагностики</span></a>
+            <a href="gynecology.html"><b>Гинекология</b><span>Прием, диагностика и женское здоровье</span></a>
+            <a href="cosmetology.html"><b>Косметология</b><span>Уходовые и аппаратные процедуры</span></a>
+            <a href="organizations.html"><b>Организациям</b><span>Медосмотры и корпоративные программы</span></a>
           </div>
         </div>
         <div class="nav-item">
@@ -34,6 +36,7 @@
           <div class="nav-dropdown nav-dropdown-compact">
             <a href="doctors.html?specialty=gynecology"><b>Гинекологи</b><span>Женское здоровье</span></a>
             <a href="doctors.html?specialty=therapy"><b>Терапевты</b><span>Первичный прием</span></a>
+            <a href="doctors.html?specialty=neurology"><b>Неврологи</b><span>Взрослый прием</span></a>
             <a href="doctors.html?specialty=pediatrics"><b>Педиатры</b><span>Для детей</span></a>
             <a href="doctors.html?specialty=diagnostics"><b>Врачи УЗИ</b><span>Диагностика</span></a>
           </div>
@@ -89,6 +92,7 @@
             <button class="active" type="button" data-filter-group="specialty" data-filter-value="all">Все</button>
             <button type="button" data-filter-group="specialty" data-filter-value="gynecology">Гинекология</button>
             <button type="button" data-filter-group="specialty" data-filter-value="therapy">Терапия</button>
+            <button type="button" data-filter-group="specialty" data-filter-value="neurology">Неврология</button>
             <button type="button" data-filter-group="specialty" data-filter-value="pediatrics">Педиатрия</button>
             <button type="button" data-filter-group="specialty" data-filter-value="cosmetology">Косметология</button>
             <button type="button" data-filter-group="specialty" data-filter-value="diagnostics">Диагностика</button>
@@ -102,14 +106,14 @@
         </aside>
 
         <div class="doctor-grid">
-          <article class="doctor-card" data-specialty="gynecology" data-branch="gavrilova">
-            <div class="doctor-photo"><i class="fa-regular fa-image"></i><span>Фото врача</span></div>
+          <article class="doctor-card" data-specialty="gynecology" data-branch="gavrilova lermontova">
+            <img class="doctor-photo doctor-photo-sukhareva" src="assets/doctor-sukhareva.jpg" alt="Сухарева Дарья Олеговна">
             <div class="doctor-info">
               <p class="eyebrow">Гинеколог</p>
-              <h2>Имя Фамилия</h2>
-              <p>Консультации, профилактические осмотры, сопровождение женского здоровья.</p>
+              <h2>Сухарева Дарья Олеговна</h2>
+              <p>Прием гинеколога, профилактические осмотры, консультации по вопросам женского здоровья.</p>
               <div class="doctor-meta">
-                <span><i class="fa-solid fa-location-dot"></i> Гаврилова, 4</span>
+                <span><i class="fa-solid fa-location-dot"></i> Гаврилова, 4 / Лермонтова, 69</span>
                 <span><i class="fa-regular fa-clock"></i> по записи</span>
               </div>
               <div class="doctor-actions">
@@ -119,14 +123,14 @@
             </div>
           </article>
 
-          <article class="doctor-card" data-specialty="therapy" data-branch="lermontova">
+          <article class="doctor-card" data-specialty="gynecology" data-branch="gavrilova lermontova">
             <div class="doctor-photo"><i class="fa-regular fa-image"></i><span>Фото врача</span></div>
             <div class="doctor-info">
-              <p class="eyebrow">Терапевт</p>
-              <h2>Имя Фамилия</h2>
-              <p>Первичный прием, жалобы, профилактика и направление к профильным специалистам.</p>
+              <p class="eyebrow">Гинеколог, гинеколог-эндокринолог</p>
+              <h2>Степанова Елена Владимировна</h2>
+              <p>Консультации гинеколога и гинеколога-эндокринолога, наблюдение и подбор дальнейшей тактики обследования.</p>
               <div class="doctor-meta">
-                <span><i class="fa-solid fa-location-dot"></i> Лермонтова, 69</span>
+                <span><i class="fa-solid fa-location-dot"></i> Гаврилова, 4 / Лермонтова, 69</span>
                 <span><i class="fa-regular fa-clock"></i> по записи</span>
               </div>
               <div class="doctor-actions">
@@ -136,14 +140,14 @@
             </div>
           </article>
 
-          <article class="doctor-card" data-specialty="pediatrics" data-branch="gavrilova">
-            <div class="doctor-photo"><i class="fa-regular fa-image"></i><span>Фото врача</span></div>
+          <article class="doctor-card" data-specialty="gynecology" data-branch="gavrilova lermontova">
+            <img class="doctor-photo doctor-photo-yuryeva" src="assets/doctor-yuryeva.jpg" alt="Юрьева Татьяна Юрьевна">
             <div class="doctor-info">
-              <p class="eyebrow">Педиатр</p>
-              <h2>Имя Фамилия</h2>
-              <p>Прием детей, справки, рекомендации по наблюдению и обследованиям.</p>
+              <p class="eyebrow">Гинеколог</p>
+              <h2>Юрьева Татьяна Юрьевна</h2>
+              <p>Прием гинеколога, профилактические осмотры, консультации и сопровождение женского здоровья.</p>
               <div class="doctor-meta">
-                <span><i class="fa-solid fa-location-dot"></i> Гаврилова, 4</span>
+                <span><i class="fa-solid fa-location-dot"></i> Гаврилова, 4 / Лермонтова, 69</span>
                 <span><i class="fa-regular fa-clock"></i> по записи</span>
               </div>
               <div class="doctor-actions">
@@ -153,14 +157,14 @@
             </div>
           </article>
 
-          <article class="doctor-card" data-specialty="cosmetology" data-branch="lermontova">
-            <div class="doctor-photo"><i class="fa-regular fa-image"></i><span>Фото врача</span></div>
+          <article class="doctor-card" data-specialty="cosmetology" data-branch="gavrilova lermontova">
+            <img class="doctor-photo doctor-photo-vlasova" src="assets/doctor-vlasova.jpg" alt="Власова Александра Валерьевна">
             <div class="doctor-info">
-              <p class="eyebrow">Косметолог</p>
-              <h2>Имя Фамилия</h2>
-              <p>Консультации, аппаратные и уходовые процедуры, подбор курса.</p>
+              <p class="eyebrow">Врач-косметолог, дерматолог</p>
+              <h2>Власова Александра Валерьевна</h2>
+              <p>Консультации по состоянию кожи, косметологические процедуры и подбор индивидуального ухода.</p>
               <div class="doctor-meta">
-                <span><i class="fa-solid fa-location-dot"></i> Лермонтова, 69</span>
+                <span><i class="fa-solid fa-location-dot"></i> Гаврилова, 4 / Лермонтова, 69</span>
                 <span><i class="fa-regular fa-clock"></i> по записи</span>
               </div>
               <div class="doctor-actions">
@@ -170,14 +174,48 @@
             </div>
           </article>
 
-          <article class="doctor-card" data-specialty="diagnostics" data-branch="gavrilova">
+          <article class="doctor-card" data-specialty="pediatrics" data-branch="gavrilova lermontova">
             <div class="doctor-photo"><i class="fa-regular fa-image"></i><span>Фото врача</span></div>
             <div class="doctor-info">
-              <p class="eyebrow">Врач УЗИ</p>
-              <h2>Имя Фамилия</h2>
-              <p>Ультразвуковая диагностика, плановые обследования и подготовка заключений для профильных врачей.</p>
+              <p class="eyebrow">Педиатр, неонатолог</p>
+              <h2>Федаш Мария Михайловна</h2>
+              <p>Прием детей, наблюдение новорожденных, консультации родителей и помощь при частых детских жалобах.</p>
               <div class="doctor-meta">
-                <span><i class="fa-solid fa-location-dot"></i> Гаврилова, 4</span>
+                <span><i class="fa-solid fa-location-dot"></i> Гаврилова, 4 / Лермонтова, 69</span>
+                <span><i class="fa-regular fa-clock"></i> по записи</span>
+              </div>
+              <div class="doctor-actions">
+                <a class="button button-primary" href="doctor-profile.html">Открыть врача</a>
+                <a class="button button-secondary" href="appointment.html">Записаться</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="doctor-card" data-specialty="diagnostics pediatrics" data-branch="gavrilova lermontova">
+            <img class="doctor-photo doctor-photo-myasnikov" src="assets/doctor-myasnikov.jpg" alt="Мясников Владимир Геннадьевич">
+            <div class="doctor-info">
+              <p class="eyebrow">Врач УЗИ, детский врач УЗИ</p>
+              <h2>Мясников Владимир Геннадьевич</h2>
+              <p>Ультразвуковая диагностика для взрослых и детей, плановые обследования и подготовка заключений.</p>
+              <div class="doctor-meta">
+                <span><i class="fa-solid fa-location-dot"></i> Гаврилова, 4 / Лермонтова, 69</span>
+                <span><i class="fa-regular fa-clock"></i> по записи</span>
+              </div>
+              <div class="doctor-actions">
+                <a class="button button-primary" href="doctor-profile.html">Открыть врача</a>
+                <a class="button button-secondary" href="appointment.html">Записаться</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="doctor-card" data-specialty="neurology" data-branch="gavrilova lermontova">
+            <img class="doctor-photo doctor-photo-fedyukova" src="assets/doctor-fedyukova.jpg" alt="Федюкова Маргарита Вячеславовна">
+            <div class="doctor-info">
+              <p class="eyebrow">Невролог</p>
+              <h2>Федюкова Маргарита Вячеславовна</h2>
+              <p>Прием взрослого невролога: консультации при боли, онемении, головокружении, нарушениях сна и других жалобах.</p>
+              <div class="doctor-meta">
+                <span><i class="fa-solid fa-location-dot"></i> Гаврилова, 4 / Лермонтова, 69</span>
                 <span><i class="fa-regular fa-clock"></i> по записи</span>
               </div>
               <div class="doctor-actions">
@@ -226,10 +264,11 @@
       <nav class="footer-column" aria-label="Популярные направления">
         <b>Направления</b>
         <a href="gynecology.html">Гинекология</a>
-        <a href="services.html#diagnostics">Диагностика</a>
-        <a href="services.html#children">Детям</a>
-        <a href="services.html#beauty">Косметология</a>
-        <a href="services.html#business">Организациям</a>
+        <a href="diagnostics.html">Диагностика</a>
+        <a href="children.html">Детям</a>
+        <a href="checkups.html">Чекапы</a>
+        <a href="cosmetology.html">Косметология</a>
+        <a href="organizations.html">Организациям</a>
       </nav>
 
       <div class="footer-column footer-branches">
@@ -266,8 +305,10 @@
       let visibleCount = 0;
 
       doctorCards.forEach((card) => {
-        const specialtyMatch = doctorFilters.specialty === 'all' || card.dataset.specialty === doctorFilters.specialty;
-        const branchMatch = doctorFilters.branch === 'all' || card.dataset.branch === doctorFilters.branch;
+        const specialties = (card.dataset.specialty || '').split(/\s+/);
+        const branches = (card.dataset.branch || '').split(/\s+/);
+        const specialtyMatch = doctorFilters.specialty === 'all' || specialties.includes(doctorFilters.specialty);
+        const branchMatch = doctorFilters.branch === 'all' || branches.includes(doctorFilters.branch);
         const isVisible = specialtyMatch && branchMatch;
 
         card.classList.toggle('is-hidden', !isVisible);
@@ -302,5 +343,3 @@
   </script>
 </body>
 </html>
-
-

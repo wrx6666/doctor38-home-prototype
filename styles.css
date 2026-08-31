@@ -554,6 +554,49 @@ section {
   transition-delay: 270ms;
 }
 
+.has-scroll-reveal .direction-summary [data-reveal-item]:nth-child(2),
+.has-scroll-reveal .direction-cards [data-reveal-item]:nth-child(2),
+.has-scroll-reveal .price-list [data-reveal-item]:nth-child(2),
+.has-scroll-reveal .direction-doctor-grid [data-reveal-item]:nth-child(2),
+.has-scroll-reveal .steps [data-reveal-item]:nth-child(2),
+.has-scroll-reveal .faq-list [data-reveal-item]:nth-child(2) {
+  transition-delay: 70ms;
+}
+
+.has-scroll-reveal .direction-summary [data-reveal-item]:nth-child(3),
+.has-scroll-reveal .direction-cards [data-reveal-item]:nth-child(3),
+.has-scroll-reveal .price-list [data-reveal-item]:nth-child(3),
+.has-scroll-reveal .direction-doctor-grid [data-reveal-item]:nth-child(3),
+.has-scroll-reveal .steps [data-reveal-item]:nth-child(3),
+.has-scroll-reveal .faq-list [data-reveal-item]:nth-child(3) {
+  transition-delay: 140ms;
+}
+
+.has-scroll-reveal .direction-cards [data-reveal-item]:nth-child(4),
+.has-scroll-reveal .price-list [data-reveal-item]:nth-child(4) {
+  transition-delay: 210ms;
+}
+
+.has-scroll-reveal .direction-cards [data-reveal-item]:nth-child(5) {
+  transition-delay: 280ms;
+}
+
+.has-scroll-reveal .direction-cards [data-reveal-item]:nth-child(6) {
+  transition-delay: 350ms;
+}
+
+.has-scroll-reveal .direction-cards [data-reveal-item]:nth-child(7) {
+  transition-delay: 420ms;
+}
+
+.has-scroll-reveal .direction-cards [data-reveal-item]:nth-child(8) {
+  transition-delay: 490ms;
+}
+
+.has-scroll-reveal .direction-cards [data-reveal-item]:nth-child(9) {
+  transition-delay: 560ms;
+}
+
 .has-scroll-reveal .appointment-form[data-reveal],
 .has-scroll-reveal .about-copy[data-reveal] {
   transition-delay: 110ms;
@@ -929,10 +972,17 @@ textarea:focus {
 .clinic-photo {
   width: 100%;
   height: 420px;
+  display: block;
+  object-fit: cover;
+  object-position: center 42%;
   align-content: center;
   gap: 12px;
   border-radius: var(--radius);
   font-weight: 800;
+}
+
+.clinic-team-photo {
+  object-position: center center;
 }
 
 .clinic-photo i {
@@ -1543,6 +1593,59 @@ textarea:focus {
   font-size: 32px;
 }
 
+.direction-doctor-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.mini-doctor-card {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+  min-height: 108px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--ink);
+  background: #fff;
+  transition: transform 180ms var(--ease-out), border-color 180ms var(--ease-out), box-shadow 180ms var(--ease-out);
+}
+
+.mini-doctor-card:hover {
+  transform: translateY(-2px);
+  border-color: #c4d8df;
+  box-shadow: 0 14px 26px rgba(21, 35, 49, .08);
+}
+
+.mini-doctor-card img,
+.mini-photo-placeholder {
+  width: 88px;
+  height: 88px;
+  min-height: 88px;
+  object-fit: cover;
+  border: 0;
+  border-radius: 8px;
+  background: var(--wash);
+}
+
+.mini-doctor-card span,
+.mini-doctor-card b,
+.mini-doctor-card small {
+  display: block;
+}
+
+.mini-doctor-card b {
+  margin-bottom: 5px;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.mini-doctor-card small {
+  color: var(--muted);
+  line-height: 1.35;
+}
+
 .steps {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1886,6 +1989,36 @@ textarea:focus {
   background: linear-gradient(135deg, #eef3f5 0%, #f7fafb 100%);
   color: #7c8c96;
   font-weight: 800;
+}
+
+img.doctor-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 258px;
+  object-fit: cover;
+  border-right: 1px solid var(--line);
+  background: #f4f8fa;
+}
+
+.doctor-photo-sukhareva {
+  object-position: center 24%;
+}
+
+.doctor-photo-vlasova {
+  object-position: center 28%;
+}
+
+.doctor-photo-yuryeva {
+  object-position: center 24%;
+}
+
+.doctor-photo-myasnikov {
+  object-position: center 18%;
+}
+
+.doctor-photo-fedyukova {
+  object-position: center 18%;
 }
 
 .doctor-photo i {
