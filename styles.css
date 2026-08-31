@@ -2085,6 +2085,186 @@ img.doctor-photo {
   display: none;
 }
 
+.doctor-profile-hero {
+  padding: 54px 0 42px;
+  border-bottom: 1px solid var(--line);
+  background:
+    linear-gradient(90deg, rgba(247, 250, 251, .98) 0%, rgba(247, 250, 251, .94) 58%, rgba(234, 247, 239, .78) 100%);
+}
+
+.doctor-profile-grid {
+  display: grid;
+  grid-template-columns: 330px minmax(0, 1fr) 300px;
+  gap: 28px;
+  align-items: center;
+}
+
+.doctor-profile-photo-wrap {
+  min-height: 430px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #eef3f5;
+  box-shadow: 0 22px 48px rgba(21, 35, 49, .1);
+}
+
+.doctor-profile-photo {
+  display: block;
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.doctor-profile-photo-wrap.is-placeholder {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 12px;
+  color: var(--muted);
+  font-weight: 800;
+  text-align: center;
+}
+
+.doctor-profile-photo-wrap.is-placeholder i {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--green);
+  font-size: 24px;
+}
+
+.doctor-profile-copy h1 {
+  max-width: 760px;
+}
+
+.doctor-profile-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 22px 0 26px;
+}
+
+.doctor-profile-tags span {
+  padding: 9px 12px;
+  border: 1px solid #cfe0e6;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .78);
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.doctor-profile-side {
+  display: grid;
+  gap: 10px;
+}
+
+.doctor-profile-side div {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, .9);
+}
+
+.doctor-profile-side span,
+.doctor-profile-side b {
+  display: block;
+}
+
+.doctor-profile-side span {
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.doctor-profile-side b {
+  color: var(--text);
+  line-height: 1.35;
+}
+
+.doctor-profile-body {
+  padding: 44px 0 0;
+}
+
+.doctor-profile-layout {
+  display: grid;
+  grid-template-columns: 270px minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.doctor-profile-nav {
+  top: 108px;
+}
+
+.doctor-profile-text {
+  max-width: 780px;
+  color: var(--text);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.doctor-service-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.doctor-service-list div {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #f7fbf9;
+  color: var(--text);
+  font-weight: 800;
+}
+
+.doctor-service-list i {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  flex: 0 0 30px;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--mint);
+  color: var(--green);
+  font-size: 13px;
+}
+
+.doctor-record-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: center;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(135deg, rgba(236, 249, 241, .86), rgba(255, 255, 255, .98));
+}
+
+.doctor-record-card h2 {
+  margin: 0 0 10px;
+  font-size: clamp(30px, 3vw, 44px);
+  line-height: 1.06;
+}
+
+.doctor-record-card p:not(.eyebrow) {
+  max-width: 640px;
+  color: var(--text);
+  line-height: 1.55;
+}
+
 .about-page-hero {
   padding: 58px 0 48px;
   background:
@@ -2973,9 +3153,35 @@ img.doctor-photo {
 
 .prices-hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) 420px;
   gap: 44px;
-  align-items: end;
+  align-items: center;
+}
+
+.price-hero-panel {
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, .88);
+  box-shadow: 0 20px 50px rgba(21, 35, 49, .08);
+}
+
+.price-hero-panel div {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.price-hero-panel span {
+  color: var(--muted);
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.price-hero-panel a:not(.button) {
+  color: var(--text);
+  font-size: 24px;
+  font-weight: 900;
 }
 
 .prices-page {
@@ -3001,25 +3207,34 @@ img.doctor-photo {
   background: var(--wash);
 }
 
-.price-sidebar a {
+.price-sidebar a,
+.price-sidebar button {
   min-height: 44px;
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 0 12px;
+  border: 0;
   border-radius: var(--radius);
+  background: transparent;
   color: var(--text);
+  font: inherit;
   font-weight: 800;
+  text-align: left;
+  cursor: pointer;
   transition: background 160ms var(--ease-out), color 160ms var(--ease-out), transform 150ms var(--ease-out);
 }
 
 .price-sidebar a:hover,
-.price-sidebar a.active {
+.price-sidebar a.active,
+.price-sidebar button:hover,
+.price-sidebar button.active {
   background: #fff;
   color: var(--green-deep);
 }
 
-.price-sidebar i {
+.price-sidebar i,
+.price-sidebar button i {
   width: 20px;
   color: var(--green);
   text-align: center;
@@ -3030,7 +3245,82 @@ img.doctor-photo {
   gap: 18px;
 }
 
+.price-tools {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: center;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #f7fbf9;
+}
+
+.price-search {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 14px;
+  border: 1px solid #cfe0e6;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.price-search i {
+  color: var(--muted);
+}
+
+.price-search input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  color: var(--text);
+  background: transparent;
+  font: inherit;
+  font-weight: 700;
+}
+
+.price-search input::placeholder {
+  color: #7a8793;
+}
+
+.price-doc-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.price-doc-links a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 12px;
+  border: 1px solid #cfe0e6;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--text);
+  font-weight: 800;
+}
+
+.price-doc-links a:hover {
+  color: var(--green-deep);
+  border-color: #b7d7c5;
+}
+
+.price-empty {
+  margin: 0;
+  padding: 18px;
+  border: 1px dashed #b9cbd2;
+  border-radius: var(--radius);
+  color: var(--muted);
+  background: #f7fbf9;
+  font-weight: 800;
+}
+
 .price-group {
+  scroll-margin-top: 104px;
   padding: 26px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -3065,6 +3355,11 @@ img.doctor-photo {
   color: var(--green-deep);
 }
 
+.price-table a[hidden],
+.price-group[hidden] {
+  display: none;
+}
+
 .price-table span {
   color: var(--text);
   font-weight: 800;
@@ -3073,6 +3368,60 @@ img.doctor-photo {
 .price-table b {
   color: var(--green-deep);
   white-space: nowrap;
+}
+
+.price-documents {
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(135deg, rgba(236, 249, 241, .76), rgba(255, 255, 255, .96));
+}
+
+.price-doc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.price-doc-grid a {
+  min-height: 90px;
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  padding: 14px;
+  border: 1px solid #cfe0e6;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .88);
+  color: var(--text);
+  font-weight: 800;
+}
+
+.price-doc-grid a:hover {
+  transform: translateY(-1px);
+  border-color: #b7d7c5;
+  color: var(--green-deep);
+}
+
+.price-doc-grid i {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: #eaf8ef;
+  color: var(--green-deep);
+}
+
+.price-doc-grid b,
+.price-doc-grid small {
+  display: block;
+}
+
+.price-doc-grid small {
+  margin-top: 4px;
+  color: var(--muted);
 }
 
 .site-footer {
@@ -3360,6 +3709,10 @@ img.doctor-photo {
     position: static;
   }
 
+  .doctor-profile-nav {
+    top: auto;
+  }
+
   .contact-map-panel {
     position: static;
   }
@@ -3380,6 +3733,10 @@ img.doctor-photo {
 
   .direction-cards,
   .reason-grid,
+  .doctor-profile-grid,
+  .doctor-profile-layout,
+  .doctor-service-list,
+  .doctor-record-card,
   .doctor-grid,
   .steps,
   .choice-grid.two,
@@ -3411,6 +3768,15 @@ img.doctor-photo {
 
   .prices-hero {
     padding-top: 44px;
+  }
+
+  .price-tools,
+  .price-doc-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .price-doc-links {
+    justify-content: flex-start;
   }
 
   .stat-strip {
@@ -3527,6 +3893,18 @@ img.doctor-photo {
     border-bottom: 1px dashed #c9d5dc;
   }
 
+  .doctor-profile-photo-wrap {
+    min-height: 340px;
+  }
+
+  .doctor-profile-photo {
+    height: 340px;
+  }
+
+  .doctor-record-card {
+    padding: 18px;
+  }
+
   .doctor-actions {
     display: grid;
   }
@@ -3553,6 +3931,21 @@ img.doctor-photo {
     grid-template-columns: 1fr;
     gap: 6px;
     padding: 14px;
+  }
+
+  .price-tools,
+  .price-documents,
+  .price-group {
+    padding: 16px;
+  }
+
+  .price-doc-links,
+  .price-doc-links a {
+    width: 100%;
+  }
+
+  .price-doc-links a {
+    justify-content: center;
   }
 
   .branch-card,

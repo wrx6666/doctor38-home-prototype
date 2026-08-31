@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <script>document.documentElement.classList.add('has-scroll-reveal');</script>
   <link rel="stylesheet" href="styles.css?v=photos1">
 </head>
 <body>
@@ -69,28 +70,50 @@
   <main>
     <section class="prices-hero">
       <div class="shell prices-hero-grid">
-        <div>
+        <div data-reveal>
           <a class="back-link" href="index.html"><i class="fa-solid fa-arrow-left"></i> На главную</a>
           <p class="eyebrow">Цены</p>
-          <h1>Стоимость основных услуг без длинного прайс-листа</h1>
-          <p class="hero-lead">Собрали ключевые направления в понятные группы. Точная стоимость зависит от назначения врача, состава обследования и выбранной программы.</p>
+          <h1>Стоимость услуг и быстрый переход к записи</h1>
+          <p class="hero-lead">Собрали ключевые позиции по направлениям. Можно найти услугу по названию, открыть нужный раздел или скачать полный прайс из документов.</p>
+        </div>
+
+        <div class="price-hero-panel" data-reveal>
+          <div>
+            <span>Единый телефон записи</span>
+            <a href="tel:+73952232303">+7 (3952) 23-23-03</a>
+          </div>
+          <a class="button button-primary" href="appointment.html">Записаться онлайн</a>
         </div>
       </div>
     </section>
 
     <section class="prices-page">
       <div class="shell prices-layout">
-        <aside class="price-sidebar" aria-label="Категории цен">
-          <a class="active" href="#consultations"><i class="fa-solid fa-user-doctor"></i> Прием врачей</a>
-          <a href="#diagnostics"><i class="fa-solid fa-wave-square"></i> Диагностика</a>
-          <a href="#children"><i class="fa-solid fa-child-reaching"></i> Детям</a>
-          <a href="#beauty"><i class="fa-solid fa-spa"></i> Косметология</a>
-          <a href="#checkups"><i class="fa-regular fa-heart"></i> Чекапы</a>
-          <a href="#business"><i class="fa-solid fa-briefcase-medical"></i> Организациям</a>
+        <aside class="price-sidebar" aria-label="Категории цен" data-reveal>
+          <button class="active" type="button" data-price-filter="all"><i class="fa-solid fa-layer-group"></i> Все</button>
+          <button type="button" data-price-filter="consultations"><i class="fa-solid fa-user-doctor"></i> Прием врачей</button>
+          <button type="button" data-price-filter="diagnostics"><i class="fa-solid fa-wave-square"></i> Диагностика</button>
+          <button type="button" data-price-filter="children"><i class="fa-solid fa-child-reaching"></i> Детям</button>
+          <button type="button" data-price-filter="beauty"><i class="fa-solid fa-spa"></i> Косметология</button>
+          <button type="button" data-price-filter="checkups"><i class="fa-regular fa-heart"></i> Чекапы</button>
+          <button type="button" data-price-filter="business"><i class="fa-solid fa-briefcase-medical"></i> Организациям</button>
         </aside>
 
         <div class="price-content">
-          <section class="price-group" id="consultations">
+          <div class="price-tools" data-reveal>
+            <label class="price-search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="search" id="priceSearch" placeholder="Найти услугу: УЗИ, гинеколог, справка">
+            </label>
+            <div class="price-doc-links">
+              <a href="documents.html#price-docs"><i class="fa-regular fa-file-lines"></i> Все прайсы</a>
+              <a href="appointment.html"><i class="fa-regular fa-calendar-check"></i> Уточнить стоимость</a>
+            </div>
+          </div>
+
+          <p class="price-empty" id="priceEmpty" hidden>По запросу ничего не найдено. Попробуйте другое название или оставьте заявку администратору.</p>
+
+          <section class="price-group" id="consultations" data-price-section="consultations" data-reveal>
             <div class="group-head">
               <div>
                 <p class="eyebrow">Взрослым</p>
@@ -99,32 +122,32 @@
               <a class="text-link" href="doctors.html">Выбрать врача</a>
             </div>
             <div class="price-table">
-              <a href="gynecologist.html"><span>Прием гинеколога</span><b>от 1 800 ₽</b></a>
-              <a href="services.html"><span>Прием терапевта</span><b>от 1 600 ₽</b></a>
-              <a href="services.html"><span>Прием невролога</span><b>от 1 900 ₽</b></a>
-              <a href="services.html"><span>Прием уролога</span><b>от 1 800 ₽</b></a>
-              <a href="services.html"><span>Повторная консультация</span><b>от 1 300 ₽</b></a>
+              <a href="gynecologist.html" data-price-item><span>Прием гинеколога</span><b>от 1 800 ₽</b></a>
+              <a href="doctors.html?specialty=therapy" data-price-item><span>Прием терапевта</span><b>от 1 600 ₽</b></a>
+              <a href="doctors.html?specialty=neurology" data-price-item><span>Прием невролога</span><b>от 1 900 ₽</b></a>
+              <a href="doctors.html" data-price-item><span>Прием уролога</span><b>от 1 800 ₽</b></a>
+              <a href="doctors.html" data-price-item><span>Повторная консультация</span><b>от 1 300 ₽</b></a>
             </div>
           </section>
 
-          <section class="price-group" id="diagnostics">
+          <section class="price-group" id="diagnostics" data-price-section="diagnostics" data-reveal>
             <div class="group-head">
               <div>
                 <p class="eyebrow">Диагностика</p>
                 <h2>УЗИ и исследования</h2>
               </div>
-              <a class="text-link" href="services.html#diagnostics">Все услуги</a>
+              <a class="text-link" href="diagnostics.html">Все услуги</a>
             </div>
             <div class="price-table">
-              <a href="services.html#diagnostics"><span>УЗИ малого таза</span><b>от 1 500 ₽</b></a>
-              <a href="services.html#diagnostics"><span>УЗИ молочных желез</span><b>от 1 400 ₽</b></a>
-              <a href="services.html#diagnostics"><span>Акушерское УЗИ</span><b>от 1 800 ₽</b></a>
-              <a href="services.html#diagnostics"><span>Детское УЗИ</span><b>от 1 300 ₽</b></a>
-              <a href="services.html#diagnostics"><span>Лабораторные исследования</span><b>по назначению</b></a>
+              <a href="diagnostics.html" data-price-item><span>УЗИ малого таза</span><b>от 1 500 ₽</b></a>
+              <a href="diagnostics.html" data-price-item><span>УЗИ молочных желез</span><b>от 1 400 ₽</b></a>
+              <a href="diagnostics.html" data-price-item><span>Акушерское УЗИ</span><b>от 1 800 ₽</b></a>
+              <a href="diagnostics.html" data-price-item><span>Детское УЗИ</span><b>от 1 300 ₽</b></a>
+              <a href="diagnostics.html" data-price-item><span>Лабораторные исследования</span><b>по назначению</b></a>
             </div>
           </section>
 
-          <section class="price-group" id="children">
+          <section class="price-group" id="children" data-price-section="children" data-reveal>
             <div class="group-head">
               <div>
                 <p class="eyebrow">Детям</p>
@@ -133,14 +156,15 @@
               <a class="text-link" href="children.html">Детские услуги</a>
             </div>
             <div class="price-table">
-              <a href="children.html"><span>Прием педиатра</span><b>от 1 700 ₽</b></a>
-              <a href="children.html"><span>Справка в сад или школу</span><b>от 900 ₽</b></a>
-              <a href="children.html"><span>Вакцинация</span><b>по препарату</b></a>
-              <a href="children.html"><span>Профилактический осмотр</span><b>от 1 500 ₽</b></a>
+              <a href="children.html" data-price-item><span>Прием педиатра</span><b>от 1 700 ₽</b></a>
+              <a href="children.html" data-price-item><span>Прием неонатолога</span><b>по прайсу</b></a>
+              <a href="children.html" data-price-item><span>Справка в сад или школу</span><b>от 900 ₽</b></a>
+              <a href="children.html" data-price-item><span>Вакцинация</span><b>по препарату</b></a>
+              <a href="children.html" data-price-item><span>Профилактический осмотр</span><b>от 1 500 ₽</b></a>
             </div>
           </section>
 
-          <section class="price-group" id="beauty">
+          <section class="price-group" id="beauty" data-price-section="beauty" data-reveal>
             <div class="group-head">
               <div>
                 <p class="eyebrow">Косметология</p>
@@ -149,14 +173,18 @@
               <a class="text-link" href="cosmetology.html">Косметология</a>
             </div>
             <div class="price-table">
-              <a href="cosmetology.html"><span>Консультация косметолога</span><b>от 1 200 ₽</b></a>
-              <a href="cosmetology.html"><span>Уходовая процедура</span><b>от 2 500 ₽</b></a>
-              <a href="cosmetology.html"><span>SMAS-лифтинг</span><b>по зоне</b></a>
-              <a href="cosmetology.html"><span>RF-лифтинг</span><b>от 3 000 ₽</b></a>
+              <a href="cosmetology.html" data-price-item><span>Консультация косметолога</span><b>от 1 200 ₽</b></a>
+              <a href="cosmetology.html" data-price-item><span>Уходовая процедура</span><b>от 2 500 ₽</b></a>
+              <a href="cosmetology.html" data-price-item><span>Комплексная чистка лица</span><b>от 4 200 ₽</b></a>
+              <a href="cosmetology.html" data-price-item><span>Химический пилинг</span><b>от 3 200 ₽</b></a>
+              <a href="cosmetology.html" data-price-item><span>SMAS-лифтинг</span><b>по зоне</b></a>
+              <a href="cosmetology.html" data-price-item><span>RF-лифтинг</span><b>от 3 000 ₽</b></a>
+              <a href="cosmetology.html" data-price-item><span>Биоревитализация</span><b>от 13 000 ₽</b></a>
+              <a href="cosmetology.html" data-price-item><span>Контурная пластика</span><b>от 13 000 ₽</b></a>
             </div>
           </section>
 
-          <section class="price-group" id="checkups">
+          <section class="price-group" id="checkups" data-price-section="checkups" data-reveal>
             <div class="group-head">
               <div>
                 <p class="eyebrow">Профилактика</p>
@@ -165,14 +193,16 @@
               <a class="text-link" href="checkups.html">Программы</a>
             </div>
             <div class="price-table">
-              <a href="checkups.html"><span>Базовый чекап</span><b>от 5 900 ₽</b></a>
-              <a href="checkups.html"><span>Расширенная диагностика</span><b>от 9 900 ₽</b></a>
-              <a href="checkups.html"><span>Биохакинг-программа</span><b>индивидуально</b></a>
-              <a href="checkups.html"><span>Капельницы</span><b>по назначению</b></a>
+              <a href="checkups.html" data-price-item><span>Старт. Ресурс и энергия</span><b>15 000 ₽</b></a>
+              <a href="checkups.html" data-price-item><span>Базовый. Профилактика</span><b>45 000 ₽</b></a>
+              <a href="checkups.html" data-price-item><span>Здоровье ребенка</span><b>25 000 ₽</b></a>
+              <a href="checkups.html" data-price-item><span>Гастро-чекап</span><b>40 000 ₽</b></a>
+              <a href="checkups.html" data-price-item><span>Биохакинг-программа</span><b>индивидуально</b></a>
+              <a href="checkups.html" data-price-item><span>Капельницы</span><b>по назначению</b></a>
             </div>
           </section>
 
-          <section class="price-group" id="business">
+          <section class="price-group" id="business" data-price-section="business" data-reveal>
             <div class="group-head">
               <div>
                 <p class="eyebrow">Организациям</p>
@@ -181,14 +211,43 @@
               <a class="text-link" href="organizations.html">Для бизнеса</a>
             </div>
             <div class="price-table">
-              <a href="organizations.html"><span>Предрейсовый осмотр</span><b>по договору</b></a>
-              <a href="organizations.html"><span>Послерейсовый осмотр</span><b>по договору</b></a>
-              <a href="organizations.html"><span>Периодический медосмотр</span><b>по составу</b></a>
-              <a href="organizations.html"><span>Корпоративная программа</span><b>индивидуально</b></a>
+              <a href="organizations.html" data-price-item><span>Предрейсовый осмотр</span><b>по договору</b></a>
+              <a href="organizations.html" data-price-item><span>Послерейсовый осмотр</span><b>по договору</b></a>
+              <a href="organizations.html" data-price-item><span>Периодический медосмотр</span><b>по составу</b></a>
+              <a href="organizations.html" data-price-item><span>Корпоративная программа</span><b>индивидуально</b></a>
+            </div>
+          </section>
+
+          <section class="price-documents" data-reveal>
+            <div class="group-head">
+              <div>
+                <p class="eyebrow">Полные документы</p>
+                <h2>Прайсы в исходном виде</h2>
+              </div>
+              <a class="text-link" href="documents.html#price-docs">Открыть раздел документов</a>
+            </div>
+            <div class="price-doc-grid">
+              <a href="https://docs.yandex.ru/docs/view?url=ya-browser%3A%2F%2F4DT1uXEPRrJRXlUFoewruDRhGN093n1km8n8X9SutuYgZn2pVni3HqTLnJ5FW8r0XxOmeuwPdxekwHQVtZknHZTn9DRjn43OahROJRdIHIvY33yLxmm7pXk11eX29SyeEqP9u1GqjT-BfmJEs-Pk_A%3D%3D%3Fsign%3DkJsFhE0fVgPdSmyW5Zb2Aq6dPAeMrZgpcPYxzdJNL0k%3D&name=bo4tgqukw7hsbs10n5xugqnsvp05zd3s.xlsx&nosw=1" target="_blank" rel="noopener"><i class="fa-regular fa-file-excel"></i><span><b>Прайс Добрый Доктор 2026</b><small>XLSX</small></span></a>
+              <a href="https://docs.yandex.ru/docs/view?url=ya-browser%3A%2F%2F4DT1uXEPRrJRXlUFoewruDFCW-kil3X0LwJLNOFOM8SSyusLpEFW1qHChInHtKJjhLkA2OWHY0eGgwMDC-T4-MVWXe-PeP1kFdsz67fYb8sxkPamd4yyZFMhJ1ZpppXnKVCv03Ff75gpE5PHRdeRnA%3D%3D%3Fsign%3Dptj1FBLJtGBIm5doTml3gJKpasChZAe_nYDP3ktjZ5A%3D&name=w2a6b31kzsvdi0bygpyl2sfucwv30pi5.xlsx&nosw=1" target="_blank" rel="noopener"><i class="fa-regular fa-file-excel"></i><span><b>Прайс косметологии</b><small>XLSX</small></span></a>
+              <a href="https://docviewer.yandex.ru/?url=ya-browser%3A%2F%2F4DT1uXEPRrJRXlUFoewruAqheAQVGaCwwUJ7DjSAhf_mI3ew5uN9vg_tad0AHKyYPIuzH3rK7Y5Mphcaodoyr3XD2_CZpq2MT7HCKjIHSf4CQheUtB6mJZ08ITSamXFye9TUG2k87twnVqm9WY6-Pg%3D%3D%3Fsign%3DF54tRI0-NqwC7tXkbWIk9zBVcEj8m3fTmPC4EnLabYQ%3D&name=7muv7zxa0wm0mood09sddd6h65ouh5fm.xlsx" target="_blank" rel="noopener"><i class="fa-regular fa-file-excel"></i><span><b>Прайс анализов Лукалаб</b><small>XLSX</small></span></a>
             </div>
           </section>
         </div>
       </div>
+    </section>
+
+    <section class="service-cta">
+      <div class="shell service-cta-grid">
+        <div>
+          <p class="eyebrow">Не нашли услугу?</p>
+          <h2>Администратор уточнит стоимость и подскажет ближайшее время приема</h2>
+        </div>
+        <div class="service-cta-actions">
+          <a class="button button-primary" href="appointment.html">Записаться онлайн</a>
+          <a class="button button-secondary" href="tel:+73952232303">Позвонить</a>
+        </div>
+      </div>
+      <div class="shell legal-note light">Имеются противопоказания. Необходима консультация специалиста. Цены в прототипе нужно сверить с актуальным прайсом клиники перед запуском.</div>
     </section>
   </main>
 
@@ -237,5 +296,83 @@
       <span>Имеются противопоказания. Необходима консультация специалиста.</span>
     </div>
   </footer>
+  <script>
+    (() => {
+      const filterButtons = document.querySelectorAll('[data-price-filter]');
+      const sections = document.querySelectorAll('[data-price-section]');
+      const search = document.querySelector('#priceSearch');
+      const empty = document.querySelector('#priceEmpty');
+      const availableFilters = Array.from(filterButtons).map((button) => button.dataset.priceFilter);
+      const hashFilter = window.location.hash.replace('#', '');
+      let activeFilter = availableFilters.includes(hashFilter) ? hashFilter : 'all';
+
+      const normalize = (value) => value.toLowerCase().trim();
+
+      const applyFilters = () => {
+        const query = normalize(search?.value || '');
+        let visibleSections = 0;
+
+        sections.forEach((section) => {
+          const sectionMatch = activeFilter === 'all' || section.dataset.priceSection === activeFilter;
+          let visibleItems = 0;
+
+          section.querySelectorAll('[data-price-item]').forEach((item) => {
+            const itemMatch = normalize(item.textContent).includes(query);
+            const visible = sectionMatch && itemMatch;
+            item.hidden = !visible;
+            if (visible) visibleItems += 1;
+          });
+
+          const visible = sectionMatch && visibleItems > 0;
+          section.hidden = !visible;
+          if (visible) visibleSections += 1;
+        });
+
+        if (empty) empty.hidden = visibleSections > 0;
+      };
+
+      filterButtons.forEach((button) => {
+        button.classList.toggle('active', button.dataset.priceFilter === activeFilter);
+
+        button.addEventListener('click', () => {
+          activeFilter = button.dataset.priceFilter;
+          filterButtons.forEach((item) => item.classList.toggle('active', item === button));
+          const nextHash = activeFilter === 'all' ? window.location.pathname : `${window.location.pathname}#${activeFilter}`;
+          window.history.replaceState(null, '', nextHash);
+          applyFilters();
+        });
+      });
+
+      search?.addEventListener('input', applyFilters);
+      applyFilters();
+
+      if (hashFilter && activeFilter !== 'all') {
+        requestAnimationFrame(() => {
+          document.querySelector('.prices-page')?.scrollIntoView({ block: 'start' });
+        });
+      }
+    })();
+
+    (() => {
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const revealItems = document.querySelectorAll('[data-reveal], [data-reveal-item]');
+
+      if (reduceMotion || !('IntersectionObserver' in window)) {
+        revealItems.forEach((item) => item.classList.add('is-visible'));
+        return;
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle('is-visible', entry.isIntersecting);
+        });
+      }, {
+        threshold: 0.16,
+        rootMargin: '-7% 0px -10% 0px'
+      });
+
+      revealItems.forEach((item) => observer.observe(item));
+    })();
+  </script>
 </body>
 </html>

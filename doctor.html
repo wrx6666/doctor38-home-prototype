@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Врач - Добрый Доктор</title>
+  <meta name="description" content="Карточка врача медицинского центра Добрый Доктор в Иркутске: специализация, направления приема, филиалы и запись.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <script>document.documentElement.classList.add('has-scroll-reveal');</script>
+  <link rel="stylesheet" href="styles.css?v=photos1">
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-line">
+      <a class="brand" href="index.html" aria-label="Добрый Доктор">
+        <img src="assets/logo.webp" alt="Добрый Доктор">
+      </a>
+
+      <nav class="main-nav" aria-label="Основная навигация">
+        <div class="nav-item">
+          <a href="services.html">Услуги</a>
+          <div class="nav-dropdown">
+            <a href="doctors.html"><b>Прием врачей</b><span>Специалисты для взрослых и детей</span></a>
+            <a href="diagnostics.html"><b>Диагностика</b><span>УЗИ, анализы и подготовка</span></a>
+            <a href="children.html"><b>Детям</b><span>Педиатрия, справки, вакцинация</span></a>
+            <a href="checkups.html"><b>Чекапы</b><span>Комплексные программы диагностики</span></a>
+            <a href="gynecology.html"><b>Гинекология</b><span>Прием, диагностика и женское здоровье</span></a>
+            <a href="cosmetology.html"><b>Косметология</b><span>Уходовые и аппаратные процедуры</span></a>
+            <a href="organizations.html"><b>Организациям</b><span>Медосмотры и корпоративные программы</span></a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a class="is-active" href="doctors.html">Врачи</a>
+          <div class="nav-dropdown nav-dropdown-compact">
+            <a href="doctors.html?specialty=gynecology"><b>Гинекологи</b><span>Женское здоровье</span></a>
+            <a href="doctors.html?specialty=therapy"><b>Терапевты</b><span>Первичный прием</span></a>
+            <a href="doctors.html?specialty=neurology"><b>Неврологи</b><span>Взрослый прием</span></a>
+            <a href="doctors.html?specialty=pediatrics"><b>Педиатры</b><span>Для детей</span></a>
+            <a href="doctors.html?specialty=diagnostics"><b>Врачи УЗИ</b><span>Диагностика</span></a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="contacts.html">Контакты</a>
+          <div class="nav-dropdown nav-dropdown-contacts">
+            <a href="contacts.html#gavrilova"><b>ул. Гаврилова, 4</b><span>ост. «Филармония»</span></a>
+            <a href="contacts.html#lermontova"><b>ул. Лермонтова, 69</b><span>ост. «Лермонтова»</span></a>
+          </div>
+        </div>
+        <a href="prices.html">Цены</a>
+        <a href="about.html">О клинике</a>
+        <a href="documents.html">Документы</a>
+      </nav>
+
+      <div class="header-contact">
+        <a class="phone" href="tel:+73952232303">
+          <i class="fa-solid fa-phone"></i>
+          <span>
+            <b>+7 (3952) 23-23-03</b>
+            <small>Пн-сб: по записи</small>
+          </span>
+        </a>
+        <a class="button button-primary" href="appointment.html">Записаться онлайн</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="doctor-profile-hero">
+      <div class="shell doctor-profile-grid">
+        <div class="doctor-profile-photo-wrap" data-reveal>
+          <img class="doctor-profile-photo" data-doctor-photo src="assets/doctor-sukhareva.jpg" alt="Сухарева Дарья Олеговна">
+        </div>
+
+        <div class="doctor-profile-copy" data-reveal>
+          <a class="back-link" href="doctors.html"><i class="fa-solid fa-arrow-left"></i> Все врачи</a>
+          <p class="eyebrow" data-doctor-specialty>Гинеколог</p>
+          <h1 data-doctor-name>Сухарева Дарья Олеговна</h1>
+          <p class="hero-lead" data-doctor-lead>Прием гинеколога, профилактические осмотры, консультации по вопросам женского здоровья.</p>
+
+          <div class="doctor-profile-tags" data-doctor-tags>
+            <span>Женское здоровье</span>
+            <span>Профилактические осмотры</span>
+            <span>По записи</span>
+          </div>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="appointment.html"><i class="fa-regular fa-calendar-check"></i> Записаться к врачу</a>
+            <a class="button button-secondary" href="tel:+73952232303">Позвонить</a>
+          </div>
+        </div>
+
+        <aside class="doctor-profile-side" data-reveal>
+          <div>
+            <span>Филиалы приема</span>
+            <b data-doctor-branches>Гаврилова, 4 / Лермонтова, 69</b>
+          </div>
+          <div>
+            <span>Формат</span>
+            <b>Очный прием по записи</b>
+          </div>
+          <div>
+            <span>Стоимость</span>
+            <b data-doctor-price>по актуальному прайсу</b>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="doctor-profile-body">
+      <div class="shell doctor-profile-layout">
+        <aside class="direction-nav doctor-profile-nav" aria-label="Навигация по врачу" data-reveal>
+          <a class="active" href="#doctor-about">О враче</a>
+          <a href="#doctor-services">С чем обращаются</a>
+          <a href="#doctor-visit">Как проходит прием</a>
+          <a href="#doctor-record">Запись</a>
+        </aside>
+
+        <div class="direction-content">
+          <section class="direction-section" id="doctor-about" data-reveal>
+            <div class="group-head">
+              <div>
+                <p class="eyebrow">Профиль</p>
+                <h2>Чем занимается врач</h2>
+              </div>
+            </div>
+            <p class="doctor-profile-text" data-doctor-about>Консультирует по вопросам женского здоровья, проводит профилактические приемы и помогает выстроить понятный маршрут обследования.</p>
+          </section>
+
+          <section class="direction-section" id="doctor-services" data-reveal>
+            <div class="group-head">
+              <div>
+                <p class="eyebrow">Поводы для записи</p>
+                <h2>С чем можно обратиться</h2>
+              </div>
+            </div>
+            <div class="doctor-service-list" data-doctor-services></div>
+          </section>
+
+          <section class="direction-section" id="doctor-visit" data-reveal>
+            <div class="group-head">
+              <div>
+                <p class="eyebrow">Прием</p>
+                <h2>Что будет на консультации</h2>
+              </div>
+            </div>
+            <div class="steps">
+              <div data-reveal-item><b>1</b><span>Врач уточняет жалобы, историю обращений и цель визита.</span></div>
+              <div data-reveal-item><b>2</b><span>Проводит осмотр или диагностику, если это входит в профиль приема.</span></div>
+              <div data-reveal-item><b>3</b><span>Объясняет дальнейшие шаги: лечение, обследования, повторный визит или наблюдение.</span></div>
+            </div>
+          </section>
+
+          <section class="doctor-record-card" id="doctor-record" data-reveal>
+            <div>
+              <p class="eyebrow">Запись</p>
+              <h2>Записаться к специалисту</h2>
+              <p>Оставьте заявку или позвоните. Администратор уточнит филиал, ближайшее время и актуальную стоимость приема.</p>
+            </div>
+            <div class="service-cta-actions">
+              <a class="button button-primary" href="appointment.html">Записаться онлайн</a>
+              <a class="button button-secondary" href="tel:+73952232303">Позвонить</a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div class="footer-brand">
+        <p>Многопрофильный медицинский центр в Иркутске для взрослых, детей и организаций.</p>
+        <a class="footer-phone" href="tel:+73952232303"><i class="fa-solid fa-phone"></i> +7 (3952) 23-23-03</a>
+      </div>
+
+      <nav class="footer-column" aria-label="Разделы сайта">
+        <b>Разделы</b>
+        <a href="services.html">Услуги</a>
+        <a href="prices.html">Цены</a>
+        <a href="doctors.html">Врачи</a>
+        <a href="about.html">О клинике</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+
+      <nav class="footer-column" aria-label="Популярные направления">
+        <b>Направления</b>
+        <a href="gynecology.html">Гинекология</a>
+        <a href="diagnostics.html">Диагностика</a>
+        <a href="children.html">Детям</a>
+        <a href="checkups.html">Чекапы</a>
+        <a href="cosmetology.html">Косметология</a>
+        <a href="organizations.html">Организациям</a>
+      </nav>
+
+      <div class="footer-column footer-branches">
+        <b>Филиалы</b>
+        <a href="contacts.html#gavrilova"><span>ул. Гаврилова, 4</span><small>ост. «Филармония»</small></a>
+        <a href="contacts.html#lermontova"><span>ул. Лермонтова, 69</span><small>ост. «Лермонтова»</small></a>
+      </div>
+
+      <div class="footer-column footer-actions">
+        <b>Пациентам</b>
+        <a href="appointment.html">Записаться онлайн</a>
+        <a href="documents.html">Документы и лицензии</a>
+        <a href="mailto:doktor.dobry2016@yandex.ru">doktor.dobry2016@yandex.ru</a>
+      </div>
+    </div>
+
+    <div class="shell footer-bottom">
+      <span>Лицензия ЛО-38-01-003181 от 20.12.2016</span>
+      <span>Имеются противопоказания. Необходима консультация специалиста.</span>
+    </div>
+  </footer>
+
+  <script>
+    const doctors = {
+      sukhareva: {
+        name: 'Сухарева Дарья Олеговна',
+        specialty: 'Гинеколог',
+        photo: 'assets/doctor-sukhareva.jpg',
+        lead: 'Прием гинеколога, профилактические осмотры, консультации по вопросам женского здоровья.',
+        about: 'Консультирует по вопросам женского здоровья, проводит профилактические приемы и помогает выстроить понятный маршрут обследования.',
+        tags: ['Женское здоровье', 'Профилактические осмотры', 'Консультации'],
+        services: ['Профилактический прием гинеколога', 'Жалобы, дискомфорт, нарушения цикла', 'Подбор дальнейших обследований', 'Разбор анализов и результатов УЗИ'],
+        price: 'прием от 1 800 ₽'
+      },
+      stepanova: {
+        name: 'Степанова Елена Владимировна',
+        specialty: 'Гинеколог, гинеколог-эндокринолог',
+        photo: '',
+        lead: 'Консультации гинеколога и гинеколога-эндокринолога, наблюдение и подбор дальнейшей тактики обследования.',
+        about: 'Помогает пациенткам с вопросами женского здоровья и эндокринологических нарушений, объясняет маршрут обследования простым языком.',
+        tags: ['Гинекология', 'Эндокринология', 'Наблюдение'],
+        services: ['Консультация гинеколога', 'Гинеколог-эндокринолог', 'Нарушения цикла', 'Профилактический прием'],
+        price: 'прием от 1 800 ₽'
+      },
+      yuryeva: {
+        name: 'Юрьева Татьяна Юрьевна',
+        specialty: 'Гинеколог',
+        photo: 'assets/doctor-yuryeva.jpg',
+        lead: 'Прием гинеколога, профилактические осмотры, консультации и сопровождение женского здоровья.',
+        about: 'Ведет прием по вопросам женского здоровья, профилактики, наблюдения и подбора дальнейших обследований.',
+        tags: ['Гинекология', 'Профилактика', 'Осмотры'],
+        services: ['Профилактический прием', 'Консультация при жалобах', 'Разбор обследований', 'План дальнейших действий'],
+        price: 'прием от 1 800 ₽'
+      },
+      vlasova: {
+        name: 'Власова Александра Валерьевна',
+        specialty: 'Врач-косметолог, дерматолог',
+        photo: 'assets/doctor-vlasova.jpg',
+        lead: 'Консультации по состоянию кожи, косметологические процедуры и подбор индивидуального ухода.',
+        about: 'Помогает оценить состояние кожи, подобрать уходовые, аппаратные и инъекционные процедуры с учетом задачи пациента.',
+        tags: ['Косметология', 'Дерматология', 'Уход кожи'],
+        services: ['Консультация косметолога', 'Уходовые процедуры', 'Чистки и пилинги', 'Аппаратные методики'],
+        price: 'консультация от 1 200 ₽'
+      },
+      fedash: {
+        name: 'Федаш Мария Михайловна',
+        specialty: 'Педиатр, неонатолог',
+        photo: '',
+        lead: 'Прием детей, наблюдение новорожденных, консультации родителей и помощь при частых детских жалобах.',
+        about: 'Принимает детей и новорожденных, помогает родителям понять состояние ребенка и дальнейшие шаги наблюдения.',
+        tags: ['Педиатрия', 'Неонатология', 'Детский прием'],
+        services: ['Прием педиатра', 'Консультация неонатолога', 'Плановый осмотр', 'Справки и наблюдение'],
+        price: 'прием от 1 700 ₽'
+      },
+      myasnikov: {
+        name: 'Мясников Владимир Геннадьевич',
+        specialty: 'Врач УЗИ, детский врач УЗИ',
+        photo: 'assets/doctor-myasnikov.jpg',
+        lead: 'Ультразвуковая диагностика для взрослых и детей, плановые обследования и подготовка заключений.',
+        about: 'Проводит ультразвуковые исследования для взрослых и детей, помогает быстро получить диагностическое заключение.',
+        tags: ['УЗИ', 'Детское УЗИ', 'Диагностика'],
+        services: ['УЗИ взрослым', 'Детское УЗИ', 'Плановые исследования', 'Диагностика по назначению врача'],
+        price: 'УЗИ от 1 300 ₽'
+      },
+      fedyukova: {
+        name: 'Федюкова Маргарита Вячеславовна',
+        specialty: 'Невролог',
+        photo: 'assets/doctor-fedyukova.jpg',
+        lead: 'Прием взрослого невролога при боли, онемении, головокружении, нарушениях сна и других жалобах.',
+        about: 'Консультирует взрослых пациентов по неврологическим жалобам и помогает определить дальнейший план обследования или наблюдения.',
+        tags: ['Неврология', 'Взрослый прием', 'Консультации'],
+        services: ['Головные боли и головокружение', 'Боль в спине и шее', 'Онемение и слабость', 'Нарушения сна'],
+        price: 'прием от 1 900 ₽'
+      }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const current = doctors[params.get('doctor')] || doctors.sukhareva;
+    const setText = (selector, value) => {
+      const element = document.querySelector(selector);
+      if (element) element.textContent = value;
+    };
+
+    document.title = `${current.name} - Добрый Доктор`;
+    document.querySelector('meta[name="description"]').setAttribute('content', `${current.name}: ${current.specialty}. Запись на прием в медицинском центре Добрый Доктор в Иркутске.`);
+    setText('[data-doctor-name]', current.name);
+    setText('[data-doctor-specialty]', current.specialty);
+    setText('[data-doctor-lead]', current.lead);
+    setText('[data-doctor-about]', current.about);
+    setText('[data-doctor-price]', current.price);
+
+    const photo = document.querySelector('[data-doctor-photo]');
+    const photoWrap = document.querySelector('.doctor-profile-photo-wrap');
+    if (current.photo) {
+      photo.src = current.photo;
+      photo.alt = current.name;
+      photoWrap.classList.remove('is-placeholder');
+    } else {
+      photo.remove();
+      photoWrap.classList.add('is-placeholder');
+      photoWrap.innerHTML = '<i class="fa-regular fa-image"></i><span>Фото врача будет добавлено позже</span>';
+    }
+
+    const tags = document.querySelector('[data-doctor-tags]');
+    tags.innerHTML = current.tags.map((tag) => `<span>${tag}</span>`).join('');
+
+    const services = document.querySelector('[data-doctor-services]');
+    services.innerHTML = current.services.map((service) => `<div data-reveal-item><i class="fa-solid fa-check"></i><span>${service}</span></div>`).join('');
+
+    (() => {
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const revealItems = document.querySelectorAll('[data-reveal], [data-reveal-item]');
+
+      if (reduceMotion || !('IntersectionObserver' in window)) {
+        revealItems.forEach((item) => item.classList.add('is-visible'));
+        return;
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle('is-visible', entry.isIntersecting);
+        });
+      }, {
+        threshold: 0.16,
+        rootMargin: '-7% 0px -10% 0px'
+      });
+
+      revealItems.forEach((item) => observer.observe(item));
+    })();
+  </script>
+</body>
+</html>
