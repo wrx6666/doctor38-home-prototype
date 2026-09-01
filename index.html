@@ -10,14 +10,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <script>document.documentElement.classList.add('has-scroll-reveal');</script>
-  <link rel="stylesheet" href="styles.css?v=photos1">
+  <link rel="stylesheet" href="styles.css?v=mobile28">
 </head>
 <body>
   <header class="site-header">
     <div class="shell header-line">
-      <a class="brand" href="#" aria-label="Добрый Доктор">
+      <a class="brand" href="index.html" aria-label="Добрый Доктор">
         <img src="assets/logo.webp" alt="Добрый Доктор">
       </a>
+
+      <button class="mobile-nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span><span></span></button>
 
       <nav class="main-nav" aria-label="Основная навигация">
         <div class="nav-item">
@@ -123,7 +125,6 @@
             <b>ул. Гаврилова, 4</b>
             <small>ост. «Филармония»</small>
           </span>
-          <em>Открыто</em>
         </a>
         <a class="branch" href="contacts.html#lermontova">
           <img class="branch-photo" src="assets/branch-lermontova.png" alt="">
@@ -131,7 +132,6 @@
             <b>ул. Лермонтова, 69</b>
             <small>ост. «Лермонтова»</small>
           </span>
-          <em>Открыто</em>
         </a>
         <a class="route-link" href="contacts.html">
           Как добраться
@@ -160,7 +160,7 @@
 
           <a class="path-card" href="diagnostics.html" data-reveal>
             <img src="assets/ultrasound.webp" alt="">
-            <span class="path-icon blue"><i class="fa-solid fa-desktop"></i></span>
+            <span class="path-icon blue"><i class="fa-solid fa-microscope"></i></span>
             <h3>Нужна диагностика</h3>
             <p>УЗИ, лабораторные анализы, функциональная диагностика и подготовка.</p>
             <i class="fa-solid fa-arrow-right path-arrow"></i>
@@ -192,7 +192,7 @@
 
           <a class="path-card" href="checkups.html" data-reveal>
             <img src="assets/card-checkup.png" alt="">
-            <span class="path-icon green"><i class="fa-regular fa-heart"></i></span>
+            <span class="path-icon green"><i class="fa-solid fa-clipboard-check"></i></span>
             <h3>Чекапы</h3>
             <p>Комплексные программы диагностики, профилактики и биохакинг.</p>
             <i class="fa-solid fa-arrow-right path-arrow"></i>
@@ -320,5 +320,6 @@
       revealItems.forEach((item) => observer.observe(item));
     })();
   </script>
+  <script src="site.js?v=mobile28"></script>
 </body>
 </html>
