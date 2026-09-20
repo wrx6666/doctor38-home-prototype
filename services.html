@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="styles.css?v=mobile28">
+  <link rel="stylesheet" href="styles.css?v=footer31">
 </head>
 <body>
   <header class="site-header">
@@ -97,6 +97,7 @@
           <a href="#children"><i class="fa-solid fa-child-reaching"></i> Для детей</a>
           <a href="#beauty"><i class="fa-solid fa-spa"></i> Косметология</a>
           <a href="#checkups"><i class="fa-solid fa-clipboard-check"></i> Чекапы</a>
+          <a href="#droppers"><i class="fa-solid fa-droplet"></i> Капельницы</a>
           <a href="#business"><i class="fa-solid fa-briefcase-medical"></i> Организациям</a>
         </aside>
 
@@ -175,7 +176,21 @@
             <div class="service-list">
               <a href="checkups.html"><span><b>Программы полной диагностики</b><small>Комплексная проверка здоровья по направлениям</small></span><i class="fa-solid fa-arrow-right"></i></a>
               <a href="checkups.html"><span><b>Биохакинг</b><small>Персональный профилактический маршрут</small></span><i class="fa-solid fa-arrow-right"></i></a>
-              <a href="checkups.html"><span><b>Капельницы</b><small>Процедуры по назначению специалиста</small></span><i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </section>
+
+          <section class="service-group service-group-featured" id="droppers">
+            <div class="group-head">
+              <div>
+                <p class="eyebrow">Новое направление</p>
+                <h2>Капельницы</h2>
+              </div>
+              <a class="text-link" href="droppers.html">Все программы</a>
+            </div>
+            <div class="service-list">
+              <a href="droppers.html#programs"><span><b>Энергия и восстановление</b><small>Программы подбираются врачом с учетом состояния и целей пациента</small></span><i class="fa-solid fa-arrow-right"></i></a>
+              <a href="droppers.html#programs"><span><b>Фокус и антистресс</b><small>Индивидуальные инфузионные программы после консультации</small></span><i class="fa-solid fa-arrow-right"></i></a>
+              <a href="droppers.html#programs"><span><b>Красота и активный образ жизни</b><small>Программы для восстановления, внешнего вида и спортивных нагрузок</small></span><i class="fa-solid fa-arrow-right"></i></a>
             </div>
           </section>
 
@@ -211,50 +226,84 @@
   </main>
 
 
-  <footer class="site-footer">
-    <div class="shell footer-grid">
-      <div class="footer-brand">
-        <p>Многопрофильный медицинский центр в Иркутске для взрослых, детей и организаций.</p>
-        <a class="footer-phone" href="tel:+73952232303"><i class="fa-solid fa-phone"></i> +7 (3952) 23-23-03</a>
+  <footer class="site-footer" id="site-footer">
+    <div class="shell">
+      <div class="footer-contact-bar">
+        <a class="footer-logo" href="index.html" aria-label="Добрый Доктор — на главную">
+          <img src="assets/logo.webp" alt="Добрый Доктор">
+          <span>Медицинский центр<br>в Иркутске</span>
+        </a>
+
+        <div class="footer-contact-primary">
+          <a class="footer-phone" href="tel:+73952232303">+7 (3952) 23-23-03</a>
+          <a class="footer-question" href="mailto:doktor.dobry2016@yandex.ru?subject=Вопрос%20администратору">Задать вопрос администратору</a>
+        </div>
+
+        <a class="footer-cta" href="appointment.html">
+          <span>Записаться онлайн</span>
+          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
       </div>
 
-      <nav class="footer-column" aria-label="Разделы сайта">
-        <b>Разделы</b>
-        <a href="services.html">Услуги</a>
-        <a href="prices.html">Цены</a>
-        <a href="doctors.html">Врачи</a>
-        <a href="about.html">О клинике</a>
-        <a href="contacts.html">Контакты</a>
-      </nav>
+      <div class="footer-nav-grid">
+        <nav class="footer-column" aria-label="Услуги и врачи">
+          <b>Услуги и врачи</b>
+          <a href="services.html">Все услуги</a>
+          <a href="doctors.html">Врачи</a>
+          <a href="diagnostics.html">Диагностика</a>
+          <a href="prices.html">Цены</a>
+          <a href="droppers.html">Капельницы</a>
+        </nav>
 
-      <nav class="footer-column" aria-label="Популярные направления">
-        <b>Направления</b>
-        <a href="gynecology.html">Гинекология</a>
-        <a href="diagnostics.html">Диагностика</a>
-        <a href="children.html">Детям</a>
-        <a href="checkups.html">Чекапы</a>
-        <a href="cosmetology.html">Косметология</a>
-        <a href="organizations.html">Организациям</a>
-      </nav>
+        <nav class="footer-column" aria-label="Пациентам">
+          <b>Пациентам</b>
+          <a href="appointment.html">Записаться на прием</a>
+          <a href="children.html">Детское отделение</a>
+          <a href="checkups.html">Чекапы</a>
+          <a href="cosmetology.html">Косметология</a>
+          <a href="documents.html">Документы и лицензии</a>
+        </nav>
 
-      <div class="footer-column footer-branches">
-        <b>Филиалы</b>
-        <a href="contacts.html#gavrilova"><span>ул. Гаврилова, 4</span><small>ост. «Филармония»</small></a>
-        <a href="contacts.html#lermontova"><span>ул. Лермонтова, 69</span><small>ост. «Лермонтова»</small></a>
+        <nav class="footer-column" aria-label="О медицинском центре">
+          <b>О клинике</b>
+          <a href="about.html">О медицинском центре</a>
+          <a href="contacts.html">Контакты</a>
+          <a href="organizations.html">Организациям</a>
+          <a href="gynecology.html">Гинекология</a>
+          <a href="mailto:doktor.dobry2016@yandex.ru">Написать в клинику</a>
+        </nav>
+
+        <div class="footer-column footer-branches">
+          <b>Филиалы</b>
+          <a href="contacts.html#gavrilova">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <span><strong>ул. Гаврилова, 4</strong><small>ост. «Филармония»</small></span>
+          </a>
+          <a href="contacts.html#lermontova">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <span><strong>ул. Лермонтова, 69</strong><small>ост. «Лермонтова»</small></span>
+          </a>
+          <p>Прием ведется по предварительной записи.</p>
+        </div>
       </div>
 
-      <div class="footer-column footer-actions">
-        <b>Пациентам</b>
-        <a href="appointment.html">Записаться онлайн</a>
-        <a href="documents.html">Документы и лицензии</a>
-        <a href="mailto:doktor.dobry2016@yandex.ru">doktor.dobry2016@yandex.ru</a>
+      <div class="footer-meta">
+        <div class="footer-meta-license">
+          <span>Лицензия ЛО-38-01-003181 от 20.12.2016</span>
+          <span>© 2026 Медицинский центр «Добрый Доктор»</span>
+        </div>
+        <div class="footer-meta-links">
+          <a href="documents.html">Правовая информация и документы</a>
+          <a href="contacts.html">Адреса и режим работы</a>
+        </div>
+        <div class="footer-meta-contact">
+          <span>Связаться с клиникой</span>
+          <a href="mailto:doktor.dobry2016@yandex.ru">doktor.dobry2016@yandex.ru</a>
+        </div>
       </div>
     </div>
 
-    <div class="shell footer-bottom">
-      <span>Лицензия ЛО-38-01-003181 от 20.12.2016</span>
-      <span>Имеются противопоказания. Необходима консультация специалиста.</span>
-    </div>
+    <div class="footer-disclaimer">Имеются противопоказания. Необходима консультация специалиста</div>
   </footer>
   <script src="site.js?v=mobile28"></script>
 </body>

@@ -12,6 +12,7 @@ Static HTML/CSS prototype for the redesigned `doctor38.ru` medical center websit
 - `contacts.html` - branches and contacts
 - `documents.html` - licenses and documents
 - `appointment.html` - appointment request page
+- `droppers.html` - IV therapy programs and appointment entry point
 
 ## Run Locally
 

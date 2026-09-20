@@ -1,6 +1,8 @@
 audit-screens/
 audit-screens-after/
 audit-screens-latest/
+audit-screenshots/
+capture-stories-qa.js
 *-desktop.png
 *-mobile.png
 services-fixed.png

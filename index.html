@@ -9,8 +9,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="icon" href="assets/logo.webp">
   <script>document.documentElement.classList.add('has-scroll-reveal');</script>
-  <link rel="stylesheet" href="styles.css?v=mobile28">
+  <link rel="stylesheet" href="styles.css?v=stories35">
 </head>
 <body>
   <header class="site-header">
@@ -70,6 +71,51 @@
   </header>
 
   <main>
+    <section class="clinic-stories" aria-labelledby="clinic-stories-title">
+      <div class="shell clinic-stories-shell">
+        <div class="clinic-stories-intro" data-reveal>
+          <h2 id="clinic-stories-title">Как проходит лечение</h2>
+        </div>
+
+        <div class="clinic-stories-row" aria-label="Истории о лечении">
+          <button class="clinic-story-card" type="button" data-story data-story-title="Первичный прием" data-story-copy="Врач выслушает жалобы, уточнит историю здоровья и поможет определить следующий шаг без лишних назначений." data-story-image="assets/hero-clinic.webp" aria-label="Открыть историю: Первичный прием" data-reveal>
+            <img src="assets/hero-clinic.webp" alt="Врач беседует с пациентом на первичном приеме">
+            <span class="clinic-story-play" aria-hidden="true"><i class="fa-solid fa-play"></i></span>
+            <span class="clinic-story-number">01</span>
+            <span class="clinic-story-caption"><small>Знакомство</small><b>Первичный прием</b></span>
+          </button>
+
+          <button class="clinic-story-card" type="button" data-story data-story-title="Обследование" data-story-copy="Подбираем только необходимые исследования, объясняем подготовку и собираем результаты в понятную картину." data-story-image="assets/card-checkup.png" aria-label="Открыть историю: Обследование" data-reveal>
+            <img src="assets/card-checkup.png" alt="Медицинское обследование и лабораторная диагностика">
+            <span class="clinic-story-play" aria-hidden="true"><i class="fa-solid fa-play"></i></span>
+            <span class="clinic-story-number">02</span>
+            <span class="clinic-story-caption"><small>Диагностика</small><b>Обследование</b></span>
+          </button>
+
+          <button class="clinic-story-card" type="button" data-story data-story-title="Лечение" data-story-copy="Врач составляет персональный план, рассказывает о каждом этапе и остается на связи в процессе лечения." data-story-image="assets/infusion-room.webp" aria-label="Открыть историю: Лечение" data-reveal>
+            <img src="assets/infusion-room.webp" alt="Лечение под контролем медицинского специалиста">
+            <span class="clinic-story-play" aria-hidden="true"><i class="fa-solid fa-play"></i></span>
+            <span class="clinic-story-number">03</span>
+            <span class="clinic-story-caption"><small>План помощи</small><b>Лечение</b></span>
+          </button>
+
+          <button class="clinic-story-card" type="button" data-story data-story-title="Промежуточная консультация" data-story-copy="Оцениваем самочувствие и динамику, отвечаем на вопросы и при необходимости корректируем рекомендации." data-story-image="assets/card-doctor.png" aria-label="Открыть историю: Промежуточная консультация" data-reveal>
+            <img src="assets/card-doctor.png" alt="Врач изучает результаты и корректирует рекомендации">
+            <span class="clinic-story-play" aria-hidden="true"><i class="fa-solid fa-play"></i></span>
+            <span class="clinic-story-number">04</span>
+            <span class="clinic-story-caption"><small>Динамика</small><b>Промежуточная консультация</b></span>
+          </button>
+
+          <button class="clinic-story-card" type="button" data-story data-story-title="Контроль результата" data-story-copy="Фиксируем результат, формируем рекомендации по профилактике и план дальнейшего наблюдения." data-story-image="assets/clinic-team-gavrilova.jpg" aria-label="Открыть историю: Контроль результата" data-reveal>
+            <img src="assets/clinic-team-gavrilova.jpg" alt="Команда медицинского центра Добрый Доктор">
+            <span class="clinic-story-play" aria-hidden="true"><i class="fa-solid fa-play"></i></span>
+            <span class="clinic-story-number">05</span>
+            <span class="clinic-story-caption"><small>Поддержка</small><b>Контроль результата</b></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
     <section class="hero" id="top">
       <div class="hero-media" aria-hidden="true">
         <img src="assets/reception-hero.png" alt="">
@@ -201,6 +247,40 @@
       </div>
     </section>
 
+    <section class="infusion-feature" aria-labelledby="infusion-feature-title">
+      <div class="shell infusion-feature-shell">
+        <div class="infusion-feature-copy" data-reveal>
+          <div class="infusion-feature-label"><span></span> Новое направление</div>
+          <h2 id="infusion-feature-title">Капельницы</h2>
+          <p class="infusion-feature-lead">Программы инфузионной терапии для восстановления, поддержки энергии и хорошего самочувствия. Состав и продолжительность курса определяет врач после консультации.</p>
+
+          <div class="infusion-feature-themes" aria-label="Направления программ">
+            <span><i class="fa-solid fa-bolt"></i> Энергия</span>
+            <span><i class="fa-solid fa-heart-pulse"></i> Восстановление</span>
+            <span><i class="fa-solid fa-brain"></i> Фокус</span>
+            <span><i class="fa-solid fa-leaf"></i> Красота</span>
+            <span><i class="fa-solid fa-dumbbell"></i> Спорт</span>
+          </div>
+
+          <div class="infusion-feature-actions">
+            <a class="button button-primary" href="droppers.html">Посмотреть программы <i class="fa-solid fa-arrow-right"></i></a>
+            <a class="button button-secondary" href="appointment.html?service=droppers">Подобрать с врачом</a>
+          </div>
+
+          <p class="infusion-feature-note"><i class="fa-solid fa-user-doctor"></i> Процедуры проводятся по назначению и под контролем медицинского специалиста.</p>
+        </div>
+
+        <a class="infusion-feature-media" href="droppers.html" data-reveal aria-label="Подробнее о капельницах">
+          <img src="assets/infusion-room.webp" alt="Процедура инфузионной терапии в медицинском центре" loading="lazy">
+          <span class="infusion-feature-media-caption">
+            <b>11 программ</b>
+            <small>Индивидуальный подбор после консультации</small>
+          </span>
+        </a>
+      </div>
+      <div class="shell legal-note infusion-feature-legal">Имеются противопоказания. Необходима консультация специалиста. Точный состав и кратность процедур определяет врач.</div>
+    </section>
+
     <section class="appointment" id="prices">
       <div class="shell appointment-grid">
         <div class="appointment-copy" data-reveal>
@@ -211,6 +291,7 @@
             <span>УЗИ</span>
             <span>Косметология</span>
             <span>Чекап</span>
+            <span>Капельницы</span>
           </div>
         </div>
         <form class="appointment-form" action="appointment.html" data-reveal>
@@ -243,7 +324,7 @@
           <div class="about-list">
             <span><i class="fa-solid fa-shield-heart"></i> Лицензии и документы доступны на сайте</span>
             <span><i class="fa-solid fa-clock"></i> Работа по записи снижает ожидание</span>
-            <span><i class="fa-solid fa-map-location-dot"></i> Два филиала в разных частях города</span>
+            <span><i class="fa-solid fa-map-location-dot"></i> Иркутск: ул. Гаврилова, 4 и ул. Лермонтова, 69</span>
           </div>
         </div>
       </div>
@@ -251,51 +332,105 @@
 
   </main>
 
+  <dialog class="story-viewer" aria-labelledby="story-viewer-title">
+    <div class="story-viewer-progress" aria-hidden="true"></div>
+    <button class="story-viewer-close" type="button" aria-label="Закрыть историю"><i class="fa-solid fa-xmark"></i></button>
+    <button class="story-viewer-nav story-viewer-prev" type="button" aria-label="Предыдущая история"><i class="fa-solid fa-chevron-left"></i></button>
+    <div class="story-viewer-panel">
+      <div class="story-viewer-media">
+        <img src="assets/hero-clinic.webp" alt="">
+        <span class="story-viewer-brand">Добрый Доктор</span>
+      </div>
+      <div class="story-viewer-copy">
+        <span class="story-viewer-count">01 / 05</span>
+        <p class="eyebrow">Как проходит лечение</p>
+        <h2 id="story-viewer-title">Первичный прием</h2>
+        <p class="story-viewer-text"></p>
+        <a class="button button-primary" href="appointment.html">Записаться на прием</a>
+      </div>
+    </div>
+    <button class="story-viewer-nav story-viewer-next" type="button" aria-label="Следующая история"><i class="fa-solid fa-chevron-right"></i></button>
+  </dialog>
 
-  <footer class="site-footer">
-    <div class="shell footer-grid">
-      <div class="footer-brand">
-        <p>Многопрофильный медицинский центр в Иркутске для взрослых, детей и организаций.</p>
-        <a class="footer-phone" href="tel:+73952232303"><i class="fa-solid fa-phone"></i> +7 (3952) 23-23-03</a>
+
+  <footer class="site-footer" id="site-footer">
+    <div class="shell">
+      <div class="footer-contact-bar">
+        <a class="footer-logo" href="index.html" aria-label="Добрый Доктор — на главную">
+          <img src="assets/logo.webp" alt="Добрый Доктор">
+          <span>Медицинский центр<br>в Иркутске</span>
+        </a>
+
+        <div class="footer-contact-primary">
+          <a class="footer-phone" href="tel:+73952232303">+7 (3952) 23-23-03</a>
+          <a class="footer-question" href="mailto:doktor.dobry2016@yandex.ru?subject=Вопрос%20администратору">Задать вопрос администратору</a>
+        </div>
+
+        <a class="footer-cta" href="appointment.html">
+          <span>Записаться онлайн</span>
+          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
       </div>
 
-      <nav class="footer-column" aria-label="Разделы сайта">
-        <b>Разделы</b>
-        <a href="services.html">Услуги</a>
-        <a href="prices.html">Цены</a>
-        <a href="doctors.html">Врачи</a>
-        <a href="about.html">О клинике</a>
-        <a href="contacts.html">Контакты</a>
-      </nav>
+      <div class="footer-nav-grid">
+        <nav class="footer-column" aria-label="Услуги и врачи">
+          <b>Услуги и врачи</b>
+          <a href="services.html">Все услуги</a>
+          <a href="doctors.html">Врачи</a>
+          <a href="diagnostics.html">Диагностика</a>
+          <a href="prices.html">Цены</a>
+          <a href="droppers.html">Капельницы</a>
+        </nav>
 
-      <nav class="footer-column" aria-label="Популярные направления">
-        <b>Направления</b>
-        <a href="gynecology.html">Гинекология</a>
-        <a href="diagnostics.html">Диагностика</a>
-        <a href="children.html">Детям</a>
-        <a href="checkups.html">Чекапы</a>
-        <a href="cosmetology.html">Косметология</a>
-        <a href="organizations.html">Организациям</a>
-      </nav>
+        <nav class="footer-column" aria-label="Пациентам">
+          <b>Пациентам</b>
+          <a href="appointment.html">Записаться на прием</a>
+          <a href="children.html">Детское отделение</a>
+          <a href="checkups.html">Чекапы</a>
+          <a href="cosmetology.html">Косметология</a>
+          <a href="documents.html">Документы и лицензии</a>
+        </nav>
 
-      <div class="footer-column footer-branches">
-        <b>Филиалы</b>
-        <a href="contacts.html#gavrilova"><span>ул. Гаврилова, 4</span><small>ост. «Филармония»</small></a>
-        <a href="contacts.html#lermontova"><span>ул. Лермонтова, 69</span><small>ост. «Лермонтова»</small></a>
+        <nav class="footer-column" aria-label="О медицинском центре">
+          <b>О клинике</b>
+          <a href="about.html">О медицинском центре</a>
+          <a href="contacts.html">Контакты</a>
+          <a href="organizations.html">Организациям</a>
+          <a href="gynecology.html">Гинекология</a>
+          <a href="mailto:doktor.dobry2016@yandex.ru">Написать в клинику</a>
+        </nav>
+
+        <div class="footer-column footer-branches">
+          <b>Филиалы</b>
+          <a href="contacts.html#gavrilova">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <span><strong>ул. Гаврилова, 4</strong><small>ост. «Филармония»</small></span>
+          </a>
+          <a href="contacts.html#lermontova">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <span><strong>ул. Лермонтова, 69</strong><small>ост. «Лермонтова»</small></span>
+          </a>
+          <p>Прием ведется по предварительной записи.</p>
+        </div>
       </div>
 
-      <div class="footer-column footer-actions">
-        <b>Пациентам</b>
-        <a href="appointment.html">Записаться онлайн</a>
-        <a href="documents.html">Документы и лицензии</a>
-        <a href="mailto:doktor.dobry2016@yandex.ru">doktor.dobry2016@yandex.ru</a>
+      <div class="footer-meta">
+        <div class="footer-meta-license">
+          <span>Лицензия ЛО-38-01-003181 от 20.12.2016</span>
+          <span>© 2026 Медицинский центр «Добрый Доктор»</span>
+        </div>
+        <div class="footer-meta-links">
+          <a href="documents.html">Правовая информация и документы</a>
+          <a href="contacts.html">Адреса и режим работы</a>
+        </div>
+        <div class="footer-meta-contact">
+          <span>Связаться с клиникой</span>
+          <a href="mailto:doktor.dobry2016@yandex.ru">doktor.dobry2016@yandex.ru</a>
+        </div>
       </div>
     </div>
 
-    <div class="shell footer-bottom">
-      <span>Лицензия ЛО-38-01-003181 от 20.12.2016</span>
-      <span>Имеются противопоказания. Необходима консультация специалиста.</span>
-    </div>
+    <div class="footer-disclaimer">Имеются противопоказания. Необходима консультация специалиста</div>
   </footer>
 
   <script>
@@ -310,7 +445,10 @@
 
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-          entry.target.classList.toggle('is-visible', entry.isIntersecting);
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
         });
       }, {
         threshold: 0.16,
@@ -320,6 +458,6 @@
       revealItems.forEach((item) => observer.observe(item));
     })();
   </script>
-  <script src="site.js?v=mobile28"></script>
+  <script src="site.js?v=mobile29"></script>
 </body>
 </html>

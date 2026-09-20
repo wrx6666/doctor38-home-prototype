@@ -1,43 +1,67 @@
 **Source Visual Truth**
-- Source: `C:/Users/wrx666/.codex/generated_images/019fddf9-5229-73c0-8666-8de9ca173f89/ig_0ee4453fb9667253016a7646c3920481919bf3ee8f5dcddcde.png`
-- Source size: generated desktop homepage concept, approximately 1440px wide.
+- Current/problem state: `C:/Users/wrx666/AppData/Local/Temp/codex-clipboard-69efc247-796c-44a6-9f71-ca40ae0315e6.png` (`1900 x 950`).
+- Selected layout reference: `C:/Users/wrx666/AppData/Local/Temp/codex-clipboard-907d094c-48e0-4912-b371-425e32e4e07a.png` (`1280 x 403`).
+- Target: remove the left editorial column and enclosed panel; keep one centered heading above five large, minimal treatment-story cards.
 
 **Implementation Evidence**
-- Implementation URL: `http://127.0.0.1:8088/`
-- Desktop screenshot: `C:/Users/wrx666/Desktop/Новая папка/doctor38-home-prototype/implementation-desktop-1440.png`
-- Mobile screenshot: `C:/Users/wrx666/Desktop/Новая папка/doctor38-home-prototype/implementation-mobile.png`
-- Side-by-side comparison: `C:/Users/wrx666/Desktop/Новая папка/doctor38-home-prototype/comparison-desktop.png`
-- Viewport: desktop `1440 x 1024`, mobile `390 x 844`.
-- State: homepage default, no hover state.
+- URL: `http://127.0.0.1:8088/index.html`.
+- Implementation screenshot: current-run in-app browser capture emitted during QA; the browser API did not expose a persistent local screenshot path.
+- Desktop viewport: `1900 x 950`, DPR 1, homepage at scroll position 0.
+- Mobile viewport: `390 x 844`, DPR 1, homepage at scroll position 0.
+- Browser-annotation viewport: `585 x 698`, DPR 1, matching the user's marked screenshot.
+- Interaction state: viewer closed for layout comparison and opened once for functional verification.
 
-**Checks**
-- Fonts and typography: implemented with Playfair Display for the distinctive editorial hero and Manrope for UI/body text. Hierarchy matches the selected direction: large serif H1, compact green eyebrow, readable 15-18px body copy.
-- Spacing and layout rhythm: desktop uses the same broad arrangement as the selected concept: header, left proof rail, hero copy, right clinic interior image, branch strip, and task navigation visible below. Mobile reflows without horizontal overflow.
-- Colors and visual tokens: preserved brand green/blue cues while reducing noise; used white, pale blue-gray, ink text, and restrained green actions.
-- Image quality and asset fidelity: generated a dedicated clinic reception hero asset to match the selected concept and reused real site images for service/task content. No broken images detected.
-- Copy and content: uses the site's core facts and services: since 2001, 20+ doctors, 10,000+ visits, 2 branches, adult/children/organization care, UZI, cosmetology, checkups, contact phone, addresses, and contraindication note.
-- Interaction/accessibility sanity: 27 focusable controls detected, primary links/buttons are real anchors or form controls, focus styling exists for inputs/selects, reduced-motion media query is present.
-- Console: browser log retained stale errors from the original `doctor38.ru` page, but there were `0` local errors matching `127.0.0.1:8088`.
+**Full-view Comparison Evidence**
+- The original implementation, selected reference and final implementation were emitted together in one comparison input.
+- The final section follows the reference hierarchy: one centered title, five equal portrait cards, play control at the upper left, and title anchored at the bottom.
+- Clinic imagery, typeface and brand colors were retained rather than copying the reference clinic's assets.
+
+**Focused Region Comparison Evidence**
+- The reference section and the rendered story area were compared at a `1280px` browser width.
+- Final desktop row width: `1120px`; each card is approximately `212.4 x 276px`; section height is `383.4px` at the `1900px` validation viewport.
+- Mobile cards are `100 x 160px`; three stages are readable and the fourth card remains partially visible as a horizontal-scroll cue.
+- At `585px` width the caption fill is `44px` high, or `28%` of the `160px` card height.
+
+**Required Fidelity Surfaces**
+- Fonts and typography: existing Onest font retained; centered `30px` desktop heading mirrors the simple reference hierarchy. Card titles use `16px` bold text without category labels or step numbers.
+- Spacing and layout rhythm: the former two-column layout, descriptive text and rounded containing panel were removed. The five-card row is centered and evenly spaced.
+- Colors and visual tokens: the neutral pale background and clinic green/dark-teal controls remain consistent with the site.
+- Image quality and asset fidelity: all five existing clinic photographs are reused with their established focal positions and no placeholder content.
+- Copy and content: only the requested heading remains outside the cards. Full, patient-readable stage names are visible on the cards and preserved in the viewer.
+
+**Interaction and Accessibility Checks**
+- Five semantic story buttons remain available with descriptive accessible names.
+- The story viewer opens successfully and closes with Escape.
+- Mobile horizontal scrolling remains functional.
+- No page-level horizontal overflow was detected.
+- Browser console: no errors or warnings after the final reload.
 
 **Findings**
-- No P0/P1/P2 blockers remain.
+- No actionable P0, P1 or P2 findings remain.
 
-**Intentional Differences**
-- The prototype is a static HTML/CSS concept, not a full Bitrix integration.
-- The generated source mock included a tiny floating reassurance card; the prototype removes it to keep the homepage calmer and avoid recreating the old floating-element clutter.
-- The clinic interior hero asset is generated because the current site did not expose a matching real interior/reception photo.
+**Comparison History**
+- Initial P1: the left text column and rounded inner panel conflicted with the selected reference's simple title-over-gallery structure.
+  Fix: removed the eyebrow and description, flattened the section and centered the heading above the stories.
+  Post-fix evidence: final desktop capture shows a single clear visual hierarchy with no side copy.
+- Initial P2: compact cards and inset caption boxes made the block feel like a toolbar rather than a visual treatment journey.
+  Fix: expanded the row to `1120px`, increased cards to approximately `212 x 276px`, removed category labels/numbers and converted captions to simple full-width overlays.
+  Post-fix evidence: the final row matches the reference's larger, calmer card rhythm.
+- Initial P2 mobile: three exact-width cards did not clearly imply additional off-screen stories.
+  Fix: reduced mobile cards from `104px` to `100px`, leaving a visible portion of the fourth card.
+  Post-fix evidence: final `390 x 844` capture shows the horizontal continuation cue.
+- Annotation P2: the dark caption treatment covered too much of each image at `585px` width.
+  Fix: removed the additional card-wide dark overlay, reduced mobile caption height from `64px` to `44px`, and lowered the caption opacity.
+  Post-fix evidence: final `585 x 698` capture shows `72%` of each image without caption fill while all titles remain readable.
 
 **Implementation Checklist**
-- HTML/CSS files created.
-- Local image assets added.
-- Desktop and mobile screenshots captured.
-- Horizontal overflow checked and fixed.
-- Broken images checked.
-- Primary CTA and navigation links wired to existing customer URLs where appropriate.
+- Left eyebrow and description removed.
+- Exactly one centered heading retained.
+- Five story cards verified.
+- Desktop and mobile layouts visually checked.
+- Viewer interaction and console checked.
+- CSS brace balance and diff whitespace checks passed.
 
 **Follow-up Polish**
-- Replace the generated reception image with a real clinic interior photo if the customer can provide one.
-- Add production form validation and backend submission during CMS integration.
-- Add doctor cards or prices only after confirming the customer's actual priority services.
+- P3: watched/unwatched indicators can be added later when the stories are backed by real video content.
 
 final result: passed
