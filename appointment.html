@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="styles.css?v=footer31">
+  <link rel="stylesheet" href="styles.css?v=layout40">
 </head>
 <body>
   <header class="site-header">
@@ -52,6 +52,7 @@
         </div>
         <a href="prices.html">Цены</a>
         <a href="about.html">О клинике</a>
+        <a href="diseases.html">Заболевания</a>
         <a href="documents.html">Документы</a>
       </nav>
 
@@ -148,13 +149,24 @@
                 <span>Специалист</span>
                 <select name="doctor">
                   <option>Подобрать администраторам</option>
-                  <option>Сухарева Дарья Олеговна</option>
-                  <option>Степанова Елена Владимировна</option>
-                  <option>Юрьева Татьяна Юрьевна</option>
-                  <option>Власова Александра Валерьевна</option>
-                  <option>Федаш Мария Михайловна</option>
+                  <option>Глазкова Яна Алексеевна</option>
+                  <option>Мясникова Александра Валерьевна</option>
                   <option>Мясников Владимир Геннадьевич</option>
-                  <option>Федюкова Маргарита Вячеславовна</option>
+                  <option>Нилова Инна Аркадьевна</option>
+                  <option>Петрунько Ирина Леонидовна</option>
+                  <option>Рудых Наталья Михайловна</option>
+                  <option>Старшинова Елена Олеговна</option>
+                  <option>Степанова Елена Владимировна</option>
+                  <option>Сухарева Дарья Олеговна</option>
+                  <option>Федаш Мария Михайловна</option>
+                  <option>Чаюк Виктория Сергеевна</option>
+                  <option>Юрьева Татьяна Юрьевна</option>
+                  <option>Асхаева Татьяна Леонидовна</option>
+                  <option>Ботова Яна Сергеевна</option>
+                  <option>Выгода Сима Яковлевна</option>
+                  <option>Новохатько Ольга Ивановна</option>
+                  <option>Пиксаева Ирина Викторовна</option>
+                  <option>Тигунцева Ольга Игоревна</option>
                 </select>
               </label>
             </div>
@@ -248,6 +260,7 @@
           <a href="children.html">Детское отделение</a>
           <a href="checkups.html">Чекапы</a>
           <a href="cosmetology.html">Косметология</a>
+          <a href="diseases.html">Заболевания</a>
           <a href="documents.html">Документы и лицензии</a>
         </nav>
 
@@ -312,6 +325,20 @@
     };
 
     const bookingParams = new URLSearchParams(window.location.search);
+    const requestedBranch = bookingParams.get('branch');
+    if (requestedBranch) {
+      const branchValue = requestedBranch === 'lermontova' ? 'Лермонтова, 69' : 'Гаврилова, 4';
+      const branchInput = bookingForm.querySelector(`input[name="branch"][value="${branchValue}"]`);
+      if (branchInput) branchInput.checked = true;
+    }
+
+    const requestedDoctor = bookingParams.get('doctor');
+    if (requestedDoctor) {
+      const doctorSelect = bookingForm.querySelector('select[name="doctor"]');
+      const hasDoctor = [...doctorSelect.options].some((option) => option.value === requestedDoctor);
+      if (hasDoctor) doctorSelect.value = requestedDoctor;
+    }
+
     if (bookingParams.get('service') === 'droppers') {
       const droppersOption = bookingForm.querySelector('input[name="service"][value="Капельницы"]');
       if (droppersOption) droppersOption.checked = true;
@@ -340,6 +367,6 @@
       document.querySelector('#bookingSuccess').hidden = false;
     });
   </script>
-  <script src="site.js?v=mobile28"></script>
+  <script src="site.js?v=a11y6"></script>
 </body>
 </html>

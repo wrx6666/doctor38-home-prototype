@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <script>document.documentElement.classList.add('has-scroll-reveal');</script>
-  <link rel="stylesheet" href="styles.css?v=footer31">
+  <link rel="stylesheet" href="styles.css?v=layout40">
 </head>
 <body>
   <header class="site-header">
@@ -53,6 +53,7 @@
         </div>
         <a href="prices.html">Цены</a>
         <a href="about.html">О клинике</a>
+        <a href="diseases.html">Заболевания</a>
         <a href="documents.html">Документы</a>
       </nav>
 
@@ -206,6 +207,7 @@
           <a href="children.html">Детское отделение</a>
           <a href="checkups.html">Чекапы</a>
           <a href="cosmetology.html">Косметология</a>
+          <a href="diseases.html">Заболевания</a>
           <a href="documents.html">Документы и лицензии</a>
         </nav>
 
@@ -256,6 +258,7 @@
       sukhareva: {
         name: 'Сухарева Дарья Олеговна',
         specialty: 'Гинеколог',
+        branches: 'Лермонтова, 69 / Гаврилова, 4 по четвергам',
         photo: 'assets/doctor-sukhareva.jpg',
         lead: 'Прием гинеколога, профилактические осмотры, консультации по вопросам женского здоровья.',
         about: 'Консультирует по вопросам женского здоровья, проводит профилактические приемы и помогает выстроить понятный маршрут обследования.',
@@ -265,7 +268,8 @@
       },
       stepanova: {
         name: 'Степанова Елена Владимировна',
-        specialty: 'Гинеколог, гинеколог-эндокринолог',
+        specialty: 'Гинеколог-эндокринолог',
+        branches: 'Гаврилова, 4',
         photo: '',
         lead: 'Консультации гинеколога и гинеколога-эндокринолога, наблюдение и подбор дальнейшей тактики обследования.',
         about: 'Помогает пациенткам с вопросами женского здоровья и эндокринологических нарушений, объясняет маршрут обследования простым языком.',
@@ -276,6 +280,7 @@
       yuryeva: {
         name: 'Юрьева Татьяна Юрьевна',
         specialty: 'Гинеколог',
+        branches: 'Гаврилова, 4',
         photo: 'assets/doctor-yuryeva.jpg',
         lead: 'Прием гинеколога, профилактические осмотры, консультации и сопровождение женского здоровья.',
         about: 'Ведет прием по вопросам женского здоровья, профилактики, наблюдения и подбора дальнейших обследований.',
@@ -283,10 +288,11 @@
         services: ['Профилактический прием', 'Консультация при жалобах', 'Разбор обследований', 'План дальнейших действий'],
         price: 'прием от 1 800 ₽'
       },
-      vlasova: {
-        name: 'Власова Александра Валерьевна',
-        specialty: 'Врач-косметолог, дерматолог',
-        photo: 'assets/doctor-vlasova.jpg',
+      myasnikova: {
+        name: 'Мясникова Александра Валерьевна',
+        specialty: 'Косметолог, дерматовенеролог, дерматолог',
+        branches: 'Гаврилова, 4',
+        photo: 'assets/doctor-myasnikova.jpg',
         lead: 'Консультации по состоянию кожи, косметологические процедуры и подбор индивидуального ухода.',
         about: 'Помогает оценить состояние кожи, подобрать уходовые, аппаратные и инъекционные процедуры с учетом задачи пациента.',
         tags: ['Косметология', 'Дерматология', 'Уход кожи'],
@@ -295,35 +301,29 @@
       },
       fedash: {
         name: 'Федаш Мария Михайловна',
-        specialty: 'Педиатр, неонатолог',
+        specialty: 'Педиатр',
+        branches: 'Гаврилова, 4',
         photo: '',
-        lead: 'Прием детей, наблюдение новорожденных, консультации родителей и помощь при частых детских жалобах.',
-        about: 'Принимает детей и новорожденных, помогает родителям понять состояние ребенка и дальнейшие шаги наблюдения.',
-        tags: ['Педиатрия', 'Неонатология', 'Детский прием'],
-        services: ['Прием педиатра', 'Консультация неонатолога', 'Плановый осмотр', 'Справки и наблюдение'],
+        lead: 'Прием детей, профилактические осмотры и консультации родителей по вопросам здоровья ребенка.',
+        about: 'Принимает детей и помогает родителям понять состояние ребенка и дальнейшие шаги наблюдения.',
+        tags: ['Педиатрия', 'Детский прием', 'Профилактика'],
+        services: ['Прием педиатра', 'Плановый осмотр', 'Консультация родителей', 'Справки и наблюдение'],
         price: 'прием от 1 700 ₽'
       },
       myasnikov: {
         name: 'Мясников Владимир Геннадьевич',
         specialty: 'Врач УЗИ, детский врач УЗИ',
+        branches: 'Гаврилова, 4',
         photo: 'assets/doctor-myasnikov.jpg',
         lead: 'Ультразвуковая диагностика для взрослых и детей, плановые обследования и подготовка заключений.',
         about: 'Проводит ультразвуковые исследования для взрослых и детей, помогает быстро получить диагностическое заключение.',
         tags: ['УЗИ', 'Детское УЗИ', 'Диагностика'],
         services: ['УЗИ взрослым', 'Детское УЗИ', 'Плановые исследования', 'Диагностика по назначению врача'],
         price: 'УЗИ от 1 300 ₽'
-      },
-      fedyukova: {
-        name: 'Федюкова Маргарита Вячеславовна',
-        specialty: 'Невролог',
-        photo: 'assets/doctor-fedyukova.jpg',
-        lead: 'Прием взрослого невролога при боли, онемении, головокружении, нарушениях сна и других жалобах.',
-        about: 'Консультирует взрослых пациентов по неврологическим жалобам и помогает определить дальнейший план обследования или наблюдения.',
-        tags: ['Неврология', 'Взрослый прием', 'Консультации'],
-        services: ['Головные боли и головокружение', 'Боль в спине и шее', 'Онемение и слабость', 'Нарушения сна'],
-        price: 'прием от 1 900 ₽'
       }
     };
+
+    doctors.vlasova = doctors.myasnikova;
 
     const params = new URLSearchParams(window.location.search);
     const current = doctors[params.get('doctor')] || doctors.sukhareva;
@@ -336,6 +336,7 @@
     document.querySelector('meta[name="description"]').setAttribute('content', `${current.name}: ${current.specialty}. Запись на прием в медицинском центре Добрый Доктор в Иркутске.`);
     setText('[data-doctor-name]', current.name);
     setText('[data-doctor-specialty]', current.specialty);
+    setText('[data-doctor-branches]', current.branches);
     setText('[data-doctor-lead]', current.lead);
     setText('[data-doctor-about]', current.about);
     setText('[data-doctor-price]', current.price);
@@ -382,6 +383,6 @@
       revealItems.forEach((item) => observer.observe(item));
     })();
   </script>
-  <script src="site.js?v=mobile28"></script>
+  <script src="site.js?v=a11y6"></script>
 </body>
 </html>

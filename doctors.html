@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="styles.css?v=footer31">
+  <link rel="stylesheet" href="styles.css?v=layout40">
 </head>
 <body>
   <header class="site-header">
@@ -52,6 +52,7 @@
         </div>
         <a href="prices.html">Цены</a>
         <a href="about.html">О клинике</a>
+        <a href="diseases.html">Заболевания</a>
         <a href="documents.html">Документы</a>
       </nav>
 
@@ -80,8 +81,8 @@
 
         <div class="doctor-note">
           <i class="fa-solid fa-user-doctor"></i>
-          <b>20 врачей разных специальностей</b>
-          <span>Терапия, гинекология, педиатрия, УЗИ, косметология и другие направления.</span>
+          <b>18 специалистов в двух филиалах</b>
+          <span>Врачи и медицинские сестры на Гаврилова, 4 и Лермонтова, 69.</span>
         </div>
       </div>
     </section>
@@ -94,10 +95,16 @@
             <button class="active" type="button" data-filter-group="specialty" data-filter-value="all">Все</button>
             <button type="button" data-filter-group="specialty" data-filter-value="gynecology">Гинекология</button>
             <button type="button" data-filter-group="specialty" data-filter-value="therapy">Терапия</button>
+            <button type="button" data-filter-group="specialty" data-filter-value="cardiology">Кардиология</button>
+            <button type="button" data-filter-group="specialty" data-filter-value="gastroenterology">Гастроэнтерология</button>
             <button type="button" data-filter-group="specialty" data-filter-value="neurology">Неврология</button>
             <button type="button" data-filter-group="specialty" data-filter-value="pediatrics">Педиатрия</button>
+            <button type="button" data-filter-group="specialty" data-filter-value="dermatology">Дерматология</button>
             <button type="button" data-filter-group="specialty" data-filter-value="cosmetology">Косметология</button>
+            <button type="button" data-filter-group="specialty" data-filter-value="endocrinology">Эндокринология</button>
             <button type="button" data-filter-group="specialty" data-filter-value="diagnostics">Диагностика</button>
+            <button type="button" data-filter-group="specialty" data-filter-value="vascular">Сосудистая хирургия</button>
+            <button type="button" data-filter-group="specialty" data-filter-value="nursing">Медицинские сестры</button>
           </div>
           <div>
             <span>Филиал</span>
@@ -113,119 +120,115 @@
             <div class="doctor-info">
               <p class="eyebrow">Гинеколог</p>
               <h2>Сухарева Дарья Олеговна</h2>
-              <p>Прием гинеколога, профилактические осмотры, консультации по вопросам женского здоровья.</p>
+              <p>Принимает на Лермонтова, 69, а по четвергам — на Гаврилова, 4.</p>
               <div class="doctor-meta">
-                <span><i class="fa-solid fa-location-dot"></i> Гаврилова, 4 / Лермонтова, 69</span>
+                <span><i class="fa-solid fa-location-dot"></i> Лермонтова, 69 / Гаврилова, 4 по четвергам</span>
                 <span><i class="fa-regular fa-clock"></i> по записи</span>
               </div>
               <div class="doctor-actions">
-                <a class="button button-primary" href="appointment.html">Записаться к врачу</a>
+                <a class="button button-primary" href="appointment.html?doctor=Сухарева%20Дарья%20Олеговна">Записаться к врачу</a>
                 <a class="button button-secondary" href="doctor.html?doctor=sukhareva">Подробнее</a>
               </div>
             </div>
           </article>
 
-          <article class="doctor-card" data-specialty="gynecology" data-branch="gavrilova lermontova">
-            <div class="doctor-photo"><i class="fa-regular fa-image"></i><span>Фото врача</span></div>
+          <article class="doctor-card" data-specialty="cosmetology dermatology" data-branch="gavrilova">
+            <img class="doctor-photo doctor-photo-myasnikova" src="assets/doctor-myasnikova.jpg" alt="Мясникова Александра Валерьевна">
             <div class="doctor-info">
-              <p class="eyebrow">Гинеколог, гинеколог-эндокринолог</p>
-              <h2>Степанова Елена Владимировна</h2>
-              <p>Консультации гинеколога и гинеколога-эндокринолога, наблюдение и подбор дальнейшей тактики обследования.</p>
+              <p class="eyebrow">Косметолог, дерматовенеролог, дерматолог</p>
+              <h2>Мясникова Александра Валерьевна</h2>
+              <p>Консультации по состоянию кожи, косметология и дерматология.</p>
               <div class="doctor-meta">
-                <span><i class="fa-solid fa-location-dot"></i> Гаврилова, 4 / Лермонтова, 69</span>
+                <span><i class="fa-solid fa-location-dot"></i> Гаврилова, 4</span>
                 <span><i class="fa-regular fa-clock"></i> по записи</span>
               </div>
               <div class="doctor-actions">
-                <a class="button button-primary" href="appointment.html">Записаться к врачу</a>
-                <a class="button button-secondary" href="doctor.html?doctor=stepanova">Подробнее</a>
+                <a class="button button-primary" href="appointment.html?doctor=Мясникова%20Александра%20Валерьевна">Записаться к врачу</a>
+                <a class="button button-secondary" href="doctor.html?doctor=myasnikova">Подробнее</a>
               </div>
             </div>
           </article>
 
-          <article class="doctor-card" data-specialty="gynecology" data-branch="gavrilova lermontova">
-            <img class="doctor-photo doctor-photo-yuryeva" src="assets/doctor-yuryeva.jpg" alt="Юрьева Татьяна Юрьевна">
-            <div class="doctor-info">
-              <p class="eyebrow">Гинеколог</p>
-              <h2>Юрьева Татьяна Юрьевна</h2>
-              <p>Прием гинеколога, профилактические осмотры, консультации и сопровождение женского здоровья.</p>
-              <div class="doctor-meta">
-                <span><i class="fa-solid fa-location-dot"></i> Гаврилова, 4 / Лермонтова, 69</span>
-                <span><i class="fa-regular fa-clock"></i> по записи</span>
-              </div>
-              <div class="doctor-actions">
-                <a class="button button-primary" href="appointment.html">Записаться к врачу</a>
-                <a class="button button-secondary" href="doctor.html?doctor=yuryeva">Подробнее</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="doctor-card" data-specialty="cosmetology" data-branch="gavrilova lermontova">
-            <img class="doctor-photo doctor-photo-vlasova" src="assets/doctor-vlasova.jpg" alt="Власова Александра Валерьевна">
-            <div class="doctor-info">
-              <p class="eyebrow">Врач-косметолог, дерматолог</p>
-              <h2>Власова Александра Валерьевна</h2>
-              <p>Консультации по состоянию кожи, косметологические процедуры и подбор индивидуального ухода.</p>
-              <div class="doctor-meta">
-                <span><i class="fa-solid fa-location-dot"></i> Гаврилова, 4 / Лермонтова, 69</span>
-                <span><i class="fa-regular fa-clock"></i> по записи</span>
-              </div>
-              <div class="doctor-actions">
-                <a class="button button-primary" href="appointment.html">Записаться к врачу</a>
-                <a class="button button-secondary" href="doctor.html?doctor=vlasova">Подробнее</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="doctor-card" data-specialty="pediatrics" data-branch="gavrilova lermontova">
-            <div class="doctor-photo"><i class="fa-regular fa-image"></i><span>Фото врача</span></div>
-            <div class="doctor-info">
-              <p class="eyebrow">Педиатр, неонатолог</p>
-              <h2>Федаш Мария Михайловна</h2>
-              <p>Прием детей, наблюдение новорожденных, консультации родителей и помощь при частых детских жалобах.</p>
-              <div class="doctor-meta">
-                <span><i class="fa-solid fa-location-dot"></i> Гаврилова, 4 / Лермонтова, 69</span>
-                <span><i class="fa-regular fa-clock"></i> по записи</span>
-              </div>
-              <div class="doctor-actions">
-                <a class="button button-primary" href="appointment.html">Записаться к врачу</a>
-                <a class="button button-secondary" href="doctor.html?doctor=fedash">Подробнее</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="doctor-card" data-specialty="diagnostics pediatrics" data-branch="gavrilova lermontova">
+          <article class="doctor-card" data-specialty="diagnostics pediatrics" data-branch="gavrilova">
             <img class="doctor-photo doctor-photo-myasnikov" src="assets/doctor-myasnikov.jpg" alt="Мясников Владимир Геннадьевич">
             <div class="doctor-info">
-              <p class="eyebrow">Врач УЗИ, детский врач УЗИ</p>
+              <p class="eyebrow">Врач ультразвуковой диагностики</p>
               <h2>Мясников Владимир Геннадьевич</h2>
-              <p>Ультразвуковая диагностика для взрослых и детей, плановые обследования и подготовка заключений.</p>
+              <p>Ультразвуковая диагностика для взрослых и детей.</p>
               <div class="doctor-meta">
-                <span><i class="fa-solid fa-location-dot"></i> Гаврилова, 4 / Лермонтова, 69</span>
+                <span><i class="fa-solid fa-location-dot"></i> Гаврилова, 4</span>
                 <span><i class="fa-regular fa-clock"></i> по записи</span>
               </div>
               <div class="doctor-actions">
-                <a class="button button-primary" href="appointment.html">Записаться к врачу</a>
+                <a class="button button-primary" href="appointment.html?doctor=Мясников%20Владимир%20Геннадьевич">Записаться к врачу</a>
                 <a class="button button-secondary" href="doctor.html?doctor=myasnikov">Подробнее</a>
               </div>
             </div>
           </article>
 
-          <article class="doctor-card" data-specialty="neurology" data-branch="gavrilova lermontova">
-            <img class="doctor-photo doctor-photo-fedyukova" src="assets/doctor-fedyukova.jpg" alt="Федюкова Маргарита Вячеславовна">
+          <article class="doctor-card" data-specialty="gynecology endocrinology" data-branch="gavrilova">
             <div class="doctor-info">
-              <p class="eyebrow">Невролог</p>
-              <h2>Федюкова Маргарита Вячеславовна</h2>
-              <p>Прием взрослого невролога: консультации при боли, онемении, головокружении, нарушениях сна и других жалобах.</p>
+              <p class="eyebrow">Гинеколог-эндокринолог</p>
+              <h2>Степанова Елена Владимировна</h2>
+              <p>Приём гинеколога-эндокринолога по предварительной записи.</p>
               <div class="doctor-meta">
-                <span><i class="fa-solid fa-location-dot"></i> Гаврилова, 4 / Лермонтова, 69</span>
+                <span><i class="fa-solid fa-location-dot"></i> Гаврилова, 4</span>
                 <span><i class="fa-regular fa-clock"></i> по записи</span>
               </div>
               <div class="doctor-actions">
-                <a class="button button-primary" href="appointment.html">Записаться к врачу</a>
-                <a class="button button-secondary" href="doctor.html?doctor=fedyukova">Подробнее</a>
+                <a class="button button-primary" href="appointment.html?doctor=Степанова%20Елена%20Владимировна">Записаться к врачу</a>
+                <a class="button button-secondary" href="doctor.html?doctor=stepanova">Подробнее</a>
               </div>
             </div>
           </article>
+
+          <article class="doctor-card" data-specialty="gynecology" data-branch="gavrilova">
+            <img class="doctor-photo doctor-photo-yuryeva" src="assets/doctor-yuryeva.jpg" alt="Юрьева Татьяна Юрьевна">
+            <div class="doctor-info">
+              <p class="eyebrow">Гинеколог</p>
+              <h2>Юрьева Татьяна Юрьевна</h2>
+              <p>Приём гинеколога по предварительной записи.</p>
+              <div class="doctor-meta">
+                <span><i class="fa-solid fa-location-dot"></i> Гаврилова, 4</span>
+                <span><i class="fa-regular fa-clock"></i> по записи</span>
+              </div>
+              <div class="doctor-actions">
+                <a class="button button-primary" href="appointment.html?doctor=Юрьева%20Татьяна%20Юрьевна">Записаться к врачу</a>
+                <a class="button button-secondary" href="doctor.html?doctor=yuryeva">Подробнее</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="doctor-card doctor-card-text" data-specialty="nursing cosmetology" data-branch="gavrilova">
+            <div class="doctor-info">
+              <p class="eyebrow">Медицинская сестра, косметология</p><h2>Глазкова Яна Алексеевна</h2>
+              <p>Процедуры по назначению врача и работа в косметологии.</p>
+              <div class="doctor-meta"><span><i class="fa-solid fa-location-dot"></i> Гаврилова, 4</span><span><i class="fa-regular fa-clock"></i> по записи</span></div>
+              <div class="doctor-actions"><a class="button button-primary" href="appointment.html?doctor=Глазкова%20Яна%20Алексеевна">Записаться</a></div>
+            </div>
+          </article>
+
+          <article class="doctor-card doctor-card-text" data-specialty="nursing" data-branch="gavrilova">
+            <div class="doctor-info">
+              <p class="eyebrow">Медицинская сестра</p><h2>Нилова Инна Аркадьевна</h2>
+              <p>Процедуры по назначению врача.</p>
+              <div class="doctor-meta"><span><i class="fa-solid fa-location-dot"></i> Гаврилова, 4</span><span><i class="fa-regular fa-clock"></i> по записи</span></div>
+              <div class="doctor-actions"><a class="button button-primary" href="appointment.html?doctor=Нилова%20Инна%20Аркадьевна">Записаться</a></div>
+            </div>
+          </article>
+
+          <article class="doctor-card doctor-card-text" data-specialty="gastroenterology" data-branch="gavrilova"><div class="doctor-info"><p class="eyebrow">Гастроэнтеролог, гепатолог</p><h2>Петрунько Ирина Леонидовна</h2><p>Приём гастроэнтеролога и гепатолога.</p><div class="doctor-meta"><span><i class="fa-solid fa-location-dot"></i> Гаврилова, 4</span><span><i class="fa-regular fa-clock"></i> по записи</span></div><div class="doctor-actions"><a class="button button-primary" href="appointment.html?doctor=Петрунько%20Ирина%20Леонидовна">Записаться</a></div></div></article>
+          <article class="doctor-card doctor-card-text" data-specialty="dermatology" data-branch="gavrilova"><div class="doctor-info"><p class="eyebrow">Дерматолог</p><h2>Рудых Наталья Михайловна</h2><p>Приём дерматолога по предварительной записи.</p><div class="doctor-meta"><span><i class="fa-solid fa-location-dot"></i> Гаврилова, 4</span><span><i class="fa-regular fa-clock"></i> по записи</span></div><div class="doctor-actions"><a class="button button-primary" href="appointment.html?doctor=Рудых%20Наталья%20Михайловна">Записаться</a></div></div></article>
+          <article class="doctor-card doctor-card-text" data-specialty="neurology pediatrics" data-branch="gavrilova"><div class="doctor-info"><p class="eyebrow">Невролог, детский невролог</p><h2>Старшинова Елена Олеговна</h2><p>Приём взрослых и детей по профилю неврологии.</p><div class="doctor-meta"><span><i class="fa-solid fa-location-dot"></i> Гаврилова, 4</span><span><i class="fa-regular fa-clock"></i> по записи</span></div><div class="doctor-actions"><a class="button button-primary" href="appointment.html?doctor=Старшинова%20Елена%20Олеговна">Записаться</a></div></div></article>
+          <article class="doctor-card doctor-card-text" data-specialty="pediatrics" data-branch="gavrilova"><div class="doctor-info"><p class="eyebrow">Педиатр</p><h2>Федаш Мария Михайловна</h2><p>Приём педиатра по предварительной записи.</p><div class="doctor-meta"><span><i class="fa-solid fa-location-dot"></i> Гаврилова, 4</span><span><i class="fa-regular fa-clock"></i> по записи</span></div><div class="doctor-actions"><a class="button button-primary" href="appointment.html?doctor=Федаш%20Мария%20Михайловна">Записаться</a><a class="button button-secondary" href="doctor.html?doctor=fedash">Подробнее</a></div></div></article>
+          <article class="doctor-card doctor-card-text" data-specialty="nursing" data-branch="gavrilova"><div class="doctor-info"><p class="eyebrow">Медицинская сестра</p><h2>Чаюк Виктория Сергеевна</h2><p>Процедуры по назначению врача.</p><div class="doctor-meta"><span><i class="fa-solid fa-location-dot"></i> Гаврилова, 4</span><span><i class="fa-regular fa-clock"></i> по записи</span></div><div class="doctor-actions"><a class="button button-primary" href="appointment.html?doctor=Чаюк%20Виктория%20Сергеевна">Записаться</a></div></div></article>
+
+          <article class="doctor-card doctor-card-text" data-specialty="dermatology" data-branch="lermontova"><div class="doctor-info"><p class="eyebrow">Дерматолог</p><h2>Асхаева Татьяна Леонидовна</h2><p>Приём дерматолога по предварительной записи.</p><div class="doctor-meta"><span><i class="fa-solid fa-location-dot"></i> Лермонтова, 69</span><span><i class="fa-regular fa-clock"></i> по записи</span></div><div class="doctor-actions"><a class="button button-primary" href="appointment.html?branch=lermontova&amp;doctor=Асхаева%20Татьяна%20Леонидовна">Записаться</a></div></div></article>
+          <article class="doctor-card doctor-card-text" data-specialty="nursing" data-branch="lermontova"><div class="doctor-info"><p class="eyebrow">Медицинская сестра</p><h2>Ботова Яна Сергеевна</h2><p>Процедуры по назначению врача.</p><div class="doctor-meta"><span><i class="fa-solid fa-location-dot"></i> Лермонтова, 69</span><span><i class="fa-regular fa-clock"></i> по записи</span></div><div class="doctor-actions"><a class="button button-primary" href="appointment.html?branch=lermontova&amp;doctor=Ботова%20Яна%20Сергеевна">Записаться</a></div></div></article>
+          <article class="doctor-card doctor-card-text" data-specialty="endocrinology" data-branch="lermontova"><div class="doctor-info"><p class="eyebrow">Эндокринолог</p><h2>Выгода Сима Яковлевна</h2><p>Приём эндокринолога по предварительной записи.</p><div class="doctor-meta"><span><i class="fa-solid fa-location-dot"></i> Лермонтова, 69</span><span><i class="fa-regular fa-clock"></i> по записи</span></div><div class="doctor-actions"><a class="button button-primary" href="appointment.html?branch=lermontova&amp;doctor=Выгода%20Сима%20Яковлевна">Записаться</a></div></div></article>
+          <article class="doctor-card doctor-card-text" data-specialty="vascular" data-branch="lermontova"><div class="doctor-info"><p class="eyebrow">Сосудистый хирург</p><h2>Новохатько Ольга Ивановна</h2><p>Приём сосудистого хирурга по предварительной записи.</p><div class="doctor-meta"><span><i class="fa-solid fa-location-dot"></i> Лермонтова, 69</span><span><i class="fa-regular fa-clock"></i> по записи</span></div><div class="doctor-actions"><a class="button button-primary" href="appointment.html?branch=lermontova&amp;doctor=Новохатько%20Ольга%20Ивановна">Записаться</a></div></div></article>
+          <article class="doctor-card doctor-card-text" data-specialty="diagnostics" data-branch="lermontova"><div class="doctor-info"><p class="eyebrow">Врач ультразвуковой диагностики</p><h2>Пиксаева Ирина Викторовна</h2><p>Ультразвуковая диагностика по предварительной записи.</p><div class="doctor-meta"><span><i class="fa-solid fa-location-dot"></i> Лермонтова, 69</span><span><i class="fa-regular fa-clock"></i> по записи</span></div><div class="doctor-actions"><a class="button button-primary" href="appointment.html?branch=lermontova&amp;doctor=Пиксаева%20Ирина%20Викторовна">Записаться</a></div></div></article>
+          <article class="doctor-card doctor-card-text" data-specialty="cardiology therapy" data-branch="lermontova"><div class="doctor-info"><p class="eyebrow">Кардиолог, терапевт</p><h2>Тигунцева Ольга Игоревна</h2><p>Приём кардиолога и терапевта.</p><div class="doctor-meta"><span><i class="fa-solid fa-location-dot"></i> Лермонтова, 69</span><span><i class="fa-regular fa-clock"></i> по записи</span></div><div class="doctor-actions"><a class="button button-primary" href="appointment.html?branch=lermontova&amp;doctor=Тигунцева%20Ольга%20Игоревна">Записаться</a></div></div></article>
 
           <p class="doctor-empty" hidden>По выбранным фильтрам пока нет врача. Попробуйте другое направление или филиал.</p>
         </div>
@@ -282,6 +285,7 @@
           <a href="children.html">Детское отделение</a>
           <a href="checkups.html">Чекапы</a>
           <a href="cosmetology.html">Косметология</a>
+          <a href="diseases.html">Заболевания</a>
           <a href="documents.html">Документы и лицензии</a>
         </nav>
 
@@ -389,6 +393,6 @@
     setActiveFilter('branch', initialParams.get('branch') || 'all');
     applyDoctorFilters();
   </script>
-  <script src="site.js?v=mobile28"></script>
+  <script src="site.js?v=a11y6"></script>
 </body>
 </html>

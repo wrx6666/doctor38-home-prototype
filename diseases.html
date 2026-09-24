@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Контакты и филиалы - Добрый Доктор</title>
-  <meta name="description" content="Контакты медицинского центра Добрый Доктор в Иркутске: адреса филиалов, телефон, email и как добраться.">
+  <title>Заболевания - Добрый Доктор</title>
+  <meta name="description" content="Справочник заболеваний медицинского центра Добрый Доктор в Иркутске.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -44,7 +44,7 @@
           </div>
         </div>
         <div class="nav-item">
-          <a class="is-active" href="contacts.html">Контакты</a>
+          <a href="contacts.html">Контакты</a>
           <div class="nav-dropdown nav-dropdown-contacts">
             <a href="contacts.html#gavrilova"><b>ул. Гаврилова, 4</b><span>ост. «Филармония»</span></a>
             <a href="contacts.html#lermontova"><b>ул. Лермонтова, 69</b><span>ост. «Лермонтова»</span></a>
@@ -52,7 +52,7 @@
         </div>
         <a href="prices.html">Цены</a>
         <a href="about.html">О клинике</a>
-        <a href="diseases.html">Заболевания</a>
+        <a class="is-active" href="diseases.html">Заболевания</a>
         <a href="documents.html">Документы</a>
       </nav>
 
@@ -70,98 +70,55 @@
   </header>
 
   <main>
-    <section class="contacts-hero">
-      <div class="shell contacts-hero-grid">
+    <section class="diseases-hero">
+      <div class="shell diseases-hero-grid">
         <div>
           <a class="back-link" href="index.html"><i class="fa-solid fa-arrow-left"></i> На главную</a>
-          <p class="eyebrow">Контакты</p>
-          <h1>Выберите филиал, который удобнее по дороге</h1>
-          <p class="hero-lead">Два филиала «Доброго Доктора» работают в разных частях Иркутска. Для записи можно позвонить, оставить онлайн-заявку или уточнить у администратора, где доступен нужный специалист.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="contacts-page">
-      <div class="shell contacts-page-grid">
-        <div class="contact-branch-list">
-          <article class="contact-branch-card" id="gavrilova">
-            <img class="contact-branch-photo" src="assets/branch-gavrilova.png" alt="Вход в филиал Добрый Доктор на улице Гаврилова, 4">
-            <div class="contact-branch-body">
-              <p class="eyebrow">Филиал</p>
-              <h2>ул. Гаврилова, 4</h2>
-              <p>Ориентир: остановка «Филармония». Подходит, если удобнее центр города и ближайшие районы.</p>
-              <div class="contact-tags">
-                <span><i class="fa-regular fa-clock"></i> по записи</span>
-                <span><i class="fa-solid fa-location-dot"></i> Иркутск</span>
-              </div>
-              <div class="contact-actions">
-                <a class="button button-primary" href="tel:+73952232303">Позвонить</a>
-                <a class="button button-secondary" href="appointment.html">Записаться</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="contact-branch-card" id="lermontova">
-            <img class="contact-branch-photo" src="assets/branch-lermontova.png" alt="Вход в филиал Добрый Доктор на улице Лермонтова, 69">
-            <div class="contact-branch-body">
-              <p class="eyebrow">Филиал</p>
-              <h2>ул. Лермонтова, 69</h2>
-              <p>Ориентир: остановка «Лермонтова». Удобный филиал для жителей левого берега и поездок по делам рядом.</p>
-              <div class="contact-tags">
-                <span><i class="fa-regular fa-clock"></i> по записи</span>
-                <span><i class="fa-solid fa-location-dot"></i> Иркутск</span>
-              </div>
-              <div class="contact-actions">
-                <a class="button button-primary" href="tel:+73952232303">Позвонить</a>
-                <a class="button button-secondary" href="appointment.html">Записаться</a>
-              </div>
-            </div>
-          </article>
+          <p class="eyebrow">Справочник для пациентов</p>
+          <h1>Заболевания</h1>
+          <p class="hero-lead">Здесь будет собрана понятная и проверенная врачами информация о заболеваниях, симптомах, диагностике и маршруте обращения за помощью.</p>
         </div>
 
-        <aside class="contact-map-panel" aria-label="Карта и быстрые действия">
-          <div class="map-embed">
-            <iframe
-              src="https://yandex.ru/map-widget/v1/?mode=search&text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%94%D0%BE%D0%BA%D1%82%D0%BE%D1%80%20%D0%98%D1%80%D0%BA%D1%83%D1%82%D1%81%D0%BA%20%D0%93%D0%B0%D0%B2%D1%80%D0%B8%D0%BB%D0%BE%D0%B2%D0%B0%204%20%D0%9B%D0%B5%D1%80%D0%BC%D0%BE%D0%BD%D1%82%D0%BE%D0%B2%D0%B0%2069&z=12"
-              title="Добрый Доктор на карте Иркутска"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              allowfullscreen>
-            </iframe>
+        <aside class="diseases-status" aria-label="Статус раздела">
+          <div class="diseases-status-top">
+            <i class="fa-regular fa-pen-to-square" aria-hidden="true"></i>
+            <b>Раздел готовится</b>
           </div>
-          <div class="route-box">
-            <b>Как добраться</b>
-            <p>Выберите филиал в Яндекс Картах, чтобы построить маршрут от вашего текущего адреса.</p>
-            <div class="route-links">
-              <a href="https://yandex.ru/maps/?text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%94%D0%BE%D0%BA%D1%82%D0%BE%D1%80%20%D0%98%D1%80%D0%BA%D1%83%D1%82%D1%81%D0%BA%20%D0%93%D0%B0%D0%B2%D1%80%D0%B8%D0%BB%D0%BE%D0%B2%D0%B0%204" target="_blank" rel="noopener">
-                <span>ул. Гаврилова, 4</span>
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-              <a href="https://yandex.ru/maps/?text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%94%D0%BE%D0%BA%D1%82%D0%BE%D1%80%20%D0%98%D1%80%D0%BA%D1%83%D1%82%D1%81%D0%BA%20%D0%9B%D0%B5%D1%80%D0%BC%D0%BE%D0%BD%D1%82%D0%BE%D0%B2%D0%B0%2069" target="_blank" rel="noopener">
-                <span>ул. Лермонтова, 69</span>
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-          </div>
+          <span>Сейчас мы утверждаем структуру и требования к материалам. Статьи добавим после медицинской проверки.</span>
         </aside>
       </div>
     </section>
 
-    <section class="contact-note-section">
-      <div class="shell contact-note-grid">
-        <div>
-          <p class="eyebrow">Перед приемом</p>
-          <h2>Если не знаете, какой филиал выбрать, администратор подскажет</h2>
-        </div>
-        <div class="contact-note-list">
-          <span><i class="fa-solid fa-user-doctor"></i> уточнит, где принимает нужный специалист</span>
-          <span><i class="fa-solid fa-wave-square"></i> напомнит о подготовке к диагностике</span>
-          <span><i class="fa-regular fa-calendar-check"></i> предложит ближайшее свободное время</span>
+    <section class="disease-directory" aria-labelledby="disease-directory-title">
+      <div class="shell">
+        <div class="disease-directory-card">
+          <div class="disease-directory-head">
+            <div>
+              <h2 id="disease-directory-title">Справочник по алфавиту</h2>
+              <p>После утверждения наполнения здесь появятся поиск, алфавитная навигация и страницы заболеваний.</p>
+            </div>
+            <div class="disease-directory-mark" aria-hidden="true">А—Я</div>
+          </div>
+
+          <div class="disease-alphabet" aria-label="Алфавит будущего справочника">
+            <span>А</span><span>Б</span><span>В</span><span>Г</span><span>Д</span><span>Е</span><span>Ж</span><span>З</span><span>И</span><span>К</span><span>Л</span><span>М</span><span>Н</span><span>О</span><span>П</span><span>Р</span><span>С</span><span>Т</span><span>У</span><span>Ф</span><span>Х</span><span>Ц</span><span>Ч</span><span>Ш</span><span>Щ</span><span>Э</span><span>Ю</span><span>Я</span>
+          </div>
+
+          <div class="disease-empty">
+            <div class="disease-empty-icon"><i class="fa-solid fa-book-medical" aria-hidden="true"></i></div>
+            <div>
+              <h3>Материалы скоро появятся</h3>
+              <p>Пока справочник наполняется, подобрать специалиста и получить рекомендации по обследованию можно через запись в клинику.</p>
+            </div>
+            <div class="disease-empty-actions">
+              <a class="button button-primary" href="appointment.html">Записаться</a>
+              <a class="button button-secondary" href="doctors.html">Выбрать врача</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
-
 
   <footer class="site-footer" id="site-footer">
     <div class="shell">
