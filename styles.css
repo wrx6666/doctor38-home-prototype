@@ -7599,6 +7599,23 @@ html.a11y-panel-open .site-header {
   }
 }
 
+/* WebKit: avoid percentage-height images stretching across the whole mobile card. */
+@media (max-width: 620px) {
+  .doctor-grid .doctor-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .doctor-grid .doctor-card > img.doctor-photo {
+    width: 100%;
+    height: clamp(360px, 108vw, 430px);
+    min-height: 0;
+    flex: 0 0 auto;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+}
+
 @media (min-width: 1361px) and (max-width: 1540px) {
   .header-line {
     grid-template-columns: 205px minmax(0, 1fr) auto;
