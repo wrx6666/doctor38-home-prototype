@@ -1,0 +1,96 @@
+/* Doctor profile: keep mobile text independent from the portrait contrast */
+@media (max-width: 620px) {
+  .doctor-profile-hero {
+    padding: 16px 0 28px;
+    background: #f3f7f6;
+  }
+
+  .doctor-profile-grid {
+    width: calc(100% - 32px);
+    gap: 0;
+    overflow: hidden;
+    border: 1px solid rgba(7, 84, 93, .14);
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 18px 42px rgba(21, 35, 49, .1);
+  }
+
+  .doctor-profile-photo-wrap {
+    width: 100%;
+    min-height: 0;
+    aspect-ratio: 4 / 5;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .doctor-profile-photo {
+    width: 100%;
+    height: 100%;
+    object-position: center 18%;
+  }
+
+  .doctor-profile-copy {
+    position: relative;
+    z-index: 2;
+    margin-top: -64px;
+    padding: 86px 20px 22px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0,
+      rgba(255, 255, 255, .96) 62px,
+      #fff 104px
+    );
+  }
+
+  .doctor-profile-copy .back-link {
+    margin-bottom: 18px;
+  }
+
+  .doctor-profile-copy h1 {
+    margin-bottom: 14px;
+    color: var(--ink);
+    font-size: clamp(29px, 8vw, 36px);
+    line-height: 1.04;
+  }
+
+  .doctor-profile-copy .hero-lead {
+    color: #435765;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .doctor-profile-tags {
+    gap: 7px;
+    margin: 18px 0 20px;
+  }
+
+  .doctor-profile-tags span {
+    padding: 8px 10px;
+    background: #f3f8f6;
+    font-size: 12px;
+  }
+
+  .doctor-profile-copy .hero-actions {
+    gap: 10px;
+  }
+
+  .doctor-profile-copy .button {
+    width: 100%;
+  }
+
+  .doctor-profile-side {
+    gap: 0;
+    padding: 0 20px 20px;
+    background: #fff;
+  }
+
+  .doctor-profile-side div {
+    padding: 14px 0;
+    border: 0;
+    border-top: 1px solid var(--line);
+    border-radius: 0;
+    background: transparent;
+  }
+}
+

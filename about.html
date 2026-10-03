@@ -5,19 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>О клинике - Добрый Доктор</title>
   <meta name="description" content="О медицинском центре Добрый Доктор в Иркутске: направления, филиалы, документы и подход к пациентам.">
+  <link rel="icon" type="image/webp" href="assets/logo.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="styles.css?v=layout41">
+  <link rel="stylesheet" href="styles/pages/about.css?v=release3">
+  <link rel="stylesheet" href="styles/dist/core-responsive.css?v=release3">
+  <link rel="stylesheet" href="styles/pages/about-overrides.css?v=release3">
+  <link rel="stylesheet" href="styles/dist/core-accessibility.css?v=release3">
 </head>
 <body>
   <header class="site-header">
     <div class="shell header-line">
       <a class="brand" href="index.html" aria-label="Добрый Доктор">
-        <img src="assets/logo.webp" alt="Добрый Доктор">
+        <img src="assets/logo.webp" alt="Добрый Доктор" width="400" height="100" decoding="async" loading="eager">
       </a>
 
+      <button class="mobile-header-accessibility-toggle" type="button" aria-controls="accessibilityPanel" aria-label="Настройки версии для слабовидящих" aria-expanded="false" aria-pressed="false" title="Версия для слабовидящих">
+        <svg class="icon-svg" aria-hidden="true" focusable="false" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6-46.8 43.5-78.1 95.4-93 131.1-3.3 7.9-3.3 16.7 0 24.6 14.9 35.7 46.2 87.7 93 131.1 47.1 43.7 111.8 80.6 192.6 80.6s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1 3.3-7.9 3.3-16.7 0-24.6-14.9-35.7-46.2-87.7-93-131.1-47.1-43.7-111.8-80.6-192.6-80.6zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64-11.5 0-22.3-3-31.7-8.4-1 10.9-.1 22.1 2.9 33.2 13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-12.2-45.7-55.5-74.8-101.1-70.8 5.3 9.3 8.4 20.1 8.4 31.7z"></path></svg>
+      </button>
       <button class="mobile-nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span><span></span></button>
 
       <nav class="main-nav" aria-label="Основная навигация">
@@ -65,6 +71,9 @@
           </span>
         </a>
         <a class="button button-primary" href="appointment.html">Записаться онлайн</a>
+        <button class="accessibility-toggle" type="button" aria-controls="accessibilityPanel" aria-label="Включить версию для слабовидящих" aria-expanded="false" aria-pressed="false" title="Версия для слабовидящих">
+          <svg class="icon-svg" aria-hidden="true" focusable="false" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6-46.8 43.5-78.1 95.4-93 131.1-3.3 7.9-3.3 16.7 0 24.6 14.9 35.7 46.2 87.7 93 131.1 47.1 43.7 111.8 80.6 192.6 80.6s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1 3.3-7.9 3.3-16.7 0-24.6-14.9-35.7-46.2-87.7-93-131.1-47.1-43.7-111.8-80.6-192.6-80.6zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64-11.5 0-22.3-3-31.7-8.4-1 10.9-.1 22.1 2.9 33.2 13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-12.2-45.7-55.5-74.8-101.1-70.8 5.3 9.3 8.4 20.1 8.4 31.7z"></path></svg>
+        </button>
       </div>
     </div>
   </header>
@@ -80,7 +89,7 @@
         </div>
 
         <div class="about-hero-photo">
-          <img class="clinic-photo clinic-team-photo" src="assets/clinic-team-gavrilova.jpg" alt="Команда медицинского центра Добрый Доктор у входа в филиал">
+          <img class="clinic-photo clinic-team-photo" src="assets/clinic-team-gavrilova-960.webp" alt="Команда медицинского центра Добрый Доктор у входа в филиал" width="1280" height="853" decoding="async" srcset="assets/clinic-team-gavrilova-480.webp 480w, assets/clinic-team-gavrilova-960.webp 960w, assets/clinic-team-gavrilova-1280.webp 1280w" sizes="(max-width: 700px) 100vw, 50vw" loading="lazy">
         </div>
       </div>
     </section>
@@ -146,7 +155,7 @@
 
         <div class="branch-card-list">
           <article class="branch-card">
-            <img class="branch-large-photo" src="assets/branch-gavrilova.png" alt="Вход в филиал Добрый Доктор на улице Гаврилова, 4">
+            <img class="branch-large-photo" src="assets/branch-gavrilova-960.webp" alt="Вход в филиал Добрый Доктор на улице Гаврилова, 4" width="960" height="1280" decoding="async" srcset="assets/branch-gavrilova-360.webp 360w, assets/branch-gavrilova-720.webp 720w, assets/branch-gavrilova-960.webp 960w" sizes="(max-width: 700px) 100vw, 50vw" loading="lazy">
             <div>
               <b>г. Иркутск, ул. Гаврилова, 4</b>
               <span>Ориентир: остановка «Филармония»</span>
@@ -154,7 +163,7 @@
           </article>
 
           <article class="branch-card">
-            <img class="branch-large-photo" src="assets/branch-lermontova.png" alt="Вход в филиал Добрый Доктор на улице Лермонтова, 69">
+            <img class="branch-large-photo" src="assets/branch-lermontova-800.webp" alt="Вход в филиал Добрый Доктор на улице Лермонтова, 69" width="800" height="600" decoding="async" srcset="assets/branch-lermontova-480.webp 480w, assets/branch-lermontova-800.webp 800w" sizes="(max-width: 700px) 100vw, 50vw" loading="lazy">
             <div>
               <b>г. Иркутск, ул. Лермонтова, 69</b>
               <span>Ориентир: остановка «Лермонтова»</span>
@@ -175,7 +184,7 @@
         <div class="document-list">
           <a href="documents.html"><i class="fa-regular fa-file-lines"></i> Документы и сертификаты</a>
           <a href="documents.html#licenses"><i class="fa-solid fa-shield-heart"></i> Лицензия ЛО-38-01-003181 от 20.12.2016</a>
-          <a href="documents.html#patients"><i class="fa-regular fa-clipboard"></i> Правила записи и приема</a>
+          <a href="documents.html#internal-rules"><i class="fa-regular fa-clipboard"></i> Правила записи и приема</a>
         </div>
       </div>
     </section>
@@ -187,7 +196,7 @@
     <div class="shell">
       <div class="footer-contact-bar">
         <a class="footer-logo" href="index.html" aria-label="Добрый Доктор — на главную">
-          <img src="assets/logo.webp" alt="Добрый Доктор">
+          <img src="assets/logo.webp" alt="Добрый Доктор" width="400" height="100" decoding="async" loading="lazy">
           <span>Медицинский центр<br>в Иркутске</span>
         </a>
 
@@ -263,6 +272,9 @@
 
     <div class="footer-disclaimer">Имеются противопоказания. Необходима консультация специалиста</div>
   </footer>
-  <script src="site.js?v=a11y6"></script>
+  <script defer src="scripts/data/icon-definitions.js?v=release4"></script>
+  <script defer src="scripts/core/icons.js?v=release4"></script>
+  <script defer src="scripts/features/accessibility.js?v=release4"></script>
+  <script type="module" src="site.js?v=release4"></script>
 </body>
 </html>

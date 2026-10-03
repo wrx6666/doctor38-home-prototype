@@ -1,0 +1,20 @@
+:root {
+  --ink: #152331;
+  --text: #374a59;
+  --muted: #74818c;
+  --line: #dde8ed;
+  --wash: #f4f8fa;
+  --white: #ffffff;
+  --green: #0a8f4a;
+  --green-deep: #087037;
+  --brand-dark: #07545d;
+  --mint: #eaf7ef;
+  --cyan: #2fb5cf;
+  --blue: #2fb5cf;
+  --amber: #f1ad20;
+  --radius: 8px;
+  --shadow: 0 18px 44px rgba(21, 35, 49, .12);
+  --ease-out: cubic-bezier(.23, 1, .32, 1);
+  --ease-in-out: cubic-bezier(.77, 0, .175, 1);
+}
+

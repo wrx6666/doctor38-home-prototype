@@ -5,19 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Документы и лицензии - Добрый Доктор</title>
   <meta name="description" content="Документы, лицензии и правовая информация медицинского центра Добрый Доктор в Иркутске.">
+  <link rel="icon" type="image/webp" href="assets/logo.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="styles.css?v=layout41">
+  <link rel="stylesheet" href="styles/pages/documents.css?v=release3">
+  <link rel="stylesheet" href="styles/dist/core-responsive.css?v=release3">
+  <link rel="stylesheet" href="styles/pages/documents-overrides.css?v=release3">
+  <link rel="stylesheet" href="styles/dist/core-accessibility.css?v=release3">
 </head>
 <body>
   <header class="site-header">
     <div class="shell header-line">
       <a class="brand" href="index.html" aria-label="Добрый Доктор">
-        <img src="assets/logo.webp" alt="Добрый Доктор">
+        <img src="assets/logo.webp" alt="Добрый Доктор" width="400" height="100" decoding="async" loading="eager">
       </a>
 
+      <button class="mobile-header-accessibility-toggle" type="button" aria-controls="accessibilityPanel" aria-label="Настройки версии для слабовидящих" aria-expanded="false" aria-pressed="false" title="Версия для слабовидящих">
+        <svg class="icon-svg" aria-hidden="true" focusable="false" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6-46.8 43.5-78.1 95.4-93 131.1-3.3 7.9-3.3 16.7 0 24.6 14.9 35.7 46.2 87.7 93 131.1 47.1 43.7 111.8 80.6 192.6 80.6s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1 3.3-7.9 3.3-16.7 0-24.6-14.9-35.7-46.2-87.7-93-131.1-47.1-43.7-111.8-80.6-192.6-80.6zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64-11.5 0-22.3-3-31.7-8.4-1 10.9-.1 22.1 2.9 33.2 13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-12.2-45.7-55.5-74.8-101.1-70.8 5.3 9.3 8.4 20.1 8.4 31.7z"></path></svg>
+      </button>
       <button class="mobile-nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span><span></span></button>
 
       <nav class="main-nav" aria-label="Основная навигация">
@@ -65,6 +71,9 @@
           </span>
         </a>
         <a class="button button-primary" href="appointment.html">Записаться онлайн</a>
+        <button class="accessibility-toggle" type="button" aria-controls="accessibilityPanel" aria-label="Включить версию для слабовидящих" aria-expanded="false" aria-pressed="false" title="Версия для слабовидящих">
+          <svg class="icon-svg" aria-hidden="true" focusable="false" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6-46.8 43.5-78.1 95.4-93 131.1-3.3 7.9-3.3 16.7 0 24.6 14.9 35.7 46.2 87.7 93 131.1 47.1 43.7 111.8 80.6 192.6 80.6s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1 3.3-7.9 3.3-16.7 0-24.6-14.9-35.7-46.2-87.7-93-131.1-47.1-43.7-111.8-80.6-192.6-80.6zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64-11.5 0-22.3-3-31.7-8.4-1 10.9-.1 22.1 2.9 33.2 13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-12.2-45.7-55.5-74.8-101.1-70.8 5.3 9.3 8.4 20.1 8.4 31.7z"></path></svg>
+        </button>
       </div>
     </div>
   </header>
@@ -84,8 +93,9 @@
     <section class="documents-page">
       <div class="shell documents-page-grid">
         <aside class="documents-sidebar" aria-label="Разделы документов">
-          <a class="active" href="#all-documents" data-doc-filter="all"><i class="fa-solid fa-layer-group"></i> Все</a>
+          <a class="active" href="documents.html" data-doc-filter="all"><i class="fa-solid fa-layer-group"></i> Все</a>
           <a href="#contracts" data-doc-filter="contracts">Договоры</a>
+          <a href="#patient-forms" data-doc-filter="patient-forms">Согласия пациента</a>
           <a href="#licenses" data-doc-filter="licenses">Лицензии</a>
           <a href="#price-docs" data-doc-filter="price-docs">Прайсы</a>
           <a href="#patient-info" data-doc-filter="patient-info">Налоговые вычеты</a>
@@ -104,13 +114,13 @@
               </div>
             </div>
             <div class="document-file-grid">
-              <a class="document-file" href="https://docs.yandex.ru/docs/view?url=ya-browser%3A%2F%2F4DT1uXEPRrJRXlUFoewruPC6PFWwzjW0BeF6w2FHl-yK4PRsCUh0Z00Od8IFuR1Ta7s8hGED3eY7fhYQYdjl3t4qnHJiOHxNhzso-23MvOFaJtDaCI5_1VkRzJza7JrO9vKZXfFM5p3Vr_zvtL5HOw%3D%3D%3Fsign%3D-LA54uNI5NaYtQq7RhmwUKe3AS15WHWnPyhcn4NKBJw%3D&name=ebwc8avxlklxnmjyq266h92tzi2yfp5j.docx&nosw=1" target="_blank" rel="noopener">
-                <i class="fa-regular fa-file-word"></i>
-                <span><b>ДД договор на оказание платных медицинских услуг (дети)</b><small>DOCX, откроется с сайта клиники</small></span>
+              <a class="document-file" href="assets/documents/paid-medical-services-contract-children.pdf" target="_blank" rel="noopener">
+                <i class="fa-regular fa-file-pdf"></i>
+                <span><b>Договор на оказание платных медицинских услуг — дети</b><small>PDF, форма для предварительного ознакомления</small></span>
               </a>
-              <a class="document-file" href="https://docs.yandex.ru/docs/view?url=ya-browser%3A%2F%2F4DT1uXEPRrJRXlUFoewruAAQKpxh-rrBv3BabFip8tJCxSNg_aFsqDWTQLsyyU4gWvj9p0vfd252n5AeAbsFS0P0WgFPrkKPtQzsU7-zLxEqbsOzQsB89ooHmS20DOBqfILmMSWLNdBqQMxbWo9a2g%3D%3D%3Fsign%3DCHatoh1UN27CpFX_CfkCLVgj9Ba6bElquQcogelvrZk%3D&name=ug7r3dp3v18e4b3ht00juir6clekydwq.docx&nosw=1" target="_blank" rel="noopener">
-                <i class="fa-regular fa-file-word"></i>
-                <span><b>ДД договор на оказание платных медицинских услуг</b><small>DOCX, откроется с сайта клиники</small></span>
+              <a class="document-file" href="assets/documents/paid-medical-services-contract-adults.pdf" target="_blank" rel="noopener">
+                <i class="fa-regular fa-file-pdf"></i>
+                <span><b>Договор на оказание платных медицинских услуг — взрослые</b><small>PDF, форма для предварительного ознакомления</small></span>
               </a>
               <a class="document-file" href="https://docs.yandex.ru/docs/view?url=ya-browser%3A%2F%2F4DT1uXEPRrJRXlUFoewruPQS-92VTElevDNA9qGhxteQYnY8ci7eKDbxYz68EQ19wI4uO2hxNuDXLVEqZ5vnbX72kHV4urLU8kMy5XIeBLaU43XgwVfG5MQ862cwwHVGLUTod4BOd76MLp5OqH9ziw%3D%3D%3Fsign%3DmbZ3fROx3to_H_csQkvHlxTowOvVNL4BRtU6df9OViE%3D&name=g2i2xcfadgkpz6i7gstm2fen5iw41qnv.docx&nosw=1" target="_blank" rel="noopener">
                 <i class="fa-regular fa-file-word"></i>
@@ -119,6 +129,25 @@
               <a class="document-file" href="https://docs.yandex.ru/docs/view?url=ya-browser%3A%2F%2F4DT1uXEPRrJRXlUFoewruHg1Su5V_myPJ1_QTfR7nAxwIooWQqPDmDpEbQ-2JOy8JYragxp0IgN0i-1mQ_Tb-cq2LL-HeZQKe7KMOPd-ricRyQVzy29N1rKWPBUguHggaWvsAW61SYctfVyast_n0Q%3D%3D%3Fsign%3De8hMfr2nFcfcbXfuaRb9TYyqNz0W9H-VfJ0JGdka3cM%3D&name=nkksnpd029ghc749zrx8x7f7olrnd1cq.docx&nosw=1" target="_blank" rel="noopener">
                 <i class="fa-regular fa-file-word"></i>
                 <span><b>АМУ договор на оказание платных медицинских услуг (дети)</b><small>DOCX, откроется с сайта клиники</small></span>
+              </a>
+            </div>
+          </section>
+
+          <section class="document-group" id="patient-forms">
+            <div class="group-head">
+              <div>
+                <p class="eyebrow">Пациентам</p>
+                <h2>Согласия и формы перед приемом</h2>
+              </div>
+            </div>
+            <div class="document-file-grid">
+              <a class="document-file" href="assets/documents/personal-data-consent-patient.pdf" target="_blank" rel="noopener">
+                <i class="fa-regular fa-file-pdf"></i>
+                <span><b>Согласие пациента на обработку персональных данных</b><small>PDF, бумажная форма для заполнения в клинике</small></span>
+              </a>
+              <a class="document-file" href="assets/documents/informed-voluntary-consent-medical-intervention.pdf" target="_blank" rel="noopener">
+                <i class="fa-regular fa-file-pdf"></i>
+                <span><b>Информированное добровольное согласие на медицинское вмешательство</b><small>PDF, бумажная форма для заполнения в клинике</small></span>
               </a>
             </div>
           </section>
@@ -233,9 +262,9 @@
               </div>
             </div>
             <div class="document-file-grid">
-              <a class="document-file" href="https://docs.yandex.ru/docs/view?url=ya-browser%3A%2F%2F4DT1uXEPRrJRXlUFoewruD83pqChX49o8s2MnnktkHyLNxcNH3dnripe0OFELprLOP5k2V_LFUBpS39BTLP3KLSlPw1hfRmxTGzeOX3y1AlxC_MYGJ_FdARWr59xK4QVhHYyPAyZMF-Ex3kJiiWBtg%3D%3D%3Fsign%3D7MYd7PP93CikblSGezjMST0dxw4V1qM2Lh3lE7EarBc%3D&name=q64qx9ci48k8ooensi1rt1m2dkeal03h.docx&nosw=1" target="_blank" rel="noopener">
+              <a class="document-file" href="assets/documents/personal-data-policy.docx" target="_blank" rel="noopener">
                 <i class="fa-regular fa-file-word"></i>
-                <span><b>Политика в отношении обработки персональных данных</b><small>DOCX, откроется с сайта клиники</small></span>
+                <span><b>Политика в отношении обработки персональных данных</b><small>DOCX, файл размещён на сайте клиники</small></span>
               </a>
             </div>
           </section>
@@ -425,7 +454,7 @@
     <div class="shell">
       <div class="footer-contact-bar">
         <a class="footer-logo" href="index.html" aria-label="Добрый Доктор — на главную">
-          <img src="assets/logo.webp" alt="Добрый Доктор">
+          <img src="assets/logo.webp" alt="Добрый Доктор" width="400" height="100" decoding="async" loading="lazy">
           <span>Медицинский центр<br>в Иркутске</span>
         </a>
 
@@ -502,82 +531,9 @@
     <div class="footer-disclaimer">Имеются противопоказания. Необходима консультация специалиста</div>
   </footer>
 
-  <script>
-    const documentFilterLinks = document.querySelectorAll('[data-doc-filter]');
-    const documentGroups = document.querySelectorAll('.document-group');
-
-    function formatDocumentCount(count) {
-      const lastDigit = count % 10;
-      const lastTwoDigits = count % 100;
-
-      if (lastDigit === 1 && lastTwoDigits !== 11) {
-        return `${count} документ`;
-      }
-
-      if (lastDigit >= 2 && lastDigit <= 4 && (lastTwoDigits < 12 || lastTwoDigits > 14)) {
-        return `${count} документа`;
-      }
-
-      return `${count} документов`;
-    }
-
-    documentGroups.forEach((group) => {
-      const heading = group.querySelector('.group-head h2');
-      const count = group.querySelectorAll('.document-file').length;
-
-      if (heading && count > 0) {
-        const counter = document.createElement('span');
-        counter.className = 'document-count';
-        counter.textContent = formatDocumentCount(count);
-        heading.append(counter);
-      }
-    });
-
-    function getFilterIds(filter) {
-      return (filter || 'all').split(',').map((id) => id.trim()).filter(Boolean);
-    }
-
-    function showDocumentGroup(filter) {
-      const normalizedFilter = filter || 'all';
-      const filterIds = getFilterIds(normalizedFilter);
-      const isAll = normalizedFilter === 'all';
-
-      documentGroups.forEach((group) => {
-        group.classList.toggle('is-hidden', !isAll && !filterIds.includes(group.id));
-      });
-
-      documentFilterLinks.forEach((link) => {
-        link.classList.toggle('active', link.dataset.docFilter === normalizedFilter);
-      });
-    }
-
-    function scrollToDocumentsTop() {
-      const target = document.querySelector('.documents-page');
-      const header = document.querySelector('.site-header');
-      const headerOffset = header ? header.getBoundingClientRect().height : 0;
-      const top = target ? target.getBoundingClientRect().top + window.scrollY - headerOffset - 18 : 0;
-
-      window.scrollTo({
-        top: Math.max(top, 0),
-        behavior: 'smooth'
-      });
-    }
-
-    documentFilterLinks.forEach((link) => {
-      link.addEventListener('click', (event) => {
-        event.preventDefault();
-        const filter = link.dataset.docFilter;
-
-        showDocumentGroup(filter);
-        history.replaceState(null, '', filter === 'all' ? 'documents.html' : link.getAttribute('href'));
-        requestAnimationFrame(scrollToDocumentsTop);
-      });
-    });
-
-    const initialFilter = location.hash ? location.hash.slice(1) : 'all';
-    const initialLink = Array.from(documentFilterLinks).find((link) => getFilterIds(link.dataset.docFilter).includes(initialFilter));
-    showDocumentGroup(initialLink ? initialLink.dataset.docFilter : 'all');
-  </script>
-  <script src="site.js?v=a11y6"></script>
+  <script defer src="scripts/data/icon-definitions.js?v=release4"></script>
+  <script defer src="scripts/core/icons.js?v=release4"></script>
+  <script defer src="scripts/features/accessibility.js?v=release4"></script>
+  <script type="module" src="site.js?v=release4"></script>
 </body>
 </html>

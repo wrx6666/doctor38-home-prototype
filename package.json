@@ -1,0 +1,18 @@
+{
+  "name": "doctor38-home-prototype",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node tools/serve.mjs",
+    "build:assets": "node tools/build-assets.mjs",
+    "build:css": "node tools/build-page-css.mjs",
+    "prepare:release": "npm run build:assets && node tools/optimize-html.mjs && npm run build:css",
+    "qa:stories": "node capture-stories-qa.js"
+  },
+  "devDependencies": {
+    "@fortawesome/free-regular-svg-icons": "^7.3.1",
+    "@fortawesome/free-solid-svg-icons": "^7.3.1",
+    "playwright": "1.61.1",
+    "purgecss": "^8.0.0"
+  }
+}

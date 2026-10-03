@@ -5,19 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Врачи - Добрый Доктор</title>
   <meta name="description" content="Врачи медицинского центра Добрый Доктор в Иркутске. Специалисты, направления, филиалы и запись на прием.">
+  <link rel="icon" type="image/webp" href="assets/logo.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="styles.css?v=layout41">
+  <link rel="preload" as="image" href="assets/hero-clinic-960.webp" imagesrcset="assets/hero-clinic-480.webp 480w, assets/hero-clinic-960.webp 960w, assets/hero-clinic-1920.webp 1920w" imagesizes="(max-width: 900px) 100vw, 48vw" fetchpriority="high" data-lcp-preload>
+  <link rel="stylesheet" href="styles/pages/doctors.css?v=release3">
+  <link rel="stylesheet" href="styles/dist/core-responsive.css?v=release3">
+  <link rel="stylesheet" href="styles/pages/doctors-overrides.css?v=release3">
+  <link rel="stylesheet" href="styles/dist/core-accessibility.css?v=release3">
 </head>
 <body>
   <header class="site-header">
     <div class="shell header-line">
       <a class="brand" href="index.html" aria-label="Добрый Доктор">
-        <img src="assets/logo.webp" alt="Добрый Доктор">
+        <img src="assets/logo.webp" alt="Добрый Доктор" width="400" height="100" decoding="async" loading="eager">
       </a>
 
+      <button class="mobile-header-accessibility-toggle" type="button" aria-controls="accessibilityPanel" aria-label="Настройки версии для слабовидящих" aria-expanded="false" aria-pressed="false" title="Версия для слабовидящих">
+        <svg class="icon-svg" aria-hidden="true" focusable="false" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6-46.8 43.5-78.1 95.4-93 131.1-3.3 7.9-3.3 16.7 0 24.6 14.9 35.7 46.2 87.7 93 131.1 47.1 43.7 111.8 80.6 192.6 80.6s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1 3.3-7.9 3.3-16.7 0-24.6-14.9-35.7-46.2-87.7-93-131.1-47.1-43.7-111.8-80.6-192.6-80.6zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64-11.5 0-22.3-3-31.7-8.4-1 10.9-.1 22.1 2.9 33.2 13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-12.2-45.7-55.5-74.8-101.1-70.8 5.3 9.3 8.4 20.1 8.4 31.7z"></path></svg>
+      </button>
       <button class="mobile-nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span><span></span></button>
 
       <nav class="main-nav" aria-label="Основная навигация">
@@ -65,6 +72,9 @@
           </span>
         </a>
         <a class="button button-primary" href="appointment.html">Записаться онлайн</a>
+        <button class="accessibility-toggle" type="button" aria-controls="accessibilityPanel" aria-label="Включить версию для слабовидящих" aria-expanded="false" aria-pressed="false" title="Версия для слабовидящих">
+          <svg class="icon-svg" aria-hidden="true" focusable="false" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6-46.8 43.5-78.1 95.4-93 131.1-3.3 7.9-3.3 16.7 0 24.6 14.9 35.7 46.2 87.7 93 131.1 47.1 43.7 111.8 80.6 192.6 80.6s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1 3.3-7.9 3.3-16.7 0-24.6-14.9-35.7-46.2-87.7-93-131.1-47.1-43.7-111.8-80.6-192.6-80.6zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64-11.5 0-22.3-3-31.7-8.4-1 10.9-.1 22.1 2.9 33.2 13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-12.2-45.7-55.5-74.8-101.1-70.8 5.3 9.3 8.4 20.1 8.4 31.7z"></path></svg>
+        </button>
       </div>
     </div>
   </header>
@@ -116,7 +126,7 @@
 
         <div class="doctor-grid">
           <article class="doctor-card" data-specialty="gynecology" data-branch="gavrilova lermontova">
-            <img class="doctor-photo doctor-photo-sukhareva" src="assets/doctor-sukhareva.jpg" alt="Сухарева Дарья Олеговна">
+            <img class="doctor-photo doctor-photo-sukhareva" src="assets/doctor-sukhareva-634.webp" alt="Сухарева Дарья Олеговна" width="634" height="952" decoding="async" srcset="assets/doctor-sukhareva-320.webp 320w, assets/doctor-sukhareva-634.webp 634w" sizes="(max-width: 700px) 100vw, 50vw" loading="lazy">
             <div class="doctor-info">
               <p class="eyebrow">Гинеколог</p>
               <h2>Сухарева Дарья Олеговна</h2>
@@ -133,7 +143,7 @@
           </article>
 
           <article class="doctor-card" data-specialty="cosmetology dermatology" data-branch="gavrilova">
-            <img class="doctor-photo doctor-photo-myasnikova" src="assets/doctor-myasnikova.jpg" alt="Мясникова Александра Валерьевна">
+            <img class="doctor-photo doctor-photo-myasnikova" src="assets/doctor-myasnikova-960.webp" alt="Мясникова Александра Валерьевна" width="960" height="1440" decoding="async" srcset="assets/doctor-myasnikova-320.webp 320w, assets/doctor-myasnikova-640.webp 640w, assets/doctor-myasnikova-960.webp 960w" sizes="(max-width: 700px) 100vw, 50vw" loading="lazy">
             <div class="doctor-info">
               <p class="eyebrow">Косметолог, дерматовенеролог, дерматолог</p>
               <h2>Мясникова Александра Валерьевна</h2>
@@ -150,7 +160,7 @@
           </article>
 
           <article class="doctor-card" data-specialty="diagnostics pediatrics" data-branch="gavrilova">
-            <img class="doctor-photo doctor-photo-myasnikov" src="assets/doctor-myasnikov.jpg" alt="Мясников Владимир Геннадьевич">
+            <img class="doctor-photo doctor-photo-myasnikov" src="assets/doctor-myasnikov-960.webp" alt="Мясников Владимир Геннадьевич" width="1200" height="1800" decoding="async" srcset="assets/doctor-myasnikov-320.webp 320w, assets/doctor-myasnikov-640.webp 640w, assets/doctor-myasnikov-960.webp 960w, assets/doctor-myasnikov-1200.webp 1200w" sizes="(max-width: 700px) 100vw, 50vw" loading="lazy">
             <div class="doctor-info">
               <p class="eyebrow">Врач ультразвуковой диагностики</p>
               <h2>Мясников Владимир Геннадьевич</h2>
@@ -167,6 +177,7 @@
           </article>
 
           <article class="doctor-card" data-specialty="gynecology endocrinology" data-branch="gavrilova">
+            <img class="doctor-photo doctor-photo-stepanova" src="assets/doctor-stepanova-960.webp" alt="Степанова Елена Владимировна" width="960" height="1440" decoding="async" srcset="assets/doctor-stepanova-320.webp 320w, assets/doctor-stepanova-640.webp 640w, assets/doctor-stepanova-960.webp 960w" sizes="(max-width: 700px) 100vw, 50vw" loading="lazy">
             <div class="doctor-info">
               <p class="eyebrow">Гинеколог-эндокринолог</p>
               <h2>Степанова Елена Владимировна</h2>
@@ -183,7 +194,7 @@
           </article>
 
           <article class="doctor-card" data-specialty="gynecology" data-branch="gavrilova">
-            <img class="doctor-photo doctor-photo-yuryeva" src="assets/doctor-yuryeva.jpg" alt="Юрьева Татьяна Юрьевна">
+            <img class="doctor-photo doctor-photo-yuryeva" src="assets/doctor-yuryeva-960.webp" alt="Юрьева Татьяна Юрьевна" width="960" height="1437" decoding="async" srcset="assets/doctor-yuryeva-320.webp 320w, assets/doctor-yuryeva-640.webp 640w, assets/doctor-yuryeva-960.webp 960w" sizes="(max-width: 700px) 100vw, 50vw" loading="lazy">
             <div class="doctor-info">
               <p class="eyebrow">Гинеколог</p>
               <h2>Юрьева Татьяна Юрьевна</h2>
@@ -208,7 +219,8 @@
             </div>
           </article>
 
-          <article class="doctor-card doctor-card-text" data-specialty="nursing" data-branch="gavrilova">
+          <article class="doctor-card" data-specialty="nursing" data-branch="gavrilova">
+            <img class="doctor-photo doctor-photo-nilova" src="assets/doctor-nilova-960.webp" alt="Нилова Инна Аркадьевна" width="960" height="1442" decoding="async" srcset="assets/doctor-nilova-320.webp 320w, assets/doctor-nilova-640.webp 640w, assets/doctor-nilova-960.webp 960w" sizes="(max-width: 700px) 100vw, 50vw" loading="lazy">
             <div class="doctor-info">
               <p class="eyebrow">Медицинская сестра</p><h2>Нилова Инна Аркадьевна</h2>
               <p>Процедуры по назначению врача.</p>
@@ -220,14 +232,14 @@
           <article class="doctor-card doctor-card-text" data-specialty="gastroenterology" data-branch="gavrilova"><div class="doctor-info"><p class="eyebrow">Гастроэнтеролог, гепатолог</p><h2>Петрунько Ирина Леонидовна</h2><p>Приём гастроэнтеролога и гепатолога.</p><div class="doctor-meta"><span><i class="fa-solid fa-location-dot"></i> Гаврилова, 4</span><span><i class="fa-regular fa-clock"></i> по записи</span></div><div class="doctor-actions"><a class="button button-primary" href="appointment.html?doctor=Петрунько%20Ирина%20Леонидовна">Записаться</a></div></div></article>
           <article class="doctor-card doctor-card-text" data-specialty="dermatology" data-branch="gavrilova"><div class="doctor-info"><p class="eyebrow">Дерматолог</p><h2>Рудых Наталья Михайловна</h2><p>Приём дерматолога по предварительной записи.</p><div class="doctor-meta"><span><i class="fa-solid fa-location-dot"></i> Гаврилова, 4</span><span><i class="fa-regular fa-clock"></i> по записи</span></div><div class="doctor-actions"><a class="button button-primary" href="appointment.html?doctor=Рудых%20Наталья%20Михайловна">Записаться</a></div></div></article>
           <article class="doctor-card doctor-card-text" data-specialty="neurology pediatrics" data-branch="gavrilova"><div class="doctor-info"><p class="eyebrow">Невролог, детский невролог</p><h2>Старшинова Елена Олеговна</h2><p>Приём взрослых и детей по профилю неврологии.</p><div class="doctor-meta"><span><i class="fa-solid fa-location-dot"></i> Гаврилова, 4</span><span><i class="fa-regular fa-clock"></i> по записи</span></div><div class="doctor-actions"><a class="button button-primary" href="appointment.html?doctor=Старшинова%20Елена%20Олеговна">Записаться</a></div></div></article>
-          <article class="doctor-card doctor-card-text" data-specialty="pediatrics" data-branch="gavrilova"><div class="doctor-info"><p class="eyebrow">Педиатр</p><h2>Федаш Мария Михайловна</h2><p>Приём педиатра по предварительной записи.</p><div class="doctor-meta"><span><i class="fa-solid fa-location-dot"></i> Гаврилова, 4</span><span><i class="fa-regular fa-clock"></i> по записи</span></div><div class="doctor-actions"><a class="button button-primary" href="appointment.html?doctor=Федаш%20Мария%20Михайловна">Записаться</a><a class="button button-secondary" href="doctor.html?doctor=fedash">Подробнее</a></div></div></article>
+          <article class="doctor-card" data-specialty="pediatrics" data-branch="gavrilova"><img class="doctor-photo doctor-photo-fedash" src="assets/doctor-fedash-960.webp" alt="Федаш Мария Михайловна" width="960" height="1440" decoding="async" srcset="assets/doctor-fedash-320.webp 320w, assets/doctor-fedash-640.webp 640w, assets/doctor-fedash-960.webp 960w" sizes="(max-width: 700px) 100vw, 50vw" loading="lazy"><div class="doctor-info"><p class="eyebrow">Педиатр</p><h2>Федаш Мария Михайловна</h2><p>Приём педиатра по предварительной записи.</p><div class="doctor-meta"><span><i class="fa-solid fa-location-dot"></i> Гаврилова, 4</span><span><i class="fa-regular fa-clock"></i> по записи</span></div><div class="doctor-actions"><a class="button button-primary" href="appointment.html?doctor=Федаш%20Мария%20Михайловна">Записаться</a><a class="button button-secondary" href="doctor.html?doctor=fedash">Подробнее</a></div></div></article>
           <article class="doctor-card doctor-card-text" data-specialty="nursing" data-branch="gavrilova"><div class="doctor-info"><p class="eyebrow">Медицинская сестра</p><h2>Чаюк Виктория Сергеевна</h2><p>Процедуры по назначению врача.</p><div class="doctor-meta"><span><i class="fa-solid fa-location-dot"></i> Гаврилова, 4</span><span><i class="fa-regular fa-clock"></i> по записи</span></div><div class="doctor-actions"><a class="button button-primary" href="appointment.html?doctor=Чаюк%20Виктория%20Сергеевна">Записаться</a></div></div></article>
 
           <article class="doctor-card doctor-card-text" data-specialty="dermatology" data-branch="lermontova"><div class="doctor-info"><p class="eyebrow">Дерматолог</p><h2>Асхаева Татьяна Леонидовна</h2><p>Приём дерматолога по предварительной записи.</p><div class="doctor-meta"><span><i class="fa-solid fa-location-dot"></i> Лермонтова, 69</span><span><i class="fa-regular fa-clock"></i> по записи</span></div><div class="doctor-actions"><a class="button button-primary" href="appointment.html?branch=lermontova&amp;doctor=Асхаева%20Татьяна%20Леонидовна">Записаться</a></div></div></article>
-          <article class="doctor-card doctor-card-text" data-specialty="nursing" data-branch="lermontova"><div class="doctor-info"><p class="eyebrow">Медицинская сестра</p><h2>Ботова Яна Сергеевна</h2><p>Процедуры по назначению врача.</p><div class="doctor-meta"><span><i class="fa-solid fa-location-dot"></i> Лермонтова, 69</span><span><i class="fa-regular fa-clock"></i> по записи</span></div><div class="doctor-actions"><a class="button button-primary" href="appointment.html?branch=lermontova&amp;doctor=Ботова%20Яна%20Сергеевна">Записаться</a></div></div></article>
+          <article class="doctor-card" data-specialty="nursing" data-branch="lermontova"><img class="doctor-photo doctor-photo-botova" src="assets/doctor-botova-960.webp" alt="Ботова Яна Сергеевна" width="960" height="1635" decoding="async" srcset="assets/doctor-botova-320.webp 320w, assets/doctor-botova-640.webp 640w, assets/doctor-botova-960.webp 960w" sizes="(max-width: 700px) 100vw, 50vw" loading="lazy"><div class="doctor-info"><p class="eyebrow">Медицинская сестра</p><h2>Ботова Яна Сергеевна</h2><p>Процедуры по назначению врача.</p><div class="doctor-meta"><span><i class="fa-solid fa-location-dot"></i> Лермонтова, 69</span><span><i class="fa-regular fa-clock"></i> по записи</span></div><div class="doctor-actions"><a class="button button-primary" href="appointment.html?branch=lermontova&amp;doctor=Ботова%20Яна%20Сергеевна">Записаться</a></div></div></article>
           <article class="doctor-card doctor-card-text" data-specialty="endocrinology" data-branch="lermontova"><div class="doctor-info"><p class="eyebrow">Эндокринолог</p><h2>Выгода Сима Яковлевна</h2><p>Приём эндокринолога по предварительной записи.</p><div class="doctor-meta"><span><i class="fa-solid fa-location-dot"></i> Лермонтова, 69</span><span><i class="fa-regular fa-clock"></i> по записи</span></div><div class="doctor-actions"><a class="button button-primary" href="appointment.html?branch=lermontova&amp;doctor=Выгода%20Сима%20Яковлевна">Записаться</a></div></div></article>
           <article class="doctor-card doctor-card-text" data-specialty="vascular" data-branch="lermontova"><div class="doctor-info"><p class="eyebrow">Сосудистый хирург</p><h2>Новохатько Ольга Ивановна</h2><p>Приём сосудистого хирурга по предварительной записи.</p><div class="doctor-meta"><span><i class="fa-solid fa-location-dot"></i> Лермонтова, 69</span><span><i class="fa-regular fa-clock"></i> по записи</span></div><div class="doctor-actions"><a class="button button-primary" href="appointment.html?branch=lermontova&amp;doctor=Новохатько%20Ольга%20Ивановна">Записаться</a></div></div></article>
-          <article class="doctor-card doctor-card-text" data-specialty="diagnostics" data-branch="lermontova"><div class="doctor-info"><p class="eyebrow">Врач ультразвуковой диагностики</p><h2>Пиксаева Ирина Викторовна</h2><p>Ультразвуковая диагностика по предварительной записи.</p><div class="doctor-meta"><span><i class="fa-solid fa-location-dot"></i> Лермонтова, 69</span><span><i class="fa-regular fa-clock"></i> по записи</span></div><div class="doctor-actions"><a class="button button-primary" href="appointment.html?branch=lermontova&amp;doctor=Пиксаева%20Ирина%20Викторовна">Записаться</a></div></div></article>
+          <article class="doctor-card" data-specialty="diagnostics" data-branch="lermontova"><img class="doctor-photo doctor-photo-piksaeva" src="assets/doctor-piksaeva-960.webp" alt="Пиксаева Ирина Викторовна" width="960" height="1444" decoding="async" srcset="assets/doctor-piksaeva-320.webp 320w, assets/doctor-piksaeva-640.webp 640w, assets/doctor-piksaeva-960.webp 960w" sizes="(max-width: 700px) 100vw, 50vw" loading="lazy"><div class="doctor-info"><p class="eyebrow">Врач ультразвуковой диагностики</p><h2>Пиксаева Ирина Викторовна</h2><p>Ультразвуковая диагностика по предварительной записи.</p><div class="doctor-meta"><span><i class="fa-solid fa-location-dot"></i> Лермонтова, 69</span><span><i class="fa-regular fa-clock"></i> по записи</span></div><div class="doctor-actions"><a class="button button-primary" href="appointment.html?branch=lermontova&amp;doctor=Пиксаева%20Ирина%20Викторовна">Записаться</a></div></div></article>
           <article class="doctor-card doctor-card-text" data-specialty="cardiology therapy" data-branch="lermontova"><div class="doctor-info"><p class="eyebrow">Кардиолог, терапевт</p><h2>Тигунцева Ольга Игоревна</h2><p>Приём кардиолога и терапевта.</p><div class="doctor-meta"><span><i class="fa-solid fa-location-dot"></i> Лермонтова, 69</span><span><i class="fa-regular fa-clock"></i> по записи</span></div><div class="doctor-actions"><a class="button button-primary" href="appointment.html?branch=lermontova&amp;doctor=Тигунцева%20Ольга%20Игоревна">Записаться</a></div></div></article>
 
           <p class="doctor-empty" hidden>По выбранным фильтрам пока нет врача. Попробуйте другое направление или филиал.</p>
@@ -254,7 +266,7 @@
     <div class="shell">
       <div class="footer-contact-bar">
         <a class="footer-logo" href="index.html" aria-label="Добрый Доктор — на главную">
-          <img src="assets/logo.webp" alt="Добрый Доктор">
+          <img src="assets/logo.webp" alt="Добрый Доктор" width="400" height="100" decoding="async" loading="lazy">
           <span>Медицинский центр<br>в Иркутске</span>
         </a>
 
@@ -331,68 +343,9 @@
     <div class="footer-disclaimer">Имеются противопоказания. Необходима консультация специалиста</div>
   </footer>
 
-  <script>
-    const doctorFilters = {
-      specialty: 'all',
-      branch: 'all'
-    };
-
-    const filterButtons = document.querySelectorAll('[data-filter-group]');
-    const doctorCards = document.querySelectorAll('.doctor-card');
-    const doctorEmpty = document.querySelector('.doctor-empty');
-    const doctorsBody = document.querySelector('.doctors-body');
-
-    const scrollToDoctorsTop = () => {
-      if (!doctorsBody) return;
-      const headerOffset = document.querySelector('.site-header')?.offsetHeight || 0;
-      const top = doctorsBody.getBoundingClientRect().top + window.scrollY - headerOffset - 18;
-      window.scrollTo({
-        top: Math.max(0, top),
-        behavior: 'smooth'
-      });
-    };
-
-    const applyDoctorFilters = () => {
-      let visibleCount = 0;
-
-      doctorCards.forEach((card) => {
-        const specialties = (card.dataset.specialty || '').split(/\s+/);
-        const branches = (card.dataset.branch || '').split(/\s+/);
-        const specialtyMatch = doctorFilters.specialty === 'all' || specialties.includes(doctorFilters.specialty);
-        const branchMatch = doctorFilters.branch === 'all' || branches.includes(doctorFilters.branch);
-        const isVisible = specialtyMatch && branchMatch;
-
-        card.classList.toggle('is-hidden', !isVisible);
-        if (isVisible) visibleCount += 1;
-      });
-
-      doctorEmpty.hidden = visibleCount > 0;
-    };
-
-    const setActiveFilter = (group, value) => {
-      const targetButton = document.querySelector(`[data-filter-group="${group}"][data-filter-value="${value}"]`);
-      if (!targetButton) return;
-
-      doctorFilters[group] = value;
-      document.querySelectorAll(`[data-filter-group="${group}"]`).forEach((item) => {
-        item.classList.toggle('active', item === targetButton);
-      });
-    };
-
-    filterButtons.forEach((button) => {
-      button.addEventListener('click', () => {
-        const group = button.dataset.filterGroup;
-        setActiveFilter(group, button.dataset.filterValue);
-        applyDoctorFilters();
-        requestAnimationFrame(scrollToDoctorsTop);
-      });
-    });
-
-    const initialParams = new URLSearchParams(window.location.search);
-    setActiveFilter('specialty', initialParams.get('specialty') || 'all');
-    setActiveFilter('branch', initialParams.get('branch') || 'all');
-    applyDoctorFilters();
-  </script>
-  <script src="site.js?v=a11y6"></script>
+  <script defer src="scripts/data/icon-definitions.js?v=release4"></script>
+  <script defer src="scripts/core/icons.js?v=release4"></script>
+  <script defer src="scripts/features/accessibility.js?v=release4"></script>
+  <script type="module" src="site.js?v=release4"></script>
 </body>
 </html>

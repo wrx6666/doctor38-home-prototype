@@ -1,0 +1,430 @@
+.doctors-hero {
+  padding: 58px 0 48px;
+  background:
+    linear-gradient(90deg, rgba(247, 250, 251, .97) 0%, rgba(247, 250, 251, .94) 56%, rgba(247, 250, 251, .72) 100%),
+    image-set(
+      url("assets/hero-clinic-960.webp") 1x,
+      url("assets/hero-clinic-1920.webp") 2x
+    ) right center / 48% auto no-repeat;
+  border-bottom: 1px solid var(--line);
+}
+
+.doctors-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 58px;
+  align-items: end;
+}
+
+.doctor-note {
+  padding: 22px;
+  border: 1px solid rgba(220, 231, 236, .92);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, .94);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+}
+
+.doctor-note i {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 16px;
+  border-radius: var(--radius);
+  background: var(--mint);
+  color: var(--green);
+}
+
+.doctor-note b,
+.doctor-note span {
+  display: block;
+}
+
+.doctor-note b {
+  font-size: 22px;
+  line-height: 1.18;
+}
+
+.doctor-note span {
+  margin-top: 10px;
+  color: var(--text);
+  line-height: 1.55;
+}
+
+.doctors-body {
+  padding-top: 44px;
+}
+
+.doctors-layout {
+  display: grid;
+  grid-template-columns: 270px minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.doctor-filters {
+  position: sticky;
+  top: 108px;
+  display: grid;
+  gap: 18px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--wash);
+}
+
+.doctor-filters div {
+  display: grid;
+  gap: 6px;
+}
+
+.doctor-filters span {
+  margin-bottom: 4px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.doctor-filters button {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 12px;
+  border: 0;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-weight: 800;
+  text-align: left;
+  cursor: pointer;
+  transition: background 160ms var(--ease-out), color 160ms var(--ease-out), transform 150ms var(--ease-out);
+}
+
+.doctor-filters button:hover,
+.doctor-filters button.active {
+  background: #fff;
+  color: var(--green-deep);
+}
+
+.doctor-filters button:focus-visible {
+  outline: 2px solid rgba(0, 145, 84, .35);
+  outline-offset: 2px;
+}
+
+.doctor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.doctor-card {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  transition: transform 180ms var(--ease-out), border-color 180ms var(--ease-out), box-shadow 180ms var(--ease-out);
+}
+
+.doctor-card:hover {
+  transform: translateY(-2px);
+  border-color: #c4d8df;
+  box-shadow: 0 14px 26px rgba(21, 35, 49, .08);
+}
+
+.doctor-card.is-hidden {
+  display: none;
+}
+
+.doctor-photo {
+  min-height: 258px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 10px;
+  border-right: 1px dashed #c9d5dc;
+  background: linear-gradient(135deg, #eef3f5 0%, #f7fafb 100%);
+  color: #7c8c96;
+  font-weight: 800;
+}
+
+img.doctor-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 258px;
+  object-fit: cover;
+  border-right: 1px solid var(--line);
+  background: #f4f8fa;
+}
+
+.doctor-photo-sukhareva {
+  object-position: center 24%;
+}
+
+.doctor-photo-myasnikova,
+.doctor-photo-stepanova,
+.doctor-photo-fedash,
+.doctor-photo-nilova,
+.doctor-photo-piksaeva,
+.doctor-photo-botova {
+  object-position: center 28%;
+}
+
+.doctor-photo-yuryeva {
+  object-position: center 24%;
+}
+
+.doctor-photo-myasnikov {
+  object-position: center 18%;
+}
+
+.doctor-photo i {
+  font-size: 28px;
+}
+
+.doctor-info {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.doctor-info h2 {
+  margin: 0 0 10px;
+  font-size: 26px;
+  line-height: 1.08;
+}
+
+.doctor-info p:not(.eyebrow) {
+  color: var(--text);
+  line-height: 1.55;
+}
+
+.doctor-meta {
+  display: grid;
+  gap: 8px;
+  margin-top: auto;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.doctor-meta span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.doctor-meta i {
+  color: var(--green);
+}
+
+.doctor-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.doctor-empty {
+  grid-column: 1 / -1;
+  min-height: 180px;
+  display: grid;
+  place-items: center;
+  padding: 28px;
+  border: 1px dashed #c9d5dc;
+  border-radius: var(--radius);
+  background: var(--wash);
+  color: var(--text);
+  font-weight: 800;
+  text-align: center;
+}
+
+.doctor-empty[hidden] {
+  display: none;
+}
+
+.doctor-profile-hero {
+  padding: 54px 0 42px;
+  border-bottom: 1px solid var(--line);
+  background:
+    linear-gradient(90deg, rgba(247, 250, 251, .98) 0%, rgba(247, 250, 251, .94) 58%, rgba(234, 247, 239, .78) 100%);
+}
+
+.doctor-profile-grid {
+  display: grid;
+  grid-template-columns: 330px minmax(0, 1fr) 300px;
+  gap: 28px;
+  align-items: center;
+}
+
+.doctor-profile-photo-wrap {
+  min-height: 430px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #eef3f5;
+  box-shadow: 0 22px 48px rgba(21, 35, 49, .1);
+}
+
+.doctor-profile-photo {
+  display: block;
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.doctor-profile-photo-wrap.is-placeholder {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 12px;
+  color: var(--muted);
+  font-weight: 800;
+  text-align: center;
+}
+
+.doctor-profile-photo-wrap.is-placeholder i {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--green);
+  font-size: 24px;
+}
+
+.doctor-profile-copy h1 {
+  max-width: 760px;
+}
+
+.doctor-profile-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 22px 0 26px;
+}
+
+.doctor-profile-tags span {
+  padding: 9px 12px;
+  border: 1px solid #cfe0e6;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .78);
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.doctor-profile-side {
+  display: grid;
+  gap: 10px;
+}
+
+.doctor-profile-side div {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, .9);
+}
+
+.doctor-profile-side span,
+.doctor-profile-side b {
+  display: block;
+}
+
+.doctor-profile-side span {
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.doctor-profile-side b {
+  color: var(--text);
+  line-height: 1.35;
+}
+
+.doctor-profile-body {
+  padding: 44px 0 clamp(28px, 4vw, 52px);
+}
+
+.doctor-profile-layout {
+  display: grid;
+  grid-template-columns: 270px minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.doctor-profile-nav {
+  top: 108px;
+}
+
+.doctor-profile-text {
+  max-width: 780px;
+  color: var(--text);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.doctor-service-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.doctor-service-list div {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #f7fbf9;
+  color: var(--text);
+  font-weight: 800;
+}
+
+.doctor-service-list i {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  flex: 0 0 30px;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--mint);
+  color: var(--green);
+  font-size: 13px;
+}
+
+.doctor-record-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: center;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(135deg, rgba(236, 249, 241, .86), rgba(255, 255, 255, .98));
+}
+
+.doctor-record-card h2 {
+  margin: 0 0 10px;
+  font-size: clamp(30px, 3vw, 44px);
+  line-height: 1.06;
+}
+
+.doctor-record-card p:not(.eyebrow) {
+  max-width: 640px;
+  color: var(--text);
+  line-height: 1.55;
+}
+

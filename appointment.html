@@ -5,19 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Запись на прием - Добрый Доктор</title>
   <meta name="description" content="Прототип страницы записи на прием в медицинский центр Добрый Доктор в Иркутске.">
+  <meta name="turnstile-site-key" content="">
+  <link rel="icon" type="image/webp" href="assets/logo.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="styles.css?v=layout41">
+  <link rel="stylesheet" href="styles/pages/appointment.css?v=release3">
+  <link rel="stylesheet" href="styles/dist/core-responsive.css?v=release3">
+  <link rel="stylesheet" href="styles/pages/appointment-overrides.css?v=release3">
+  <link rel="stylesheet" href="styles/dist/core-accessibility.css?v=release3">
 </head>
 <body>
   <header class="site-header">
     <div class="shell header-line">
       <a class="brand" href="index.html" aria-label="Добрый Доктор">
-        <img src="assets/logo.webp" alt="Добрый Доктор">
+        <img src="assets/logo.webp" alt="Добрый Доктор" width="400" height="100" decoding="async" loading="eager">
       </a>
 
+      <button class="mobile-header-accessibility-toggle" type="button" aria-controls="accessibilityPanel" aria-label="Настройки версии для слабовидящих" aria-expanded="false" aria-pressed="false" title="Версия для слабовидящих">
+        <svg class="icon-svg" aria-hidden="true" focusable="false" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6-46.8 43.5-78.1 95.4-93 131.1-3.3 7.9-3.3 16.7 0 24.6 14.9 35.7 46.2 87.7 93 131.1 47.1 43.7 111.8 80.6 192.6 80.6s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1 3.3-7.9 3.3-16.7 0-24.6-14.9-35.7-46.2-87.7-93-131.1-47.1-43.7-111.8-80.6-192.6-80.6zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64-11.5 0-22.3-3-31.7-8.4-1 10.9-.1 22.1 2.9 33.2 13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-12.2-45.7-55.5-74.8-101.1-70.8 5.3 9.3 8.4 20.1 8.4 31.7z"></path></svg>
+      </button>
       <button class="mobile-nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span><span></span></button>
 
       <nav class="main-nav" aria-label="Основная навигация">
@@ -65,6 +72,9 @@
           </span>
         </a>
         <a class="button button-primary" href="appointment.html">Записаться онлайн</a>
+        <button class="accessibility-toggle" type="button" aria-controls="accessibilityPanel" aria-label="Включить версию для слабовидящих" aria-expanded="false" aria-pressed="false" title="Версия для слабовидящих">
+          <svg class="icon-svg" aria-hidden="true" focusable="false" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6-46.8 43.5-78.1 95.4-93 131.1-3.3 7.9-3.3 16.7 0 24.6 14.9 35.7 46.2 87.7 93 131.1 47.1 43.7 111.8 80.6 192.6 80.6s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1 3.3-7.9 3.3-16.7 0-24.6-14.9-35.7-46.2-87.7-93-131.1-47.1-43.7-111.8-80.6-192.6-80.6zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64-11.5 0-22.3-3-31.7-8.4-1 10.9-.1 22.1 2.9 33.2 13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-12.2-45.7-55.5-74.8-101.1-70.8 5.3 9.3 8.4 20.1 8.4 31.7z"></path></svg>
+        </button>
       </div>
     </div>
   </header>
@@ -76,7 +86,7 @@
           <a class="back-link" href="index.html"><i class="fa-solid fa-arrow-left"></i> На главную</a>
           <p class="eyebrow">Запись на прием</p>
           <h1>Оставьте заявку, администратор подтвердит время</h1>
-          <p class="hero-lead">Выберите филиал, направление и удобный временной интервал. Это прототип формы: в финальной версии данные можно подключить к CRM, расписанию врачей или форме старого сайта.</p>
+          <p class="hero-lead">Выберите филиал, направление и удобный временной интервал. Заявка поступит администраторам клиники, которые подтвердят запись по телефону.</p>
         </div>
 
         <aside class="appointment-help">
@@ -98,11 +108,11 @@
             </div>
             <div class="choice-grid two">
               <label class="choice-card">
-                <input type="radio" name="branch" value="Гаврилова, 4" checked>
+                <input type="radio" name="branch" value="Гаврилова, 4" data-clinic-id="1000" checked>
                 <span><b>ул. Гаврилова, 4</b><small>ост. «Филармония»</small></span>
               </label>
               <label class="choice-card">
-                <input type="radio" name="branch" value="Лермонтова, 69">
+                <input type="radio" name="branch" value="Лермонтова, 69" data-clinic-id="999">
                 <span><b>ул. Лермонтова, 69</b><small>ост. «Лермонтова»</small></span>
               </label>
             </div>
@@ -111,10 +121,10 @@
           <div class="form-step">
             <span class="step-number">02</span>
             <div>
-              <p class="eyebrow">Услуга</p>
-              <h2>Направление или задача</h2>
+              <p class="eyebrow">Цель обращения</p>
+              <h2>Что вас интересует?</h2>
             </div>
-            <div class="choice-grid four">
+            <div class="choice-grid four service-choice-grid">
               <label class="choice-card">
                 <input type="radio" name="service" value="Прием врача" checked>
                 <span><b>Прием врача</b><small>терапевт, гинеколог, педиатр</small></span>
@@ -131,6 +141,10 @@
                 <input type="radio" name="service" value="Капельницы">
                 <span><b>Капельницы</b><small>подбор программы врачом</small></span>
               </label>
+              <label class="choice-card choice-card-assistance">
+                <input type="radio" name="service" value="Подбор направления">
+                <span><b>Не знаю, что выбрать</b><small>администратор уточнит задачу и подскажет подходящее направление</small></span>
+              </label>
             </div>
           </div>
 
@@ -143,40 +157,26 @@
             <div class="booking-fields">
               <label>
                 <span>Дата</span>
-                <input type="date" name="date" required>
+                <input type="date" name="date">
               </label>
               <label>
                 <span>Специалист</span>
-                <select name="doctor">
-                  <option>Подобрать администраторам</option>
-                  <option>Глазкова Яна Алексеевна</option>
-                  <option>Мясникова Александра Валерьевна</option>
-                  <option>Мясников Владимир Геннадьевич</option>
-                  <option>Нилова Инна Аркадьевна</option>
-                  <option>Петрунько Ирина Леонидовна</option>
-                  <option>Рудых Наталья Михайловна</option>
-                  <option>Старшинова Елена Олеговна</option>
-                  <option>Степанова Елена Владимировна</option>
-                  <option>Сухарева Дарья Олеговна</option>
-                  <option>Федаш Мария Михайловна</option>
-                  <option>Чаюк Виктория Сергеевна</option>
-                  <option>Юрьева Татьяна Юрьевна</option>
-                  <option>Асхаева Татьяна Леонидовна</option>
-                  <option>Ботова Яна Сергеевна</option>
-                  <option>Выгода Сима Яковлевна</option>
-                  <option>Новохатько Ольга Ивановна</option>
-                  <option>Пиксаева Ирина Викторовна</option>
-                  <option>Тигунцева Ольга Игоревна</option>
+                <select name="doctor" aria-describedby="doctorLoadStatus">
+                  <option value="">Подобрать администратору</option>
                 </select>
+                <small class="field-status" id="doctorLoadStatus" data-doctors-status role="status" aria-live="polite"></small>
               </label>
             </div>
-            <div class="time-slots" aria-label="Удобное время">
-              <button class="active" type="button">09:30</button>
-              <button type="button">11:00</button>
-              <button type="button">13:30</button>
-              <button type="button">16:00</button>
-              <button type="button">18:30</button>
-            </div>
+            <p class="time-slots-status" data-slots-status role="status" aria-live="polite">Выберите врача, чтобы увидеть свободное время.</p>
+            <aside class="alternate-branch" data-alternative-slots hidden>
+              <div class="alternate-branch-copy">
+                <span>Есть запись в другом филиале</span>
+                <strong data-alternative-branch></strong>
+                <small data-alternative-times></small>
+              </div>
+              <button type="button" data-switch-branch>Показать время</button>
+            </aside>
+            <div class="time-slots" data-time-slots aria-label="Свободное время приема"></div>
           </div>
 
           <div class="form-step">
@@ -199,8 +199,20 @@
               <span>Комментарий</span>
               <textarea name="comment" placeholder="Например: нужна подготовка к УЗИ или справка для ребенка"></textarea>
             </label>
+            <div class="appointment-consent">
+              <input id="bookingConsent" type="checkbox" name="consent" required>
+              <div class="consent-copy">
+                <label for="bookingConsent">Даю согласие на обработку персональных данных</label>
+                <div class="consent-links">
+                  <a href="personal-data-consent.html" target="_blank" rel="noopener">Прочитать согласие</a>
+                  <span aria-hidden="true">·</span>
+                  <a href="assets/documents/personal-data-policy.docx" target="_blank" rel="noopener">Политика обработки данных</a>
+                </div>
+              </div>
+            </div>
+            <div class="turnstile-widget" data-turnstile hidden></div>
             <button class="button button-primary" type="submit">Отправить заявку</button>
-            <p class="form-note">Нажимая кнопку, пациент соглашается на обработку персональных данных. Для прототипа отправка показывает подтверждение на странице.</p>
+            <p class="form-note">Данные заявки будут переданы администраторам клиники для подбора времени приема.</p>
           </div>
         </form>
 
@@ -209,16 +221,16 @@
           <h2>Заявка на прием</h2>
           <div class="summary-list">
             <span><b>Филиал</b><em data-summary="branch">Гаврилова, 4</em></span>
-            <span><b>Услуга</b><em data-summary="service">Прием врача</em></span>
-            <span><b>Специалист</b><em data-summary="doctor">Подобрать администраторам</em></span>
+            <span><b>Цель</b><em data-summary="service">Прием врача</em></span>
+            <span><b>Специалист</b><em data-summary="doctor">Подобрать администратору</em></span>
             <span><b>Дата</b><em data-summary="date">не выбрана</em></span>
-            <span><b>Время</b><em data-summary="time">09:30</em></span>
+            <span><b>Время</b><em data-summary="time">Подберет администратор</em></span>
           </div>
           <div class="summary-contact">
             <i class="fa-solid fa-phone"></i>
             <span><b>+7 (3952) 23-23-03</b><small>можно записаться по телефону</small></span>
           </div>
-          <p class="booking-success" id="bookingSuccess" hidden>Заявка принята в прототипе. В реальной версии здесь будет отправка данных администратору.</p>
+          <p class="booking-success" id="bookingSuccess" role="status" aria-live="polite" hidden></p>
         </aside>
       </div>
     </section>
@@ -229,7 +241,7 @@
     <div class="shell">
       <div class="footer-contact-bar">
         <a class="footer-logo" href="index.html" aria-label="Добрый Доктор — на главную">
-          <img src="assets/logo.webp" alt="Добрый Доктор">
+          <img src="assets/logo.webp" alt="Добрый Доктор" width="400" height="100" decoding="async" loading="lazy">
           <span>Медицинский центр<br>в Иркутске</span>
         </a>
 
@@ -306,67 +318,9 @@
     <div class="footer-disclaimer">Имеются противопоказания. Необходима консультация специалиста</div>
   </footer>
 
-  <script>
-    const bookingForm = document.querySelector('#bookingForm');
-    const summary = {
-      branch: document.querySelector('[data-summary="branch"]'),
-      service: document.querySelector('[data-summary="service"]'),
-      doctor: document.querySelector('[data-summary="doctor"]'),
-      date: document.querySelector('[data-summary="date"]'),
-      time: document.querySelector('[data-summary="time"]')
-    };
-
-    const updateSummary = () => {
-      const data = new FormData(bookingForm);
-      summary.branch.textContent = data.get('branch');
-      summary.service.textContent = data.get('service');
-      summary.doctor.textContent = data.get('doctor');
-      summary.date.textContent = data.get('date') || 'не выбрана';
-    };
-
-    const bookingParams = new URLSearchParams(window.location.search);
-    const requestedBranch = bookingParams.get('branch');
-    if (requestedBranch) {
-      const branchValue = requestedBranch === 'lermontova' ? 'Лермонтова, 69' : 'Гаврилова, 4';
-      const branchInput = bookingForm.querySelector(`input[name="branch"][value="${branchValue}"]`);
-      if (branchInput) branchInput.checked = true;
-    }
-
-    const requestedDoctor = bookingParams.get('doctor');
-    if (requestedDoctor) {
-      const doctorSelect = bookingForm.querySelector('select[name="doctor"]');
-      const hasDoctor = [...doctorSelect.options].some((option) => option.value === requestedDoctor);
-      if (hasDoctor) doctorSelect.value = requestedDoctor;
-    }
-
-    if (bookingParams.get('service') === 'droppers') {
-      const droppersOption = bookingForm.querySelector('input[name="service"][value="Капельницы"]');
-      if (droppersOption) droppersOption.checked = true;
-    }
-
-    const requestedProgram = bookingParams.get('program');
-    if (requestedProgram) {
-      const comment = bookingForm.querySelector('textarea[name="comment"]');
-      if (comment) comment.value = `Интересует программа капельниц: ${requestedProgram}`;
-    }
-
-    updateSummary();
-
-    document.querySelectorAll('.time-slots button').forEach((button) => {
-      button.addEventListener('click', () => {
-        document.querySelectorAll('.time-slots button').forEach((item) => item.classList.toggle('active', item === button));
-        summary.time.textContent = button.textContent;
-      });
-    });
-
-    bookingForm.addEventListener('input', updateSummary);
-    bookingForm.addEventListener('change', updateSummary);
-    bookingForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-      updateSummary();
-      document.querySelector('#bookingSuccess').hidden = false;
-    });
-  </script>
-  <script src="site.js?v=a11y6"></script>
+  <script defer src="scripts/data/icon-definitions.js?v=release4"></script>
+  <script defer src="scripts/core/icons.js?v=release4"></script>
+  <script defer src="scripts/features/accessibility.js?v=release4"></script>
+  <script type="module" src="site.js?v=release4"></script>
 </body>
 </html>

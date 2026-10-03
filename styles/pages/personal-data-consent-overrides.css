@@ -1,0 +1,48 @@
+/* Homepage mobile density pass */
+@media (max-width: 900px) {
+
+  .appointment {
+    padding: 56px 0;
+  }
+}
+
+@media (max-width: 620px) {
+
+  .footer-logo {
+    grid-column: auto;
+  }
+
+  .footer-logo img {
+    width: 176px;
+  }
+
+  .footer-column {
+    gap: 10px;
+  }
+
+  .footer-column b {
+    min-height: 38px;
+    margin-bottom: 3px;
+    font-size: 13px;
+  }
+
+  .footer-column a {
+    font-size: 14px;
+  }
+}
+
+/* Doctor profile: keep mobile text independent from the portrait contrast */
+@media (max-width: 620px) {
+
+  .doctor-profile-photo-wrap {
+    width: 100%;
+    min-height: 0;
+    aspect-ratio: 4 / 5;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+/* Homepage doctors */
+

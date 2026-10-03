@@ -5,20 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Гинекология - Добрый Доктор</title>
   <meta name="description" content="Гинекология в медицинском центре Добрый Доктор в Иркутске. Консультации, диагностика, УЗИ и запись на прием.">
+  <link rel="icon" type="image/webp" href="assets/logo.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <script>document.documentElement.classList.add('has-scroll-reveal');</script>
-  <link rel="stylesheet" href="styles.css?v=layout41">
+  <link rel="preload" as="image" href="assets/card-doctor-960.webp" imagesrcset="assets/card-doctor-480.webp 480w, assets/card-doctor-960.webp 960w, assets/card-doctor-1672.webp 1672w" imagesizes="(max-width: 900px) 100vw, 48vw" fetchpriority="high" data-lcp-preload>
+  <link rel="stylesheet" href="styles/pages/gynecology.css?v=release3">
+  <link rel="stylesheet" href="styles/dist/core-responsive.css?v=release3">
+  <link rel="stylesheet" href="styles/pages/gynecology-overrides.css?v=release3">
+  <link rel="stylesheet" href="styles/dist/core-accessibility.css?v=release3">
 </head>
 <body>
   <header class="site-header">
     <div class="shell header-line">
       <a class="brand" href="index.html" aria-label="Добрый Доктор">
-        <img src="assets/logo.webp" alt="Добрый Доктор">
+        <img src="assets/logo.webp" alt="Добрый Доктор" width="400" height="100" decoding="async" loading="eager">
       </a>
 
+      <button class="mobile-header-accessibility-toggle" type="button" aria-controls="accessibilityPanel" aria-label="Настройки версии для слабовидящих" aria-expanded="false" aria-pressed="false" title="Версия для слабовидящих">
+        <svg class="icon-svg" aria-hidden="true" focusable="false" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6-46.8 43.5-78.1 95.4-93 131.1-3.3 7.9-3.3 16.7 0 24.6 14.9 35.7 46.2 87.7 93 131.1 47.1 43.7 111.8 80.6 192.6 80.6s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1 3.3-7.9 3.3-16.7 0-24.6-14.9-35.7-46.2-87.7-93-131.1-47.1-43.7-111.8-80.6-192.6-80.6zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64-11.5 0-22.3-3-31.7-8.4-1 10.9-.1 22.1 2.9 33.2 13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-12.2-45.7-55.5-74.8-101.1-70.8 5.3 9.3 8.4 20.1 8.4 31.7z"></path></svg>
+      </button>
       <button class="mobile-nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span><span></span></button>
 
       <nav class="main-nav" aria-label="Основная навигация">
@@ -66,6 +72,9 @@
           </span>
         </a>
         <a class="button button-primary" href="appointment.html">Записаться онлайн</a>
+        <button class="accessibility-toggle" type="button" aria-controls="accessibilityPanel" aria-label="Включить версию для слабовидящих" aria-expanded="false" aria-pressed="false" title="Версия для слабовидящих">
+          <svg class="icon-svg" aria-hidden="true" focusable="false" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6-46.8 43.5-78.1 95.4-93 131.1-3.3 7.9-3.3 16.7 0 24.6 14.9 35.7 46.2 87.7 93 131.1 47.1 43.7 111.8 80.6 192.6 80.6s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1 3.3-7.9 3.3-16.7 0-24.6-14.9-35.7-46.2-87.7-93-131.1-47.1-43.7-111.8-80.6-192.6-80.6zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64-11.5 0-22.3-3-31.7-8.4-1 10.9-.1 22.1 2.9 33.2 13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-12.2-45.7-55.5-74.8-101.1-70.8 5.3 9.3 8.4 20.1 8.4 31.7z"></path></svg>
+        </button>
       </div>
     </div>
   </header>
@@ -156,15 +165,15 @@
             </div>
             <div class="direction-doctor-grid">
               <a class="mini-doctor-card" href="doctor.html?doctor=sukhareva" data-reveal-item>
-                <img src="assets/doctor-sukhareva.jpg" alt="Сухарева Дарья Олеговна">
+                <img src="assets/doctor-sukhareva-634.webp" alt="Сухарева Дарья Олеговна" width="634" height="952" decoding="async" srcset="assets/doctor-sukhareva-320.webp 320w, assets/doctor-sukhareva-634.webp 634w" sizes="(max-width: 700px) 100vw, 50vw" loading="lazy">
                 <span><b>Сухарева Дарья Олеговна</b><small>Гинеколог</small></span>
               </a>
               <a class="mini-doctor-card" href="doctor.html?doctor=stepanova" data-reveal-item>
-                <div class="doctor-photo mini-photo-placeholder"><i class="fa-regular fa-image"></i></div>
+                <img src="assets/doctor-stepanova-960.webp" alt="Степанова Елена Владимировна" width="960" height="1440" decoding="async" srcset="assets/doctor-stepanova-320.webp 320w, assets/doctor-stepanova-640.webp 640w, assets/doctor-stepanova-960.webp 960w" sizes="(max-width: 700px) 100vw, 50vw" loading="lazy">
                 <span><b>Степанова Елена Владимировна</b><small>Гинеколог, гинеколог-эндокринолог</small></span>
               </a>
               <a class="mini-doctor-card" href="doctor.html?doctor=yuryeva" data-reveal-item>
-                <img src="assets/doctor-yuryeva.jpg" alt="Юрьева Татьяна Юрьевна">
+                <img src="assets/doctor-yuryeva-960.webp" alt="Юрьева Татьяна Юрьевна" width="960" height="1437" decoding="async" srcset="assets/doctor-yuryeva-320.webp 320w, assets/doctor-yuryeva-640.webp 640w, assets/doctor-yuryeva-960.webp 960w" sizes="(max-width: 700px) 100vw, 50vw" loading="lazy">
                 <span><b>Юрьева Татьяна Юрьевна</b><small>Гинеколог</small></span>
               </a>
             </div>
@@ -230,7 +239,7 @@
     <div class="shell">
       <div class="footer-contact-bar">
         <a class="footer-logo" href="index.html" aria-label="Добрый Доктор — на главную">
-          <img src="assets/logo.webp" alt="Добрый Доктор">
+          <img src="assets/logo.webp" alt="Добрый Доктор" width="400" height="100" decoding="async" loading="lazy">
           <span>Медицинский центр<br>в Иркутске</span>
         </a>
 
@@ -307,31 +316,9 @@
     <div class="footer-disclaimer">Имеются противопоказания. Необходима консультация специалиста</div>
   </footer>
 
-  <script>
-    (() => {
-      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const revealItems = document.querySelectorAll('[data-reveal], [data-reveal-item]');
-
-      if (reduceMotion || !('IntersectionObserver' in window)) {
-        revealItems.forEach((item) => item.classList.add('is-visible'));
-        return;
-      }
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, {
-        threshold: 0.16,
-        rootMargin: '-7% 0px -10% 0px'
-      });
-
-      revealItems.forEach((item) => observer.observe(item));
-    })();
-  </script>
-  <script src="site.js?v=a11y6"></script>
+  <script defer src="scripts/data/icon-definitions.js?v=release4"></script>
+  <script defer src="scripts/core/icons.js?v=release4"></script>
+  <script defer src="scripts/features/accessibility.js?v=release4"></script>
+  <script type="module" src="site.js?v=release4"></script>
 </body>
 </html>

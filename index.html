@@ -3,23 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="turnstile-site-key" content="">
   <title>Добрый Доктор - медицинский центр в Иркутске</title>
   <meta name="description" content="Редизайн главной страницы медицинского центра Добрый Доктор в Иркутске.">
+  <link rel="icon" type="image/webp" href="assets/logo.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="icon" href="assets/logo.webp">
-  <script>document.documentElement.classList.add('has-scroll-reveal');</script>
-  <link rel="stylesheet" href="styles.css?v=layout41">
+  <link rel="preload" as="image" href="assets/reception-hero-960.webp" imagesrcset="assets/reception-hero-480.webp 480w, assets/reception-hero-960.webp 960w, assets/reception-hero-1672.webp 1672w" imagesizes="100vw" fetchpriority="high" data-lcp-preload>
+  <link rel="stylesheet" href="styles/pages/index.css?v=release3">
+  <link rel="stylesheet" href="styles/dist/core-responsive.css?v=release3">
+  <link rel="stylesheet" href="styles/pages/index-overrides.css?v=release3">
+  <link rel="stylesheet" href="styles/dist/core-accessibility.css?v=release3">
 </head>
 <body>
   <header class="site-header">
     <div class="shell header-line">
       <a class="brand" href="index.html" aria-label="Добрый Доктор">
-        <img src="assets/logo.webp" alt="Добрый Доктор">
+        <img src="assets/logo.webp" alt="Добрый Доктор" width="400" height="100" decoding="async" loading="eager">
       </a>
 
+      <button class="mobile-header-accessibility-toggle" type="button" aria-controls="accessibilityPanel" aria-label="Настройки версии для слабовидящих" aria-expanded="false" aria-pressed="false" title="Версия для слабовидящих">
+        <svg class="icon-svg" aria-hidden="true" focusable="false" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6-46.8 43.5-78.1 95.4-93 131.1-3.3 7.9-3.3 16.7 0 24.6 14.9 35.7 46.2 87.7 93 131.1 47.1 43.7 111.8 80.6 192.6 80.6s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1 3.3-7.9 3.3-16.7 0-24.6-14.9-35.7-46.2-87.7-93-131.1-47.1-43.7-111.8-80.6-192.6-80.6zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64-11.5 0-22.3-3-31.7-8.4-1 10.9-.1 22.1 2.9 33.2 13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-12.2-45.7-55.5-74.8-101.1-70.8 5.3 9.3 8.4 20.1 8.4 31.7z"></path></svg>
+      </button>
       <button class="mobile-nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span><span></span></button>
 
       <nav class="main-nav" aria-label="Основная навигация">
@@ -67,6 +73,9 @@
           </span>
         </a>
         <a class="button button-primary" href="appointment.html">Записаться онлайн</a>
+        <button class="accessibility-toggle" type="button" aria-controls="accessibilityPanel" aria-label="Включить версию для слабовидящих" aria-expanded="false" aria-pressed="false" title="Версия для слабовидящих">
+          <svg class="icon-svg" aria-hidden="true" focusable="false" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6-46.8 43.5-78.1 95.4-93 131.1-3.3 7.9-3.3 16.7 0 24.6 14.9 35.7 46.2 87.7 93 131.1 47.1 43.7 111.8 80.6 192.6 80.6s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1 3.3-7.9 3.3-16.7 0-24.6-14.9-35.7-46.2-87.7-93-131.1-47.1-43.7-111.8-80.6-192.6-80.6zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64-11.5 0-22.3-3-31.7-8.4-1 10.9-.1 22.1 2.9 33.2 13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-12.2-45.7-55.5-74.8-101.1-70.8 5.3 9.3 8.4 20.1 8.4 31.7z"></path></svg>
+        </button>
       </div>
     </div>
   </header>
@@ -74,7 +83,7 @@
   <main>
     <section class="hero" id="top">
       <div class="hero-media" aria-hidden="true">
-        <img src="assets/reception-hero.png" alt="">
+        <img src="assets/reception-hero-960.webp" alt="" width="1672" height="941" decoding="async" srcset="assets/reception-hero-480.webp 480w, assets/reception-hero-960.webp 960w, assets/reception-hero-1672.webp 1672w" sizes="100vw" loading="eager" fetchpriority="high">
       </div>
 
       <div class="shell hero-grid">
@@ -122,14 +131,14 @@
       <div class="shell branch-panel" data-reveal>
         <div class="branch-title">Выберите удобный филиал</div>
         <a class="branch" href="contacts.html#gavrilova">
-          <img class="branch-photo" src="assets/branch-gavrilova.png" alt="">
+          <img class="branch-photo" src="assets/branch-gavrilova-960.webp" alt="" width="960" height="1280" decoding="async" srcset="assets/branch-gavrilova-360.webp 360w, assets/branch-gavrilova-720.webp 720w, assets/branch-gavrilova-960.webp 960w" sizes="(max-width: 700px) 100vw, 50vw" loading="lazy">
           <span>
             <b>ул. Гаврилова, 4</b>
             <small>ост. «Филармония»</small>
           </span>
         </a>
         <a class="branch" href="contacts.html#lermontova">
-          <img class="branch-photo" src="assets/branch-lermontova.png" alt="">
+          <img class="branch-photo" src="assets/branch-lermontova-800.webp" alt="" width="800" height="600" decoding="async" srcset="assets/branch-lermontova-480.webp 480w, assets/branch-lermontova-800.webp 800w" sizes="(max-width: 700px) 100vw, 50vw" loading="lazy">
           <span>
             <b>ул. Лермонтова, 69</b>
             <small>ост. «Лермонтова»</small>
@@ -150,35 +159,35 @@
 
         <div class="clinic-stories-row" aria-label="Истории о лечении">
           <button class="clinic-story-card" type="button" data-story data-story-title="Первичный прием" data-story-copy="Врач выслушает жалобы, уточнит историю здоровья и поможет определить следующий шаг без лишних назначений." data-story-image="assets/hero-clinic.webp" aria-label="Открыть историю: Первичный прием" data-reveal>
-            <img src="assets/hero-clinic.webp" alt="Врач беседует с пациентом на первичном приеме">
+            <img src="assets/hero-clinic-960.webp" alt="Врач беседует с пациентом на первичном приеме" width="1920" height="1080" decoding="async" srcset="assets/hero-clinic-480.webp 480w, assets/hero-clinic-960.webp 960w, assets/hero-clinic-1920.webp 1920w" sizes="(max-width: 700px) 100vw, 50vw" loading="lazy">
             <span class="clinic-story-play" aria-hidden="true"><i class="fa-solid fa-play"></i></span>
             <span class="clinic-story-number">01</span>
             <span class="clinic-story-caption"><small>Знакомство</small><b>Первичный прием</b></span>
           </button>
 
-          <button class="clinic-story-card" type="button" data-story data-story-title="Обследование" data-story-copy="Подбираем только необходимые исследования, объясняем подготовку и собираем результаты в понятную картину." data-story-image="assets/card-checkup.png" aria-label="Открыть историю: Обследование" data-reveal>
-            <img src="assets/card-checkup.png" alt="Медицинское обследование и лабораторная диагностика">
+            <button class="clinic-story-card" type="button" data-story data-story-title="Обследование" data-story-copy="Подбираем только необходимые исследования, объясняем подготовку и собираем результаты в понятную картину." data-story-image="assets/card-checkup-960.webp" aria-label="Открыть историю: Обследование" data-reveal>
+            <img src="assets/card-checkup-960.webp" alt="Медицинское обследование и лабораторная диагностика" width="1672" height="941" decoding="async" srcset="assets/card-checkup-480.webp 480w, assets/card-checkup-960.webp 960w, assets/card-checkup-1672.webp 1672w" sizes="(max-width: 700px) 100vw, 33vw" loading="lazy">
             <span class="clinic-story-play" aria-hidden="true"><i class="fa-solid fa-play"></i></span>
             <span class="clinic-story-number">02</span>
             <span class="clinic-story-caption"><small>Диагностика</small><b>Обследование</b></span>
           </button>
 
           <button class="clinic-story-card" type="button" data-story data-story-title="Лечение" data-story-copy="Врач составляет персональный план, рассказывает о каждом этапе и остается на связи в процессе лечения." data-story-image="assets/infusion-room.webp" aria-label="Открыть историю: Лечение" data-reveal>
-            <img src="assets/infusion-room.webp" alt="Лечение под контролем медицинского специалиста">
+            <img src="assets/infusion-room-960.webp" alt="Лечение под контролем медицинского специалиста" width="1586" height="992" decoding="async" srcset="assets/infusion-room-480.webp 480w, assets/infusion-room-960.webp 960w, assets/infusion-room-1586.webp 1586w" sizes="(max-width: 700px) 100vw, 50vw" loading="lazy">
             <span class="clinic-story-play" aria-hidden="true"><i class="fa-solid fa-play"></i></span>
             <span class="clinic-story-number">03</span>
             <span class="clinic-story-caption"><small>План помощи</small><b>Лечение</b></span>
           </button>
 
-          <button class="clinic-story-card" type="button" data-story data-story-title="Промежуточная консультация" data-story-copy="Оцениваем самочувствие и динамику, отвечаем на вопросы и при необходимости корректируем рекомендации." data-story-image="assets/card-doctor.png" aria-label="Открыть историю: Промежуточная консультация" data-reveal>
-            <img src="assets/card-doctor.png" alt="Врач изучает результаты и корректирует рекомендации">
+            <button class="clinic-story-card" type="button" data-story data-story-title="Промежуточная консультация" data-story-copy="Оцениваем самочувствие и динамику, отвечаем на вопросы и при необходимости корректируем рекомендации." data-story-image="assets/card-doctor-960.webp" aria-label="Открыть историю: Промежуточная консультация" data-reveal>
+            <img src="assets/card-doctor-960.webp" alt="Врач изучает результаты и корректирует рекомендации" width="1672" height="941" decoding="async" srcset="assets/card-doctor-480.webp 480w, assets/card-doctor-960.webp 960w, assets/card-doctor-1672.webp 1672w" sizes="(max-width: 700px) 100vw, 33vw" loading="lazy">
             <span class="clinic-story-play" aria-hidden="true"><i class="fa-solid fa-play"></i></span>
             <span class="clinic-story-number">04</span>
             <span class="clinic-story-caption"><small>Динамика</small><b>Промежуточная консультация</b></span>
           </button>
 
-          <button class="clinic-story-card" type="button" data-story data-story-title="Контроль результата" data-story-copy="Фиксируем результат, формируем рекомендации по профилактике и план дальнейшего наблюдения." data-story-image="assets/clinic-team-gavrilova.jpg" aria-label="Открыть историю: Контроль результата" data-reveal>
-            <img src="assets/clinic-team-gavrilova.jpg" alt="Команда медицинского центра Добрый Доктор">
+            <button class="clinic-story-card" type="button" data-story data-story-title="Контроль результата" data-story-copy="Фиксируем результат, формируем рекомендации по профилактике и план дальнейшего наблюдения." data-story-image="assets/clinic-team-gavrilova-960.webp" aria-label="Открыть историю: Контроль результата" data-reveal>
+            <img src="assets/clinic-team-gavrilova-960.webp" alt="Команда медицинского центра Добрый Доктор" width="1280" height="853" decoding="async" srcset="assets/clinic-team-gavrilova-480.webp 480w, assets/clinic-team-gavrilova-960.webp 960w, assets/clinic-team-gavrilova-1280.webp 1280w" sizes="(max-width: 700px) 100vw, 50vw" loading="lazy">
             <span class="clinic-story-play" aria-hidden="true"><i class="fa-solid fa-play"></i></span>
             <span class="clinic-story-number">05</span>
             <span class="clinic-story-caption"><small>Поддержка</small><b>Контроль результата</b></span>
@@ -198,7 +207,7 @@
 
         <div class="path-grid">
           <a class="path-card" href="doctors.html" data-reveal>
-            <img src="assets/card-doctor.png" alt="">
+            <img src="assets/card-doctor-960.webp" alt="" width="1672" height="941" decoding="async" srcset="assets/card-doctor-480.webp 480w, assets/card-doctor-960.webp 960w, assets/card-doctor-1672.webp 1672w" sizes="(max-width: 700px) 100vw, 33vw" loading="lazy">
             <span class="path-icon"><i class="fa-solid fa-stethoscope"></i></span>
             <h3>Нужен врач</h3>
             <p>Терапевт, гинеколог, кардиолог, невролог, уролог и другие специалисты.</p>
@@ -206,7 +215,7 @@
           </a>
 
           <a class="path-card" href="diagnostics.html" data-reveal>
-            <img src="assets/ultrasound.webp" alt="">
+            <img src="assets/ultrasound-960.webp" alt="" width="1500" height="860" decoding="async" srcset="assets/ultrasound-480.webp 480w, assets/ultrasound-960.webp 960w, assets/ultrasound-1500.webp 1500w" sizes="(max-width: 700px) 100vw, 33vw" loading="lazy">
             <span class="path-icon blue"><i class="fa-solid fa-microscope"></i></span>
             <h3>Нужна диагностика</h3>
             <p>УЗИ, лабораторные анализы, функциональная диагностика и подготовка.</p>
@@ -214,7 +223,7 @@
           </a>
 
           <a class="path-card" href="children.html" data-reveal>
-            <img src="assets/card-child.png" alt="">
+            <img src="assets/card-child-960.webp" alt="" width="1672" height="941" decoding="async" srcset="assets/card-child-480.webp 480w, assets/card-child-960.webp 960w, assets/card-child-1672.webp 1672w" sizes="(max-width: 700px) 100vw, 33vw" loading="lazy">
             <span class="path-icon cyan"><i class="fa-solid fa-child-reaching"></i></span>
             <h3>Для ребенка</h3>
             <p>Педиатрия, детские врачи, вакцинация, справки в сад и школу.</p>
@@ -222,7 +231,7 @@
           </a>
 
           <a class="path-card" href="organizations.html" data-reveal>
-            <img src="assets/card-corporate.png" alt="">
+            <img src="assets/card-corporate-960.webp" alt="" width="1672" height="941" decoding="async" srcset="assets/card-corporate-480.webp 480w, assets/card-corporate-960.webp 960w, assets/card-corporate-1672.webp 1672w" sizes="(max-width: 700px) 100vw, 33vw" loading="lazy">
             <span class="path-icon ink"><i class="fa-solid fa-briefcase-medical"></i></span>
             <h3>Для организации</h3>
             <p>Медосмотры сотрудников, предрейсовые и послерейсовые осмотры.</p>
@@ -230,7 +239,7 @@
           </a>
 
           <a class="path-card" href="cosmetology.html" data-reveal>
-            <img src="assets/card-cosmetology.png" alt="">
+            <img src="assets/card-cosmetology-960.webp" alt="" width="1672" height="941" decoding="async" srcset="assets/card-cosmetology-480.webp 480w, assets/card-cosmetology-960.webp 960w, assets/card-cosmetology-1672.webp 1672w" sizes="(max-width: 700px) 100vw, 33vw" loading="lazy">
             <span class="path-icon teal"><i class="fa-solid fa-spa"></i></span>
             <h3>Косметология</h3>
             <p>Аппаратные и уходовые процедуры, консультации, SMAS- и RF-лифтинг.</p>
@@ -238,7 +247,7 @@
           </a>
 
           <a class="path-card" href="checkups.html" data-reveal>
-            <img src="assets/card-checkup.png" alt="">
+            <img src="assets/card-checkup-960.webp" alt="" width="1672" height="941" decoding="async" srcset="assets/card-checkup-480.webp 480w, assets/card-checkup-960.webp 960w, assets/card-checkup-1672.webp 1672w" sizes="(max-width: 700px) 100vw, 33vw" loading="lazy">
             <span class="path-icon green"><i class="fa-solid fa-clipboard-check"></i></span>
             <h3>Чекапы</h3>
             <p>Комплексные программы диагностики, профилактики и биохакинг.</p>
@@ -264,7 +273,7 @@
 
         <div class="home-doctors-grid">
           <a class="home-doctor-card" href="doctor.html?doctor=myasnikova" data-reveal>
-            <img src="assets/doctor-myasnikova.jpg" alt="Мясникова Александра Валерьевна" loading="lazy">
+            <img src="assets/doctor-myasnikova-960.webp" alt="Мясникова Александра Валерьевна" width="960" height="1440" decoding="async" srcset="assets/doctor-myasnikova-320.webp 320w, assets/doctor-myasnikova-640.webp 640w, assets/doctor-myasnikova-960.webp 960w" sizes="(max-width: 700px) 100vw, 50vw" loading="lazy">
             <span class="home-doctor-branch"><i class="fa-solid fa-location-dot"></i> Гаврилова, 4</span>
             <span class="home-doctor-info">
               <small>Косметолог, дерматовенеролог</small>
@@ -274,7 +283,7 @@
           </a>
 
           <a class="home-doctor-card" href="doctor.html?doctor=sukhareva" data-reveal>
-            <img src="assets/doctor-sukhareva.jpg" alt="Сухарева Дарья Олеговна" loading="lazy">
+            <img src="assets/doctor-sukhareva-634.webp" alt="Сухарева Дарья Олеговна" width="634" height="952" decoding="async" srcset="assets/doctor-sukhareva-320.webp 320w, assets/doctor-sukhareva-634.webp 634w" sizes="(max-width: 700px) 100vw, 50vw" loading="lazy">
             <span class="home-doctor-branch"><i class="fa-solid fa-location-dot"></i> Два филиала</span>
             <span class="home-doctor-info">
               <small>Гинеколог</small>
@@ -284,7 +293,7 @@
           </a>
 
           <a class="home-doctor-card" href="doctor.html?doctor=yuryeva" data-reveal>
-            <img src="assets/doctor-yuryeva.jpg" alt="Юрьева Татьяна Юрьевна" loading="lazy">
+            <img src="assets/doctor-yuryeva-960.webp" alt="Юрьева Татьяна Юрьевна" width="960" height="1437" decoding="async" srcset="assets/doctor-yuryeva-320.webp 320w, assets/doctor-yuryeva-640.webp 640w, assets/doctor-yuryeva-960.webp 960w" sizes="(max-width: 700px) 100vw, 50vw" loading="lazy">
             <span class="home-doctor-branch"><i class="fa-solid fa-location-dot"></i> Гаврилова, 4</span>
             <span class="home-doctor-info">
               <small>Гинеколог</small>
@@ -294,7 +303,7 @@
           </a>
 
           <a class="home-doctor-card" href="doctor.html?doctor=myasnikov" data-reveal>
-            <img src="assets/doctor-myasnikov.jpg" alt="Мясников Владимир Геннадьевич" loading="lazy">
+            <img src="assets/doctor-myasnikov-960.webp" alt="Мясников Владимир Геннадьевич" width="1200" height="1800" decoding="async" srcset="assets/doctor-myasnikov-320.webp 320w, assets/doctor-myasnikov-640.webp 640w, assets/doctor-myasnikov-960.webp 960w, assets/doctor-myasnikov-1200.webp 1200w" sizes="(max-width: 700px) 100vw, 50vw" loading="lazy">
             <span class="home-doctor-branch"><i class="fa-solid fa-location-dot"></i> Гаврилова, 4</span>
             <span class="home-doctor-info">
               <small>Врач ультразвуковой диагностики</small>
@@ -330,7 +339,7 @@
         </div>
 
         <a class="infusion-feature-media" href="droppers.html" data-reveal aria-label="Подробнее о капельницах">
-          <img src="assets/infusion-room.webp" alt="Процедура инфузионной терапии в медицинском центре" loading="lazy">
+          <img src="assets/infusion-room-960.webp" alt="Процедура инфузионной терапии в медицинском центре" width="1586" height="992" decoding="async" srcset="assets/infusion-room-480.webp 480w, assets/infusion-room-960.webp 960w, assets/infusion-room-1586.webp 1586w" sizes="(max-width: 700px) 100vw, 50vw" loading="lazy">
           <span class="infusion-feature-media-caption">
             <b>11 программ</b>
             <small>Индивидуальный подбор после консультации</small>
@@ -353,19 +362,28 @@
             <span>Капельницы</span>
           </div>
         </div>
-        <form class="appointment-form" action="appointment.html" data-reveal>
+        <form class="appointment-form" id="callbackForm" data-reveal>
           <label>
             <span>Ваше имя</span>
-            <input type="text" placeholder="Как к вам обращаться">
+            <input type="text" name="name" placeholder="Как к вам обращаться" autocomplete="name" minlength="2" maxlength="100" required>
           </label>
           <label>
             <span>Телефон</span>
-            <input type="tel" placeholder="+7 ___ ___-__-__">
+            <input type="tel" name="phone" placeholder="+7 ___ ___-__-__" autocomplete="tel" inputmode="tel" minlength="7" maxlength="25" required>
           </label>
-          <label class="appointment-consent">
-            <input type="checkbox" checked>
-            <span>Согласен на обработку персональных данных</span>
-          </label>
+          <div class="appointment-consent">
+            <input id="callbackConsent" type="checkbox" name="consent" required>
+            <div class="consent-copy">
+              <label for="callbackConsent">Даю согласие на обработку персональных данных</label>
+              <div class="consent-links">
+                <a href="personal-data-consent.html" target="_blank" rel="noopener">Прочитать согласие</a>
+                <span aria-hidden="true">·</span>
+                <a href="assets/documents/personal-data-policy.docx" target="_blank" rel="noopener">Политика обработки данных</a>
+              </div>
+            </div>
+          </div>
+          <div class="turnstile-widget" data-turnstile hidden></div>
+          <p class="form-status" data-form-status role="status" aria-live="polite" hidden></p>
           <button class="button button-primary" type="submit">Отправить</button>
         </form>
       </div>
@@ -374,7 +392,7 @@
     <section class="about" id="about">
       <div class="shell about-grid">
         <div class="about-photo" data-reveal>
-          <img class="clinic-photo clinic-team-photo" src="assets/clinic-team-gavrilova.jpg" alt="Команда медицинского центра Добрый Доктор у входа в филиал">
+          <img class="clinic-photo clinic-team-photo" src="assets/clinic-team-gavrilova-960.webp" alt="Команда медицинского центра Добрый Доктор у входа в филиал" width="1280" height="853" decoding="async" srcset="assets/clinic-team-gavrilova-480.webp 480w, assets/clinic-team-gavrilova-960.webp 960w, assets/clinic-team-gavrilova-1280.webp 1280w" sizes="(max-width: 700px) 100vw, 50vw" loading="lazy">
         </div>
         <div class="about-copy" data-reveal>
           <p class="eyebrow">О клинике</p>
@@ -397,7 +415,7 @@
     <button class="story-viewer-nav story-viewer-prev" type="button" aria-label="Предыдущая история"><i class="fa-solid fa-chevron-left"></i></button>
     <div class="story-viewer-panel">
       <div class="story-viewer-media">
-        <img src="assets/hero-clinic.webp" alt="">
+        <img src="assets/hero-clinic-960.webp" alt="" width="1920" height="1080" decoding="async" srcset="assets/hero-clinic-480.webp 480w, assets/hero-clinic-960.webp 960w, assets/hero-clinic-1920.webp 1920w" sizes="(max-width: 700px) 100vw, 50vw" loading="lazy">
         <span class="story-viewer-brand">Добрый Доктор</span>
       </div>
       <div class="story-viewer-copy">
@@ -416,7 +434,7 @@
     <div class="shell">
       <div class="footer-contact-bar">
         <a class="footer-logo" href="index.html" aria-label="Добрый Доктор — на главную">
-          <img src="assets/logo.webp" alt="Добрый Доктор">
+          <img src="assets/logo.webp" alt="Добрый Доктор" width="400" height="100" decoding="async" loading="lazy">
           <span>Медицинский центр<br>в Иркутске</span>
         </a>
 
@@ -493,31 +511,9 @@
     <div class="footer-disclaimer">Имеются противопоказания. Необходима консультация специалиста</div>
   </footer>
 
-  <script>
-    (() => {
-      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const revealItems = document.querySelectorAll('[data-reveal], [data-reveal-item]');
-
-      if (reduceMotion || !('IntersectionObserver' in window)) {
-        revealItems.forEach((item) => item.classList.add('is-visible'));
-        return;
-      }
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, {
-        threshold: 0.16,
-        rootMargin: '-7% 0px -10% 0px'
-      });
-
-      revealItems.forEach((item) => observer.observe(item));
-    })();
-  </script>
-  <script src="site.js?v=a11y6"></script>
+  <script defer src="scripts/data/icon-definitions.js?v=release4"></script>
+  <script defer src="scripts/core/icons.js?v=release4"></script>
+  <script defer src="scripts/features/accessibility.js?v=release4"></script>
+  <script type="module" src="site.js?v=release4"></script>
 </body>
 </html>

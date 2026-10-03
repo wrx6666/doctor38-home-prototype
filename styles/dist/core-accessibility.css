@@ -1,0 +1,635 @@
+/* Accessible viewing mode */
+.accessibility-toggle,
+.mobile-header-accessibility-toggle,
+.footer-accessibility-toggle {
+  font: inherit;
+  cursor: pointer;
+}
+
+.mobile-header-accessibility-toggle {
+  display: none;
+}
+
+.accessibility-toggle {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  border: 1px solid var(--green);
+  border-radius: var(--radius);
+  background: #f8fffb;
+  color: var(--green-deep);
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+  box-shadow: 0 6px 16px rgba(10, 143, 74, .1);
+}
+
+.accessibility-toggle:hover,
+.accessibility-toggle:focus-visible,
+.accessibility-toggle.is-active {
+  border-color: var(--green);
+  background: var(--mint);
+  color: var(--green-deep);
+  outline: 3px solid rgba(10, 143, 74, .16);
+  outline-offset: 2px;
+}
+
+.accessibility-panel {
+  position: fixed;
+  top: 84px;
+  right: 0;
+  left: 0;
+  z-index: 29;
+  border-bottom: 2px solid var(--green);
+  background: #fff;
+  color: #111;
+  box-shadow: 0 18px 42px rgba(21, 35, 49, .18);
+}
+
+.accessibility-panel[hidden] {
+  display: none;
+}
+
+.accessibility-panel-inner {
+  position: relative;
+  min-height: 94px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 22px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.accessibility-panel-title {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding-right: 20px;
+  border-right: 1px solid #cbd6da;
+  font-size: 15px;
+}
+
+.accessibility-panel-title i {
+  color: var(--green-deep);
+  font-size: 18px;
+}
+
+.accessibility-group {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 6px;
+  align-items: center;
+}
+
+.accessibility-group > span {
+  grid-column: 1 / -1;
+  color: #4b5b65;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.accessibility-group button,
+.accessibility-reset,
+.accessibility-exit,
+.accessibility-close {
+  min-height: 38px;
+  padding: 7px 11px;
+  border: 2px solid #27343c;
+  border-radius: 5px;
+  background: #fff;
+  color: #111;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.accessibility-group button:hover,
+.accessibility-group button:focus-visible,
+.accessibility-group button.is-active,
+.accessibility-reset:hover,
+.accessibility-reset:focus-visible,
+.accessibility-exit:hover,
+.accessibility-exit:focus-visible,
+.accessibility-close:hover,
+.accessibility-close:focus-visible {
+  border-color: var(--green-deep);
+  background: #e8f5ed;
+  color: #063d21;
+  outline: 3px solid rgba(10, 143, 74, .18);
+  outline-offset: 2px;
+}
+
+.accessibility-group .accessibility-swatch-dark {
+  background: #000;
+  color: #fff;
+}
+
+.accessibility-group .accessibility-swatch-mono {
+  background: #ececec;
+  color: #000;
+}
+
+.accessibility-reset,
+.accessibility-exit {
+  align-self: end;
+  white-space: nowrap;
+}
+
+.accessibility-exit {
+  border-color: #111;
+  background: #111;
+  color: #fff;
+}
+
+.accessibility-close {
+  width: 40px;
+  align-self: center;
+  padding: 0;
+  border-color: #cbd6da;
+}
+
+.footer-accessibility-toggle {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: inherit;
+  text-align: left;
+}
+
+.footer-accessibility-toggle:hover,
+.footer-accessibility-toggle:focus-visible {
+  color: #fff;
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+html.a11y-mode {
+  scroll-behavior: auto;
+}
+
+html.a11y-mode *,
+html.a11y-mode *::before,
+html.a11y-mode *::after {
+  animation: none !important;
+  transition: none !important;
+}
+
+html.a11y-font-large :where(p, li, label, input, select, textarea, button, .button, .main-nav a, .nav-dropdown span, .phone small, .footer-column a, .doctor-meta, .hero-lead) {
+  font-size: 18px !important;
+}
+
+html.a11y-font-large small {
+  font-size: 16px !important;
+}
+
+html.a11y-font-xlarge :where(p, li, label, input, select, textarea, button, .button, .main-nav a, .nav-dropdown span, .phone small, .footer-column a, .doctor-meta, .hero-lead) {
+  font-size: 20px !important;
+}
+
+html.a11y-font-xlarge small {
+  font-size: 18px !important;
+}
+
+html.a11y-font-xlarge h1 {
+  font-size: clamp(40px, 7vw, 76px) !important;
+}
+
+html.a11y-font-xlarge h2 {
+  font-size: clamp(32px, 5vw, 58px) !important;
+}
+
+html.a11y-spacing-wide :where(h1, h2, h3, h4, p, a, button, label, input, select, textarea, li, span, b, small) {
+  letter-spacing: .09em !important;
+  line-height: 1.65 !important;
+}
+
+html.a11y-theme-mono body {
+  filter: grayscale(1) contrast(1.08);
+}
+
+html.a11y-theme-contrast body {
+  --ink: #fff;
+  --text: #fff;
+  --muted: #eee;
+  --line: #fff;
+  --white: #000;
+  --wash: #111;
+  --green: #ffeb3b;
+  --green-deep: #ffeb3b;
+  --brand-dark: #fff;
+  --mint: #171717;
+  background: #000 !important;
+  color: #fff !important;
+}
+
+html.a11y-theme-contrast :where(.site-header, .accessibility-panel, .nav-dropdown, .mobile-menu-panel, main, main section, footer, dialog, article, form, aside, .doctor-info, .home-doctor-info, .branch-panel, .direction-section, .footer-disclaimer, .footer-meta, .footer-nav-grid) {
+  border-color: #fff !important;
+  background-color: #000 !important;
+  background-image: none !important;
+  color: #fff !important;
+  box-shadow: none !important;
+}
+
+html.a11y-theme-contrast :where(h1, h2, h3, h4, p, span, b, small, strong, em, label, a:not(.button)) {
+  color: #fff !important;
+}
+
+html.a11y-theme-contrast :where(.eyebrow, i, .path-icon, .doctor-meta i, .about-list i) {
+  color: #ffeb3b !important;
+}
+
+html.a11y-theme-contrast :where(.button-primary, .home-doctors-all, .accessibility-group button.is-active) {
+  border-color: #ffeb3b !important;
+  background: #ffeb3b !important;
+  color: #000 !important;
+}
+
+html.a11y-theme-contrast :where(.button-secondary, input, select, textarea, .accessibility-group button, .accessibility-reset, .accessibility-close) {
+  border: 2px solid #fff !important;
+  background: #000 !important;
+  color: #fff !important;
+}
+
+html.a11y-theme-contrast :where(input, textarea)::placeholder {
+  color: #ddd !important;
+}
+
+html.a11y-theme-contrast img {
+  filter: contrast(1.12);
+}
+
+html.a11y-images-hide main img,
+html.a11y-images-hide .site-footer img {
+  visibility: hidden !important;
+}
+
+html.a11y-images-hide :where(.hero, .catalog-hero, .direction-hero, .service-detail-hero, .doctors-hero, .about-page-hero, .contacts-hero, .documents-hero, .prices-hero) {
+  background-image: none !important;
+}
+
+@media (max-width: 1360px) {
+  .accessibility-toggle span {
+    display: none;
+  }
+
+  .accessibility-toggle {
+    width: 42px;
+    justify-content: center;
+    padding: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .accessibility-panel {
+    top: 72px;
+    max-height: calc(100dvh - 72px);
+    overflow-y: auto;
+  }
+
+  .accessibility-panel-inner {
+    width: calc(100% - 32px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 16px;
+    padding: 18px 0 22px;
+  }
+
+  .accessibility-panel-title {
+    grid-column: 1 / -1;
+    padding: 0 48px 14px 0;
+    border-right: 0;
+    border-bottom: 1px solid #cbd6da;
+  }
+
+  .accessibility-close {
+    position: absolute;
+    top: 14px;
+    right: 0;
+  }
+
+  .accessibility-reset,
+  .accessibility-exit {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 620px) {
+  .accessibility-panel-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .accessibility-group {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .accessibility-group button {
+    width: 100%;
+  }
+
+  html.a11y-font-large :where(p, li, label, input, select, textarea, button, .button, .hero-lead),
+  html.a11y-font-xlarge :where(p, li, label, input, select, textarea, button, .button, .hero-lead) {
+    font-size: 18px !important;
+  }
+}
+
+/* Final cascade for the compact accessibility toolbar */
+.accessibility-toggle {
+  width: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #111;
+  box-shadow: none;
+  font-size: 18px;
+}
+
+.accessibility-toggle:hover,
+.accessibility-toggle:focus-visible,
+html.a11y-panel-open .accessibility-toggle:focus-visible {
+  border-color: transparent;
+  background: #eef1f2;
+  color: #000;
+  outline: 2px solid #111;
+  outline-offset: 2px;
+}
+
+.accessibility-toggle.is-active:not(:focus-visible) {
+  background: transparent;
+  color: #111;
+  outline: 0;
+}
+
+#accessibilityPanel.accessibility-panel {
+  top: 0;
+  z-index: 1000;
+  padding: 0 !important;
+  border-bottom: 1px solid #d2d2d2;
+  background: #f7f7f7;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+}
+
+html.a11y-panel-open body {
+  padding-top: var(--a11y-panel-height, 104px);
+}
+
+html.a11y-panel-open .site-header {
+  top: var(--a11y-panel-height, 104px);
+}
+
+#accessibilityPanel .accessibility-panel-inner {
+  width: min(1240px, calc(100% - 32px));
+  min-height: 103px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+  padding: 11px 0 8px;
+}
+
+#accessibilityPanel .accessibility-group {
+  display: block;
+  padding: 0 14px;
+}
+
+#accessibilityPanel .accessibility-group > span {
+  display: block;
+  margin: 0 0 10px;
+  color: #050505;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1.15;
+  text-align: center;
+  text-transform: none;
+}
+
+#accessibilityPanel .accessibility-control-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+#accessibilityPanel .accessibility-group button,
+#accessibilityPanel .accessibility-reset,
+#accessibilityPanel .accessibility-exit,
+#accessibilityPanel .accessibility-close {
+  position: static;
+  width: auto;
+  min-width: 43px;
+  min-height: 36px;
+  padding: 6px 11px;
+  border: 1px solid #c7c7c7;
+  border-radius: 4px;
+  background: #e3e3e3;
+  color: #050505;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1;
+  box-shadow: inset 0 1px rgba(255, 255, 255, .7);
+}
+
+#accessibilityPanel .accessibility-group button:hover,
+#accessibilityPanel .accessibility-group button:focus-visible,
+#accessibilityPanel .accessibility-group button.is-active,
+#accessibilityPanel .accessibility-reset:hover,
+#accessibilityPanel .accessibility-reset:focus-visible,
+#accessibilityPanel .accessibility-exit:hover,
+#accessibilityPanel .accessibility-exit:focus-visible,
+#accessibilityPanel .accessibility-close:hover,
+#accessibilityPanel .accessibility-close:focus-visible {
+  border-color: #111;
+  background: #d5d5d5;
+  color: #000;
+  outline: 2px solid #111;
+  outline-offset: 2px;
+}
+
+#accessibilityPanel .accessibility-group button.is-active {
+  box-shadow: inset 0 0 0 2px currentColor;
+}
+
+#accessibilityPanel .accessibility-group .accessibility-swatch-light { background: #fff; color: #000; }
+#accessibilityPanel .accessibility-group .accessibility-swatch-dark { background: #000; color: #fff; }
+#accessibilityPanel .accessibility-group .accessibility-swatch-blue { background: #9bd1f5; color: #083d69; }
+#accessibilityPanel .accessibility-group .accessibility-swatch-beige { background: #fff6c9; color: #57420a; }
+#accessibilityPanel .accessibility-group .accessibility-swatch-brown { background: #3c2b17; color: #b8ef4f; }
+
+#accessibilityPanel .accessibility-actions .accessibility-exit {
+  min-width: 186px;
+  border-color: #c7c7c7;
+  background: #e3e3e3;
+  color: #050505;
+}
+
+#accessibilityPanel .accessibility-actions .accessibility-close {
+  width: 43px;
+  padding: 6px;
+}
+
+#accessibilityPanel .accessibility-advanced {
+  flex: 0 0 100%;
+  margin-top: 10px;
+  border-top: 1px solid #d2d2d2;
+}
+
+#accessibilityPanel .accessibility-advanced[hidden] {
+  display: none;
+}
+
+#accessibilityPanel .accessibility-advanced-inner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 14px;
+  padding: 12px 0 4px;
+}
+
+#accessibilityPanel .accessibility-advanced .accessibility-group > span {
+  margin-bottom: 7px;
+  font-size: 13px;
+}
+
+#accessibilityPanel .accessibility-reset {
+  align-self: auto;
+  min-height: 36px;
+  white-space: nowrap;
+}
+
+@media (max-width: 1080px) {
+  #accessibilityPanel .accessibility-panel-inner {
+    width: min(760px, calc(100% - 24px));
+    row-gap: 16px;
+  }
+
+  #accessibilityPanel .accessibility-actions {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .mobile-header-accessibility-toggle {
+    display: grid;
+  }
+
+  #accessibilityPanel.accessibility-panel {
+    top: 0;
+    max-height: min(74dvh, 560px);
+    overflow-y: auto;
+  }
+
+  #accessibilityPanel .accessibility-panel-inner {
+    width: min(560px, calc(100% - 24px));
+    min-height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 8px;
+    padding: 18px 0;
+  }
+
+  #accessibilityPanel .accessibility-group {
+    padding: 0 4px;
+  }
+
+  #accessibilityPanel .accessibility-group > span {
+    margin-bottom: 8px;
+    font-size: 15px;
+  }
+
+  #accessibilityPanel .accessibility-actions,
+  #accessibilityPanel .accessibility-advanced {
+    grid-column: 1 / -1;
+  }
+
+  #accessibilityPanel .accessibility-advanced {
+    margin-top: 0;
+  }
+
+  #accessibilityPanel .accessibility-advanced-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #accessibilityPanel .accessibility-reset {
+    width: auto;
+  }
+}
+
+@media (max-width: 520px) {
+  #accessibilityPanel .accessibility-panel-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 17px 4px;
+  }
+
+  #accessibilityPanel .accessibility-group button {
+    width: auto;
+  }
+
+  #accessibilityPanel .accessibility-theme-controls,
+  #accessibilityPanel .accessibility-actions .accessibility-control-row {
+    flex-wrap: wrap;
+  }
+
+  #accessibilityPanel .accessibility-actions .accessibility-exit {
+    order: 3;
+    flex: 0 0 100%;
+  }
+}
+
+/* WebKit: avoid percentage-height images stretching across the whole mobile card. */
+@media (max-width: 620px) {
+  .doctor-grid .doctor-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .doctor-grid .doctor-card > img.doctor-photo {
+    width: 100%;
+    height: clamp(360px, 108vw, 430px);
+    min-height: 0;
+    flex: 0 0 auto;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+}
+
+@media (min-width: 1361px) and (max-width: 1540px) {
+  .header-line {
+    grid-template-columns: 205px minmax(0, 1fr) auto;
+    gap: 12px;
+  }
+
+  .brand img {
+    width: 205px;
+  }
+
+  .main-nav > a,
+  .nav-item > a {
+    padding-right: 8px;
+    padding-left: 8px;
+    font-size: 14px;
+  }
+
+  .header-contact {
+    gap: 8px;
+  }
+
+  .header-contact .button {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}

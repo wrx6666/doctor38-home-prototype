@@ -1,0 +1,508 @@
+/* Homepage stories */
+.clinic-stories {
+  padding: 28px 0 34px;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, #f1f7f4 0%, #f7faf9 100%);
+  border-top: 1px solid rgba(7, 84, 93, .07);
+}
+
+.clinic-stories-shell {
+  position: relative;
+  width: min(1180px, calc(100% - 48px));
+  display: block;
+  overflow: hidden;
+  padding: 24px 28px 28px;
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 92% -28%, rgba(109, 202, 147, .22), transparent 34%),
+    linear-gradient(118deg, #07545d 0%, #087047 100%);
+  box-shadow: 0 22px 50px rgba(7, 84, 93, .16);
+}
+
+.clinic-stories-intro h2 {
+  margin: 0 0 18px;
+  color: #fff;
+  font-size: 28px;
+  line-height: 1.08;
+  letter-spacing: -.035em;
+  text-align: center;
+}
+
+.clinic-stories-row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  overflow: visible;
+  margin: 0 auto;
+  padding: 0 1px 2px;
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
+}
+
+.clinic-stories-row::-webkit-scrollbar {
+  display: none;
+}
+
+.clinic-story-card {
+  position: relative;
+  width: 100%;
+  height: 210px;
+  overflow: hidden;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, .18);
+  border-radius: 17px;
+  background: #dce9e6;
+  box-shadow: 0 14px 28px rgba(2, 31, 34, .2);
+  color: #fff;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  isolation: isolate;
+  scroll-snap-align: start;
+  transition: transform 260ms var(--ease-out), border-color 200ms var(--ease-out), box-shadow 260ms var(--ease-out);
+}
+
+.clinic-story-card::after {
+  display: none;
+}
+
+.clinic-story-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 650ms var(--ease-out), filter 260ms var(--ease-out);
+}
+
+.clinic-story-card:nth-child(1) img { object-position: 47% center; }
+.clinic-story-card:nth-child(2) img { object-position: 67% center; }
+.clinic-story-card:nth-child(3) img { object-position: 61% center; }
+.clinic-story-card:nth-child(4) img { object-position: 61% center; }
+.clinic-story-card:nth-child(5) img { object-position: 54% center; }
+
+.clinic-story-card:hover,
+.clinic-story-card:focus-visible {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, .72);
+  box-shadow: 0 18px 34px rgba(2, 31, 34, .28);
+  outline: none;
+}
+
+.clinic-story-card:hover img,
+.clinic-story-card:focus-visible img {
+  transform: scale(1.035);
+  filter: saturate(1.03);
+}
+
+.clinic-story-play {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, .7);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .94);
+  color: var(--green-deep);
+  box-shadow: 0 5px 14px rgba(0, 34, 36, .16);
+}
+
+.clinic-story-play i {
+  margin-left: 1px;
+  font-size: 9px;
+}
+
+.clinic-story-number {
+  display: none;
+}
+
+.clinic-story-caption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  min-height: 78px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 14px 15px 13px;
+  border: 0;
+  border-radius: 0;
+  background: linear-gradient(180deg, rgba(5, 41, 44, 0) 0%, rgba(5, 41, 44, .88) 58%);
+}
+
+.clinic-story-caption small {
+  display: none;
+}
+
+.clinic-story-caption b {
+  display: -webkit-box;
+  overflow: hidden;
+  font-size: 16px;
+  line-height: 1.12;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.story-viewer {
+  width: min(940px, calc(100% - 40px));
+  max-width: none;
+  padding: 0;
+  overflow: visible;
+  border: 0;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 34px 100px rgba(2, 28, 30, .32);
+  color: var(--ink);
+}
+
+.story-viewer::backdrop {
+  background: rgba(4, 27, 30, .78);
+  backdrop-filter: blur(10px);
+}
+
+.story-viewer[open] {
+  animation: storyViewerIn 260ms var(--ease-out);
+}
+
+.story-viewer-progress {
+  position: absolute;
+  top: 16px;
+  right: 72px;
+  left: 18px;
+  z-index: 4;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+}
+
+.story-viewer-progress span {
+  height: 3px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, .34);
+}
+
+.story-viewer-progress span::after {
+  content: "";
+  width: 0;
+  height: 100%;
+  display: block;
+  border-radius: inherit;
+  background: #fff;
+}
+
+.story-viewer-progress span.is-complete::after,
+.story-viewer-progress span.is-current::after {
+  width: 100%;
+}
+
+.story-viewer-panel {
+  min-height: 600px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(330px, .92fr);
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.story-viewer-media {
+  position: relative;
+  min-height: 600px;
+  overflow: hidden;
+  background: #dce9e6;
+}
+
+.story-viewer-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 41, 44, .08);
+  pointer-events: none;
+}
+
+.story-viewer-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.story-viewer-brand {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 2;
+  padding: 9px 12px;
+  border: 1px solid rgba(255, 255, 255, .42);
+  border-radius: 999px;
+  background: rgba(5, 45, 49, .72);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .03em;
+  backdrop-filter: blur(10px);
+}
+
+.story-viewer-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 66px 46px 48px;
+  background: #fff;
+}
+
+.story-viewer-count {
+  width: fit-content;
+  margin-bottom: 24px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--green);
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.story-viewer-copy h2 {
+  margin-bottom: 18px;
+  color: #073f42;
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1.03;
+  letter-spacing: -.04em;
+}
+
+.story-viewer-text {
+  margin-bottom: 30px;
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.story-viewer-copy .button {
+  align-self: flex-start;
+}
+
+.story-viewer-close,
+.story-viewer-nav {
+  position: absolute;
+  z-index: 5;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, .34);
+  border-radius: 50%;
+  background: rgba(5, 45, 49, .76);
+  color: #fff;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: background 160ms var(--ease-out), transform 160ms var(--ease-out);
+}
+
+.story-viewer-close:hover,
+.story-viewer-nav:hover,
+.story-viewer-close:focus-visible,
+.story-viewer-nav:focus-visible {
+  background: var(--green);
+  outline: none;
+  transform: scale(1.05);
+}
+
+.story-viewer-close {
+  top: 13px;
+  right: 14px;
+}
+
+.story-viewer-nav {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.story-viewer-nav:hover,
+.story-viewer-nav:focus-visible {
+  transform: translateY(-50%) scale(1.05);
+}
+
+.story-viewer-prev { left: -66px; }
+.story-viewer-next { right: -66px; }
+
+.story-viewer-nav:disabled {
+  opacity: .32;
+  cursor: default;
+  transform: translateY(-50%);
+}
+
+.story-viewer.is-switching .story-viewer-media img,
+.story-viewer.is-switching .story-viewer-copy > * {
+  animation: storyContentIn 300ms var(--ease-out);
+}
+
+body.story-viewer-open {
+  overflow: hidden;
+}
+
+@keyframes storyViewerIn {
+  from { opacity: 0; transform: translateY(14px) scale(.985); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes storyContentIn {
+  from { opacity: 0; transform: translateY(7px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1100px) {
+  .clinic-stories-shell {
+    width: calc(100% - 40px);
+    padding: 22px 22px 24px;
+  }
+
+  .clinic-stories-row {
+    width: 100%;
+  }
+
+  .clinic-story-card {
+    height: 195px;
+  }
+
+  .story-viewer-prev { left: 12px; }
+  .story-viewer-next { right: 12px; }
+}
+
+@media (max-width: 900px) {
+  .clinic-stories-intro {
+    display: block;
+  }
+
+  .clinic-stories-intro h2 {
+    margin: 0 0 16px;
+    font-size: 24px;
+  }
+
+  .clinic-story-card {
+    height: 190px;
+  }
+
+  .story-viewer-panel {
+    grid-template-columns: 1fr 330px;
+  }
+
+  .story-viewer-copy {
+    padding: 64px 32px 40px;
+  }
+}
+
+@media (max-width: 620px) {
+  .clinic-stories {
+    padding: 14px 0 22px;
+  }
+
+  .clinic-stories-shell {
+    width: calc(100% - 24px);
+    padding: 18px 0 18px 16px;
+    border-radius: 22px;
+  }
+
+  .clinic-stories-intro h2 {
+    margin-bottom: 14px;
+    padding-right: 16px;
+    font-size: 21px;
+  }
+
+  .clinic-stories-row {
+    width: 100%;
+    display: flex;
+    gap: 11px;
+    overflow-x: auto;
+    margin: 0;
+    padding: 1px 16px 4px 0;
+  }
+
+  .clinic-story-card,
+  .clinic-story-card:nth-child(4),
+  .clinic-story-card:nth-child(5) {
+    flex: 0 0 100px;
+    width: 100px;
+    height: 160px;
+  }
+
+  .clinic-story-caption {
+    min-height: 44px;
+    padding: 7px 9px 6px;
+  }
+
+  .clinic-story-caption b {
+    font-size: 11px;
+    line-height: 1.15;
+  }
+
+  .clinic-story-caption small {
+    display: none;
+  }
+
+  .clinic-story-number {
+    display: none;
+  }
+
+  .story-viewer {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .story-viewer-panel {
+    min-height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(300px, 54vh) 1fr;
+    overflow-y: auto;
+  }
+
+  .story-viewer-media {
+    min-height: 0;
+  }
+
+  .story-viewer-copy {
+    justify-content: flex-start;
+    padding: 34px 22px 42px;
+  }
+
+  .story-viewer-count {
+    margin-bottom: 16px;
+  }
+
+  .story-viewer-copy h2 {
+    font-size: 36px;
+  }
+
+  .story-viewer-copy .button {
+    align-self: stretch;
+  }
+
+  .story-viewer-nav {
+    top: 27vh;
+    width: 40px;
+    height: 40px;
+  }
+
+  .story-viewer-prev { left: 10px; }
+  .story-viewer-next { right: 10px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .clinic-story-card,
+  .clinic-story-card img,
+  .story-viewer[open],
+  .story-viewer.is-switching .story-viewer-media img,
+  .story-viewer.is-switching .story-viewer-copy > * {
+    animation: none;
+    transition: none;
+  }
+}
+
