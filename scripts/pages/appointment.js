@@ -9,7 +9,7 @@ import { setupTurnstile } from '../core/turnstile.js';
 import { createPersonalDataConsent } from '../data/consent.js';
 
 const BRANCH_NAMES = {
-  gavrilova: 'Гаврилова, 4',
+  gavrilova: 'Иркутск, улица Николая Гаврилова, 4',
   lermontova: 'Лермонтова, 69'
 };
 

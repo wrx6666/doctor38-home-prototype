@@ -84,7 +84,7 @@ function getOrCreateMenuPanel() {
       <details class="mobile-menu-section">
         <summary>Контакты</summary>
         <div class="mobile-menu-sublist">
-          <a href="contacts.html#gavrilova"><b>ул. Гаврилова, 4</b><span>ост. «Филармония»</span></a>
+          <a href="contacts.html#gavrilova"><b>ул. Николая Гаврилова, 4</b><span>ост. «Филармония»</span></a>
           <a href="contacts.html#lermontova"><b>ул. Лермонтова, 69</b><span>ост. «Лермонтова»</span></a>
         </div>
       </details>
