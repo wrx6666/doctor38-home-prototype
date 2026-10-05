@@ -1,5 +1,5 @@
 const DEFAULT_OPTIONS = {
-  threshold: 0.16,
+  threshold: 0.08,
   rootMargin: '-7% 0px -10% 0px'
 };
 

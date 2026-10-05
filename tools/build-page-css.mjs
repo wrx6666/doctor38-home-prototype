@@ -16,6 +16,13 @@ const scriptSources = fs.readdirSync(path.join(root, 'scripts'), { recursive: tr
   .map((entry) => fs.readFileSync(path.join(entry.parentPath, entry.name), 'utf8'))
   .concat(fs.readFileSync(path.join(root, 'site.js'), 'utf8'))
   .join('\n');
+const pricesScriptSource = fs.readFileSync(path.join(root, 'scripts', 'pages', 'prices.js'), 'utf8');
+const analysesScriptSource = fs.readFileSync(path.join(root, 'scripts', 'pages', 'analyses.js'), 'utf8');
+const ultrasoundScriptSource = fs.readFileSync(path.join(root, 'scripts', 'pages', 'ultrasound.js'), 'utf8');
+const sharedScriptSources = scriptSources
+  .replace(pricesScriptSource, '')
+  .replace(analysesScriptSource, '')
+  .replace(ultrasoundScriptSource, '');
 
 const pageMainSources = sourceFiles.filter((file) => file <= '10-booking-prices.css');
 const sharedResponsiveSources = ['11-footer-responsive.css'];
@@ -37,6 +44,7 @@ async function purgeCss(source, content, name) {
         /^has-/,
         /^is-/,
         /^menu-open$/,
+        /^prices-page$/,
         /^reveal-/
       ],
       deep: [/^accessibility-/, /^mobile-nav-/]
@@ -85,9 +93,16 @@ console.log(`core-responsive.css: ${(Buffer.byteLength(sharedResponsiveCss) / 10
 console.log(`core-accessibility.css: ${(Buffer.byteLength(sharedAccessibilityCss) / 1024).toFixed(1)} KiB shared CSS`);
 
 for (const { html, htmlFile, htmlPath, pageName } of pages) {
+  const pageScriptSources = htmlFile === 'prices.html'
+    ? `${sharedScriptSources}\n${pricesScriptSource}`
+    : htmlFile === 'analyses.html'
+      ? `${sharedScriptSources}\n${analysesScriptSource}`
+      : htmlFile === 'ultrasound.html'
+        ? `${sharedScriptSources}\n${ultrasoundScriptSource}`
+        : sharedScriptSources;
   const pageContent = [
     { raw: html, extension: 'html' },
-    { raw: scriptSources, extension: 'js' }
+    { raw: pageScriptSources, extension: 'js' }
   ];
   const pageCss = await purgeCss(readSources(pageMainSources), pageContent, `${pageName}-main`);
   const pageOverridesCss = await purgeCss(readSources(pageOverrideSources), pageContent, `${pageName}-overrides`);

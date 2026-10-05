@@ -12,6 +12,7 @@ Thumbs.db
 node_modules/
 /.runtime/
 /tmp/
+/outputs/
 .env
 .env.*
 !.env.example

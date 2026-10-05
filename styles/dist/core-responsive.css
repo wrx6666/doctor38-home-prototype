@@ -665,8 +665,40 @@
   .prices-layout,
   .split-section,
   .service-cta-grid,
+  .specialty-doctor-card,
+  .specialty-related,
   .about-grid {
     grid-template-columns: 1fr;
+  }
+
+  .specialty-doctor-actions {
+    justify-items: start;
+  }
+
+  .cosmetology-price-toolbar {
+    grid-template-columns: 1fr;
+  }
+
+  .cosmetology-filter-list {
+    flex-wrap: nowrap;
+    margin-right: -20px;
+    padding-right: 20px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .cosmetology-filter-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cosmetology-filter-list button {
+    flex: 0 0 auto;
+  }
+
+  .cosmetology-price-list a {
+    gap: 12px;
+    padding: 12px 14px;
+    font-size: 13px;
   }
 
   .branch-panel {
@@ -728,6 +760,22 @@
 
   .price-sidebar {
     position: static;
+    display: flex;
+    max-height: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-inline: contain;
+    scrollbar-width: thin;
+  }
+
+  .price-sidebar button {
+    width: auto;
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  .price-sidebar button span {
+    overflow-wrap: normal;
   }
 
   .direction-cards,
@@ -961,6 +1009,23 @@
     padding: 14px;
   }
 
+  .price-table span {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .price-table b {
+    font-size: 14px;
+  }
+
+  .price-group .group-head {
+    align-items: flex-start;
+  }
+
+  .price-group .group-head h2 {
+    font-size: clamp(24px, 8vw, 34px);
+  }
+
   .price-tools,
   .price-documents,
   .price-group {
@@ -1178,4 +1243,3 @@
     line-height: 1.35;
   }
 }
-

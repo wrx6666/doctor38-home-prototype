@@ -360,6 +360,10 @@
   gap: 18px;
 }
 
+.direction-content > * {
+  min-width: 0;
+}
+
 .direction-section {
   padding: 26px;
   border: 1px solid var(--line);
@@ -439,6 +443,163 @@
   white-space: nowrap;
 }
 
+.cosmetology-price-toolbar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: center;
+  margin-top: 22px;
+}
+
+.cosmetology-search {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--wash);
+  color: var(--muted);
+}
+
+.cosmetology-search:focus-within {
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(9, 151, 81, .1);
+}
+
+.cosmetology-search input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+}
+
+.cosmetology-result {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.cosmetology-filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0 20px;
+}
+
+.cosmetology-filter-list button {
+  min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--text);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.cosmetology-filter-list button small {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.cosmetology-filter-list button.active {
+  border-color: var(--green);
+  background: var(--green);
+  color: #fff;
+}
+
+.cosmetology-filter-list button.active small {
+  color: rgba(255, 255, 255, .75);
+}
+
+.cosmetology-price-groups {
+  display: grid;
+  gap: 16px;
+}
+
+.cosmetology-price-group {
+  scroll-margin-top: 104px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+}
+
+.cosmetology-price-head {
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 18px;
+  background: #f2f7f8;
+}
+
+.cosmetology-price-head h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.cosmetology-price-head span {
+  color: var(--green-deep);
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.cosmetology-price-list a {
+  min-height: 58px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: center;
+  padding: 12px 18px;
+  border-top: 1px solid #edf3f5;
+  color: var(--text);
+}
+
+.cosmetology-price-list a:hover {
+  background: var(--mint);
+}
+
+.cosmetology-price-list span {
+  line-height: 1.4;
+}
+
+.cosmetology-price-list b {
+  color: var(--green-deep);
+  white-space: nowrap;
+}
+
+.cosmetology-price-more {
+  width: 100%;
+  min-height: 44px;
+  border: 0;
+  border-top: 1px solid var(--line);
+  background: #fff;
+  color: var(--green-deep);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.cosmetology-price-more:hover {
+  background: var(--mint);
+}
+
 .split-section {
   display: grid;
   grid-template-columns: minmax(0, .85fr) minmax(280px, 1fr);
@@ -502,6 +663,13 @@
   border: 0;
   border-radius: 8px;
   background: var(--wash);
+}
+
+.mini-doctor-card .mini-photo-placeholder {
+  display: grid;
+  place-items: center;
+  color: var(--green);
+  font-size: 28px;
 }
 
 .mini-doctor-card span,
@@ -717,3 +885,62 @@
   font-size: 13px;
 }
 
+.specialty-hero {
+  background:
+    radial-gradient(circle at 82% 26%, rgba(47, 181, 207, .14), transparent 24%),
+    linear-gradient(112deg, #f8fbfc 0%, #f2f9f5 56%, #edf7f8 100%);
+}
+
+.specialty-price-list {
+  margin-top: 20px;
+}
+
+.price-footnote {
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.specialty-doctor-card,
+.specialty-related {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 28px;
+  align-items: center;
+}
+
+.specialty-doctor-card p {
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.specialty-doctor-list {
+  display: grid;
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.specialty-doctor-list .specialty-doctor-card {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--wash);
+}
+
+.specialty-doctor-card h3 {
+  margin: 6px 0 10px;
+  color: var(--ink);
+  font-size: clamp(21px, 2vw, 27px);
+  line-height: 1.15;
+}
+
+.specialty-doctor-actions {
+  display: grid;
+  justify-items: end;
+  gap: 14px;
+}
+
+.specialty-related {
+  background: linear-gradient(110deg, var(--mint), #fff 70%);
+}

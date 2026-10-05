@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://doctor38.ru/sitemap.xml
+Host: doctor38.ru

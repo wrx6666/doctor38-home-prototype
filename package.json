@@ -6,7 +6,9 @@
     "start": "node tools/serve.mjs",
     "build:assets": "node tools/build-assets.mjs",
     "build:css": "node tools/build-page-css.mjs",
-    "prepare:release": "npm run build:assets && node tools/optimize-html.mjs && npm run build:css",
+    "build:seo": "node tools/build-seo.mjs",
+    "prepare:release": "npm run build:assets && npm run build:seo && node tools/optimize-html.mjs && npm run build:css",
+    "qa:site": "node tools/qa-site.mjs",
     "qa:stories": "node capture-stories-qa.js"
   },
   "devDependencies": {

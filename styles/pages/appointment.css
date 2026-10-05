@@ -1140,6 +1140,89 @@ textarea:focus {
   white-space: nowrap;
 }
 
+.text-link {
+  color: var(--blue);
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.text-link:hover {
+  color: var(--green-deep);
+}
+
+.cosmetology-price-group {
+  scroll-margin-top: 104px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+}
+
+.cosmetology-price-head {
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 18px;
+  background: #f2f7f8;
+}
+
+.cosmetology-price-head h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.cosmetology-price-head span {
+  color: var(--green-deep);
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.cosmetology-price-list a {
+  min-height: 58px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: center;
+  padding: 12px 18px;
+  border-top: 1px solid #edf3f5;
+  color: var(--text);
+}
+
+.cosmetology-price-list a:hover {
+  background: var(--mint);
+}
+
+.cosmetology-price-list span {
+  line-height: 1.4;
+}
+
+.cosmetology-price-list b {
+  color: var(--green-deep);
+  white-space: nowrap;
+}
+
+.cosmetology-price-more {
+  width: 100%;
+  min-height: 44px;
+  border: 0;
+  border-top: 1px solid var(--line);
+  background: #fff;
+  color: var(--green-deep);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.cosmetology-price-more:hover {
+  background: var(--mint);
+}
+
 .doctors-body {
   padding-top: 44px;
 }
@@ -1774,3 +1857,95 @@ textarea:focus {
   background: #fff;
 }
 
+.price-loading {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.price-loading-card {
+  min-height: 156px;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  text-align: center;
+}
+
+.price-group {
+  scroll-margin-top: 104px;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  scroll-margin-top: 110px;
+}
+
+.price-table {
+  display: grid;
+  overflow: hidden;
+  border-radius: 0;
+  background: transparent;
+}
+
+.price-table a {
+  min-height: 76px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #edf3f5;
+  transition: background 160ms var(--ease-out);
+}
+
+.price-table a:last-child {
+  border-bottom: 0;
+}
+
+.price-table a:hover {
+  background: transparent;
+  color: var(--green-deep);
+}
+
+.price-table a[hidden],
+.price-group[hidden] {
+  display: none;
+}
+
+.price-table span {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.price-table b {
+  color: var(--green-deep);
+  white-space: nowrap;
+}
+
+.price-more {
+  width: 100%;
+  min-height: 46px;
+  margin-top: 10px;
+  border: 1px solid #cfe0e6;
+  border-radius: 8px;
+  background: #f7fbf9;
+  color: var(--green-deep);
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+  transition: border-color 160ms var(--ease-out), background 160ms var(--ease-out);
+}
+
+.price-more:hover {
+  border-color: #a9d3bb;
+  background: #edf8f1;
+}
+
+.price-more[hidden] {
+  display: none;
+}

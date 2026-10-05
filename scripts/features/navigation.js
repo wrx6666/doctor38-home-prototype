@@ -3,6 +3,22 @@ const MENU_TRANSITION_MS = 360;
 
 function addDroppersLinks() {
   const servicesMenu = document.querySelector('.main-nav .nav-item:first-child .nav-dropdown');
+  if (servicesMenu && !servicesMenu.querySelector('a[href="analyses.html"]')) {
+    const link = document.createElement('a');
+    link.href = 'analyses.html';
+    link.innerHTML = '<b>Анализы</b><span>Лабораторные исследования и цены</span>';
+
+    const childrenLink = servicesMenu.querySelector('a[href="children.html"]');
+    servicesMenu.insertBefore(link, childrenLink);
+  }
+  if (servicesMenu && !servicesMenu.querySelector('a[href="treatment-room.html"]')) {
+    const link = document.createElement('a');
+    link.href = 'treatment-room.html';
+    link.innerHTML = '<b>Процедурный кабинет</b><span>Инъекции, перевязки и забор анализов</span>';
+
+    const childrenLink = servicesMenu.querySelector('a[href="children.html"]');
+    servicesMenu.insertBefore(link, childrenLink);
+  }
   if (servicesMenu && !servicesMenu.querySelector('a[href="droppers.html"]')) {
     const link = document.createElement('a');
     link.href = 'droppers.html';
@@ -21,6 +37,31 @@ function addDroppersLinks() {
     const organizationsLink = footerDirections.querySelector('a[href="organizations.html"]');
     footerDirections.insertBefore(link, organizationsLink);
   }
+}
+
+const DOCTOR_MENU_ITEMS = [
+  ['gynecology', 'Гинекологи', 'Женское здоровье'],
+  ['therapy', 'Терапевты', 'Первичный прием'],
+  ['cardiology', 'Кардиологи', 'Консультация и ЭКГ'],
+  ['gastroenterology', 'Гастроэнтерологи', 'Прием и консультация'],
+  ['neurology', 'Неврологи', 'Взрослым и детям'],
+  ['dermatology', 'Дерматологи', 'Кожа и здоровье'],
+  ['endocrinology', 'Эндокринологи', 'Общий и женский профиль'],
+  ['vascular', 'Сосудистые хирурги', 'Первичный и повторный прием'],
+  ['pediatrics', 'Педиатры', 'Для детей'],
+  ['diagnostics', 'Врачи УЗИ', 'Ультразвуковая диагностика']
+];
+
+function normalizeDoctorsMenuLinks() {
+  document.querySelectorAll('.main-nav .nav-item:nth-child(2) .nav-dropdown').forEach((doctorsMenu) => {
+    const links = DOCTOR_MENU_ITEMS.map(([filter, label, description]) => {
+      const link = document.createElement('a');
+      link.href = `doctors.html?specialty=${filter}`;
+      link.innerHTML = `<b>${label}</b><span>${description}</span>`;
+      return link;
+    });
+    doctorsMenu.replaceChildren(...links);
+  });
 }
 
 function getOrCreateMenuToggle(headerLine) {
@@ -61,6 +102,8 @@ function getOrCreateMenuPanel() {
         <div class="mobile-menu-sublist">
           <a href="doctors.html"><b>Прием врачей</b><span>Специалисты для взрослых и детей</span></a>
           <a href="diagnostics.html"><b>Диагностика</b><span>УЗИ, анализы и подготовка</span></a>
+          <a href="analyses.html"><b>Анализы</b><span>Лабораторные исследования и цены</span></a>
+          <a href="treatment-room.html"><b>Процедурный кабинет</b><span>Инъекции, перевязки и забор анализов</span></a>
           <a href="children.html"><b>Детям</b><span>Педиатрия, справки, вакцинация</span></a>
           <a href="checkups.html"><b>Чекапы</b><span>Комплексные программы диагностики</span></a>
           <a href="gynecology.html"><b>Гинекология</b><span>Прием, диагностика и женское здоровье</span></a>
@@ -75,9 +118,14 @@ function getOrCreateMenuPanel() {
         <div class="mobile-menu-sublist">
           <a href="doctors.html?specialty=gynecology"><b>Гинекологи</b><span>Женское здоровье</span></a>
           <a href="doctors.html?specialty=therapy"><b>Терапевты</b><span>Первичный прием</span></a>
-          <a href="doctors.html?specialty=neurology"><b>Неврологи</b><span>Взрослый прием</span></a>
+          <a href="doctors.html?specialty=cardiology"><b>Кардиологи</b><span>Консультация и ЭКГ</span></a>
+          <a href="doctors.html?specialty=gastroenterology"><b>Гастроэнтерологи</b><span>Прием и консультация</span></a>
+          <a href="doctors.html?specialty=neurology"><b>Неврологи</b><span>Взрослым и детям</span></a>
+          <a href="doctors.html?specialty=dermatology"><b>Дерматологи</b><span>Кожа и здоровье</span></a>
+          <a href="doctors.html?specialty=endocrinology"><b>Эндокринологи</b><span>Общий и женский профиль</span></a>
+          <a href="doctors.html?specialty=vascular"><b>Сосудистые хирурги</b><span>Первичный и повторный прием</span></a>
           <a href="doctors.html?specialty=pediatrics"><b>Педиатры</b><span>Для детей</span></a>
-          <a href="doctors.html?specialty=diagnostics"><b>Врачи УЗИ</b><span>Диагностика</span></a>
+          <a href="doctors.html?specialty=diagnostics"><b>Врачи УЗИ</b><span>Ультразвуковая диагностика</span></a>
         </div>
       </details>
 
@@ -101,6 +149,7 @@ function getOrCreateMenuPanel() {
 
 export function initNavigation() {
   addDroppersLinks();
+  normalizeDoctorsMenuLinks();
 
   const headerLine = document.querySelector('.header-line');
   if (!headerLine) return { closeMobileMenu: () => {} };
