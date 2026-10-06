@@ -37,12 +37,12 @@ assert.equal(queries.length,851);
 assert.equal(queries.filter(r=>r[2]==='Капельницы').length,50);
 assert.equal(queries.filter(r=>r[2]==='УЗИ').length,288);
 assert.equal(queries.filter(r=>r[2]==='Косметология').length,513);
-assert.equal(queries.filter(r=>Number.isFinite(r[10])).length,205);
+assert.equal(queries.filter(r=>Number.isFinite(r[10])).length,235);
 assert.equal(queries.filter(r=>Number.isFinite(r[11])).length,30);
-assert.equal(wordstatRows.length,37);
-assert.equal(ultrasoundWordstatRows.length,103);
-assert.equal(cosmetologyWordstatRows.length,220);
-assert.equal(cosmetologyWordstatRows.filter(r=>String(r[3]).startsWith('В ядро')).length,87);
+assert.equal(wordstatRows.length,51);
+assert.equal(ultrasoundWordstatRows.length,115);
+assert.equal(cosmetologyWordstatRows.length,224);
+assert.equal(cosmetologyWordstatRows.filter(r=>String(r[3]).startsWith('В ядро')).length,90);
 assert.equal(cosmetologyWordstatRows.filter(r=>r[3]==='Исключить').length,133);
 assert.equal(exactWordstatRows.length,30);
 assert.equal(serpDecisionRows.length,14);
@@ -114,27 +114,27 @@ assert.deepEqual(book.worksheets.getItem('Покрытие услуг').getRange
 const summary=book.worksheets.getItem('Сводка');
 const audit=book.worksheets.getItem('Аудит ядра');
 book.recalculate();
-assert.equal(summary.getRange('E24').values[0][0],205);
+assert.equal(summary.getRange('E24').values[0][0],235);
 assert.equal(summary.getRange('E25').values[0][0],30);
-assert.deepEqual(audit.getRange('B6:B14').values.map((row)=>row[0]), [851,205,646,30,138,0,0,0,14]);
+assert.deepEqual(audit.getRange('B6:B14').values.map((row)=>row[0]), [851,235,616,30,129,0,0,0,14]);
 assert.deepEqual(audit.getRange('D6:I8').values, [
-  ['Капельницы',50,25,10,33,0],
-  ['УЗИ',288,93,10,13,195],
-  ['Косметология',513,87,10,92,369],
+  ['Капельницы',50,39,10,22,0],
+  ['УЗИ',288,105,10,13,183],
+  ['Косметология',513,91,10,94,365],
 ]);
 const unmeasuredIndex=queries.findIndex(row=>row[10]===null);
 assert(unmeasuredIndex>=0);
 const unmeasuredRow=unmeasuredIndex+5;
 qsheet.getRange(`M${unmeasuredRow}`).values=[['Wordstat']];
 book.recalculate();
-assert.equal(summary.getRange('E24').values[0][0],205,'Selecting source without frequency must not count');
+assert.equal(summary.getRange('E24').values[0][0],235,'Selecting source without frequency must not count');
 qsheet.getRange(`K${unmeasuredRow}`).values=[[0]];
 book.recalculate();
-assert.equal(summary.getRange('E24').values[0][0],206,'Measured zero must count as numeric frequency');
+assert.equal(summary.getRange('E24').values[0][0],236,'Measured zero must count as numeric frequency');
 const secondUnmeasuredRow=queries.findIndex((row,index)=>index>unmeasuredIndex&&row[10]===null)+5;
 qsheet.getRange(`K${secondUnmeasuredRow}`).values=[[42]];
 book.recalculate();
-assert.equal(summary.getRange('E24').values[0][0],207);
+assert.equal(summary.getRange('E24').values[0][0],237);
 // Test mutations above are in-memory only; delivered file remains blank.
 const price=await SpreadsheetFile.importXlsx(await FileBlob.load(fileURLToPath(new URL('../assets/documents/services-price-current.xlsx',import.meta.url))));
 const rows=price.worksheets.getItem('Прайс').getRange('A2:C938').values;

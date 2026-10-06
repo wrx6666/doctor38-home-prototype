@@ -137,6 +137,10 @@ function classify([query, frequency], type) {
 }
 
 export const cosmetologyWordstatRows = [
+  { query: 'биоревитализация', frequency: 1930, type: 'Отдельная проверка', decision: 'В ядро с проверкой', group: 'Биоревитализация', entityKey: 'biorevitalization', level: 'Группа', intent: 'Услуга', note: 'Высокий спрос; фактический препарат и показания подтверждает специалист.' },
+  { query: 'биоревитализация иркутск', frequency: 218, type: 'Отдельная проверка', decision: 'В ядро с проверкой', group: 'Биоревитализация', entityKey: 'biorevitalization', level: 'Группа', intent: 'Услуга', note: 'Основной локальный запрос; фактический препарат и показания подтверждает специалист.' },
+  { query: 'альгинатная маска для лица', frequency: 9, type: 'Отдельная проверка', decision: 'В ядро', group: 'Другие косметологические процедуры', entityKey: 'other', level: 'Услуга', intent: 'Услуга', note: 'Низкочастотный запрос по услуге из актуального прайса.' },
+  { query: 'альгинатная маска для лица иркутск', frequency: 0, type: 'Отдельная проверка', decision: 'Отклонить', group: 'Другие косметологические процедуры', entityKey: 'other', level: 'Услуга', intent: 'Услуга', note: 'За период спрос не зафиксирован.' },
   ...popularRows.map((row) => classify(row, 'Популярные')),
   ...similarRows.map((row) => classify(row, 'Похожие')),
 ];
