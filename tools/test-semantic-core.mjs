@@ -112,9 +112,16 @@ const serpSourceStart=serpDecisionRows.length+10;
 assert.deepEqual(book.worksheets.getItem('Кластеризация SERP').getRange(`A${serpSourceStart}:F${serpSourceStart+serpSourceRows.length-1}`).values,excelBlanks(serpSourceRows));
 assert.deepEqual(book.worksheets.getItem('Покрытие услуг').getRange('A2:I247').values,excelBlanks(coverage));
 const summary=book.worksheets.getItem('Сводка');
+const audit=book.worksheets.getItem('Аудит ядра');
 book.recalculate();
 assert.equal(summary.getRange('E24').values[0][0],205);
 assert.equal(summary.getRange('E25').values[0][0],30);
+assert.deepEqual(audit.getRange('B6:B14').values.map((row)=>row[0]), [851,205,646,30,138,0,0,0,14]);
+assert.deepEqual(audit.getRange('D6:I8').values, [
+  ['Капельницы',50,25,10,33,0],
+  ['УЗИ',288,93,10,13,195],
+  ['Косметология',513,87,10,92,369],
+]);
 const unmeasuredIndex=queries.findIndex(row=>row[10]===null);
 assert(unmeasuredIndex>=0);
 const unmeasuredRow=unmeasuredIndex+5;

@@ -216,8 +216,47 @@ const approvalRows = [
   ['Название услуги', 'ТТГ, териотропный гормон', 'Исправить «териотропный» на «тиреотропный»', 'Ожидает клинику'],
 ];
 
+const normalizedQueryGroups = new Map();
+for (const row of queryRows) {
+  const normalized = String(row[4]).trim().toLowerCase().replaceAll('ё', 'е');
+  if (!normalizedQueryGroups.has(normalized)) normalizedQueryGroups.set(normalized, []);
+  normalizedQueryGroups.get(normalized).push(row);
+}
+const duplicateQueryGroups = [...normalizedQueryGroups.values()].filter((rows) => rows.length > 1);
+const groupTargetPages = new Map();
+for (const row of queryRows) {
+  const groupKey = `${row[2]} / ${row[3]}`;
+  if (!groupTargetPages.has(groupKey)) groupTargetPages.set(groupKey, new Set());
+  groupTargetPages.get(groupKey).add(row[9]);
+}
+const competingGroups = [...groupTargetPages.values()].filter((pages) => pages.size > 1);
+const missingTargetPages = [...new Set(queryRows
+  .map((row) => row[9])
+  .filter(Boolean)
+  .filter((target) => !htmlFiles.includes(target.split('#')[0])))];
+const auditDirectionRows = ['Капельницы', 'УЗИ', 'Косметология'].map((direction) => {
+  const rows = queryRows.filter((row) => row[2] === direction);
+  return [
+    direction,
+    rows.length,
+    rows.filter((row) => Number.isFinite(row[10])).length,
+    rows.filter((row) => Number.isFinite(row[11])).length,
+    rows.filter((row) => row[13] === 'Проверить медицинскую формулировку').length,
+    rows.filter((row) => row[13] === 'Готов к проверке частотности').length,
+  ];
+});
+const auditActionRows = [
+  ['1', 'Общая частотность', `${queryRows.filter((row) => !Number.isFinite(row[10])).length} запросов без измерения`, 'Собрать Wordstat после замечаний аудитора и удалить запросы без спроса', 'Не завершено'],
+  ['2', 'Точная частотность', `${queryRows.filter((row) => Number.isFinite(row[11])).length} из ${queryRows.length} запросов измерено`, 'После аудита измерить точную частотность итогового приоритетного списка', 'Частично'],
+  ['3', 'Кластеризация по выдаче', `${serpDecisionRows.length} основных запросов проверено`, 'Расширить SERP-проверку для спорных групп и кандидатов отдельных страниц', 'Частично'],
+  ['4', 'Медицинские формулировки', `${queryRows.filter((row) => row[13] === 'Проверить медицинскую формулировку').length} запросов требуют проверки`, 'Передать врачу или ответственному сотруднику клиники', 'Ожидает клинику'],
+  ['5', 'Внешний аудит', 'Три приоритетных направления собраны', 'Проверить группы запросов, целевые страницы и связь с прайсом', 'Готово к передаче'],
+  ['6', 'Остальные направления', 'В ядро не включены подробно', 'Расширять после утверждения УЗИ, капельниц и косметологии', 'Следующий этап'],
+];
+
 const workbook = Workbook.create();
 const summary = workbook.worksheets.add('Сводка');
+const auditSheet = workbook.worksheets.add('Аудит ядра');
 const clusterSheet = workbook.worksheets.add('Кластеры');
 const entitySheet = workbook.worksheets.add('Словарь сущностей');
 const queriesSheet = workbook.worksheets.add('Поисковые запросы');
@@ -232,7 +271,7 @@ const doctorsSheet = workbook.worksheets.add('Врачи');
 const pagesSheet = workbook.worksheets.add('Текущие страницы');
 const approvalSheet = workbook.worksheets.add('На согласование');
 
-for (const sheet of [summary, clusterSheet, entitySheet, queriesSheet, wordstatSheet, ultrasoundWordstatSheet, cosmetologyWordstatSheet, exactWordstatSheet, serpSheet, negativeSheet, servicesSheet, doctorsSheet, pagesSheet, approvalSheet]) {
+for (const sheet of [summary, auditSheet, clusterSheet, entitySheet, queriesSheet, wordstatSheet, ultrasoundWordstatSheet, cosmetologyWordstatSheet, exactWordstatSheet, serpSheet, negativeSheet, servicesSheet, doctorsSheet, pagesSheet, approvalSheet]) {
   sheet.showGridLines = true;
 }
 
@@ -348,6 +387,55 @@ summary.getRange('4:4').format.rowHeight = 34;
 summary.getRange('6:11').format.rowHeight = 35;
 summary.getRange('26:26').format.rowHeight = 56;
 summary.getRange('23:25').format.rowHeight = 42;
+
+auditSheet.getRange('A2').values = [['Аудит семантического ядра']];
+auditSheet.mergeCells('A2:F2');
+auditSheet.getRange('A2').format.font = { name: 'Calibri', size: 14, bold: true, color: colors.text };
+auditSheet.getRange('A3').values = [['Проверка структуры запросов, полноты частотности, целевых страниц и незакрытых действий.']];
+auditSheet.mergeCells('A3:F3');
+auditSheet.getRange('A3').format.font = { name: 'Calibri', size: 11, italic: true, color: colors.muted };
+auditSheet.getRange('A5:B14').values = [
+  ['Проверка', 'Результат'],
+  ['Запросов в ядре', queryRows.length],
+  ['С общей частотностью', queryRows.filter((row) => Number.isFinite(row[10])).length],
+  ['Без общей частотности', queryRows.filter((row) => !Number.isFinite(row[10])).length],
+  ['С точной частотностью', queryRows.filter((row) => Number.isFinite(row[11])).length],
+  ['Требуют медицинской проверки', queryRows.filter((row) => row[13] === 'Проверить медицинскую формулировку').length],
+  ['Точные дубли запросов', duplicateQueryGroups.length],
+  ['Группы с конкурирующими страницами', competingGroups.length],
+  ['Отсутствующие целевые страницы', missingTargetPages.length],
+  ['Проверено запросов по выдаче', serpDecisionRows.length],
+];
+auditSheet.getRange('D5:I8').values = [
+  ['Направление', 'Запросов', 'Общая частотность', 'Точная частотность', 'Медицинская проверка', 'Без частотности'],
+  ...auditDirectionRows,
+];
+auditSheet.getRange('A17:E17').values = [['Приоритет', 'Задача', 'Текущее состояние', 'Следующее действие', 'Статус']];
+auditSheet.getRange(`A18:E${auditActionRows.length + 17}`).values = auditActionRows;
+auditSheet.getRange('A5:B5').format = { fill: colors.header, font: { name: 'Calibri', size: 11, bold: true, color: colors.text }, horizontalAlignment: 'center', verticalAlignment: 'center', wrapText: true };
+auditSheet.getRange('D5:I5').format = { fill: colors.header, font: { name: 'Calibri', size: 11, bold: true, color: colors.text }, horizontalAlignment: 'center', verticalAlignment: 'center', wrapText: true };
+auditSheet.getRange('A17:E17').format = { fill: colors.header, font: { name: 'Calibri', size: 11, bold: true, color: colors.text }, horizontalAlignment: 'center', verticalAlignment: 'center', wrapText: true };
+auditSheet.getRange(`A5:I${auditActionRows.length + 17}`).format.font = { name: 'Calibri', size: 11, color: colors.text };
+auditSheet.getRange('A6:B14').format.borders = { preset: 'inside', style: 'thin', color: colors.line };
+auditSheet.getRange('D6:I8').format.borders = { preset: 'inside', style: 'thin', color: colors.line };
+auditSheet.getRange(`A18:E${auditActionRows.length + 17}`).format.borders = { preset: 'inside', style: 'thin', color: colors.line };
+auditSheet.getRange(`B6:B14`).format.numberFormat = '#,##0';
+auditSheet.getRange('E18:E23').conditionalFormats.add('containsText', { text: 'Не завершено', format: { fill: colors.paleRed, font: { bold: true, color: '#9F1D20' } } });
+auditSheet.getRange('E18:E23').conditionalFormats.add('containsText', { text: 'Частично', format: { fill: colors.paleAmber, font: { bold: true, color: '#8A5A00' } } });
+auditSheet.getRange('E18:E23').conditionalFormats.add('containsText', { text: 'Ожидает', format: { fill: colors.paleAmber, font: { bold: true, color: '#8A5A00' } } });
+auditSheet.getRange('E18:E23').conditionalFormats.add('containsText', { text: 'Готово', format: { fill: colors.paleGreen, font: { bold: true, color: '#086A3B' } } });
+auditSheet.getRange('A3:I3').format.wrapText = true;
+auditSheet.getRange('A18:E23').format.wrapText = true;
+auditSheet.getRange('D6:I8').format.wrapText = true;
+[40, 32, 40, 64, 24, 20, 20, 24, 20].forEach((width, index) => { auditSheet.getRangeByIndexes(0, index, 1, 1).format.columnWidth = width; });
+auditSheet.getRange('2:2').format.rowHeight = 26;
+auditSheet.getRange('3:3').format.rowHeight = 38;
+auditSheet.getRange('17:17').format.rowHeight = 34;
+auditSheet.getRange('18:23').format.rowHeight = 56;
+auditSheet.freezePanes.freezeRows(5);
+auditSheet.tables.add('A5:B14', true, 'SemanticAuditChecks').style = 'TableStyleLight1';
+auditSheet.tables.add('D5:I8', true, 'SemanticAuditDirections').style = 'TableStyleLight1';
+auditSheet.tables.add(`A17:E${auditActionRows.length + 17}`, true, 'SemanticAuditActions').style = 'TableStyleLight1';
 
 const clusterHeaders = ['ID', 'Приоритет', 'Направление', 'Основной запрос', 'Дополнительные запросы', 'Интент', 'Текущий URL', 'Целевой URL', 'Состояние страницы', 'Услуг в прайсе', 'Связанные врачи', 'Рекомендуемый title', 'Рекомендуемый H1', 'Рекомендуемый description', 'Следующее действие', 'Частотность', 'Что подтвердить'];
 clusterSheet.getRange('A2').values = [['Кластеры запросов и целевые страницы']];
@@ -725,6 +813,7 @@ await fs.mkdir(previewDir, { recursive: true });
 
 for (const [sheetName, range, fileName] of [
   ['Сводка', 'A1:E27', 'summary.png'],
+  ['Аудит ядра', 'A1:I23', 'semantic-audit.png'],
   ['Покрытие услуг', 'A1:E10', 'coverage.png'],
   ['Кластеры', 'A1:E10', 'clusters.png'],
   ['Словарь сущностей', 'C2:F10', 'entities.png'],
@@ -762,6 +851,13 @@ const summaryInspection = await workbook.inspect({
   include: 'values,formulas',
   tableMaxRows: 30,
   tableMaxCols: 8,
+});
+const auditInspection = await workbook.inspect({
+  kind: 'table',
+  range: 'Аудит ядра!A2:I23',
+  include: 'values,formulas',
+  tableMaxRows: 24,
+  tableMaxCols: 9,
 });
 const entityInspection = await workbook.inspect({
   kind: 'table',
@@ -888,6 +984,7 @@ const report = {
   pages: pageRows.length,
   inspections: {
     summary: summaryInspection.ndjson,
+    audit: auditInspection.ndjson,
     clusters: clusterInspection.ndjson,
     entities: entityInspection.ndjson,
     entityCoverage: entityCoverageInspection.ndjson,
