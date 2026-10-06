@@ -2,6 +2,7 @@ import { readdir } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { chromium } from 'playwright';
+import { servicePriceCatalog } from '../scripts/data/service-prices.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const baseUrl = process.env.QA_BASE_URL || 'http://127.0.0.1:8088';
@@ -19,12 +20,21 @@ for (const viewport of viewports) {
   for (const fileName of htmlFiles) {
     const page = await context.newPage();
     const runtimeErrors = [];
+    let expectedYandexMapResourceFailure = false;
     page.on('pageerror', (error) => runtimeErrors.push(`pageerror: ${error.message}`));
     page.on('console', (message) => {
       const text = message.text();
       const isExpectedLocalApiFailure = fileName === 'appointment.html'
         && text.includes('net::ERR_CONNECTION_REFUSED');
-      if (message.type() === 'error' && !isExpectedLocalApiFailure) {
+      const isExpectedYandexMapCorsFailure = fileName === 'contacts.html'
+        && text.includes('mc.yandex.ru/watch')
+        && text.includes('blocked by CORS policy');
+      if (isExpectedYandexMapCorsFailure) expectedYandexMapResourceFailure = true;
+      const isExpectedYandexMapFollowup = fileName === 'contacts.html'
+        && expectedYandexMapResourceFailure
+        && text === 'Failed to load resource: net::ERR_FAILED';
+      if (isExpectedYandexMapFollowup) expectedYandexMapResourceFailure = false;
+      if (message.type() === 'error' && !isExpectedLocalApiFailure && !isExpectedYandexMapCorsFailure && !isExpectedYandexMapFollowup) {
         runtimeErrors.push(`console: ${text}`);
       }
     });
@@ -59,7 +69,9 @@ const priceState = await page.evaluate(() => ({
   categories: document.querySelectorAll('[data-price-filter]').length,
   busy: document.querySelector('[data-price-groups]')?.getAttribute('aria-busy'),
 }));
-if (priceState.items !== 942) issues.push(`prices.html: rendered ${priceState.items} of 942 services`);
+if (priceState.items !== servicePriceCatalog.total) {
+  issues.push(`prices.html: rendered ${priceState.items} of ${servicePriceCatalog.total} services`);
+}
 if (priceState.categories !== 17) issues.push(`prices.html: rendered ${priceState.categories} filters, expected 17 including "Все"`);
 if (priceState.busy !== 'false') issues.push('prices.html: price catalog remains busy');
 
@@ -93,4 +105,4 @@ if (issues.length) {
   process.exit(1);
 }
 
-console.log(`QA passed: ${htmlFiles.length} pages × ${viewports.length} viewports, 942 prices, ${doctorFilters.length} doctor filters, consent links.`);
+console.log(`QA passed: ${htmlFiles.length} pages × ${viewports.length} viewports, ${servicePriceCatalog.total} prices, ${doctorFilters.length} doctor filters, consent links.`);

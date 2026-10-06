@@ -191,7 +191,7 @@ body.story-viewer-open {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  
+
   .story-viewer[open],
   .story-viewer.is-switching .story-viewer-media img {
     animation: none;
@@ -437,9 +437,9 @@ html.a11y-theme-brown body {
   color: #c9f468 !important;
 }
 
-html.a11y-theme-blue :where(.site-header, .accessibility-panel, .nav-dropdown, .mobile-menu-panel, main, main section, footer, form, aside, .footer-disclaimer, .footer-meta, .footer-nav-grid),
-html.a11y-theme-beige :where(.site-header, .accessibility-panel, .nav-dropdown, .mobile-menu-panel, main, main section, footer, form, aside, .footer-disclaimer, .footer-meta, .footer-nav-grid),
-html.a11y-theme-brown :where(.site-header, .accessibility-panel, .nav-dropdown, .mobile-menu-panel, main, main section, footer, form, aside, .footer-disclaimer, .footer-meta, .footer-nav-grid) {
+html.a11y-theme-blue :where(.site-header, .accessibility-panel, .nav-dropdown, .mobile-menu-panel, main, main section, footer, article, form, aside, .direction-section, .footer-disclaimer, .footer-meta, .footer-nav-grid),
+html.a11y-theme-beige :where(.site-header, .accessibility-panel, .nav-dropdown, .mobile-menu-panel, main, main section, footer, article, form, aside, .direction-section, .footer-disclaimer, .footer-meta, .footer-nav-grid),
+html.a11y-theme-brown :where(.site-header, .accessibility-panel, .nav-dropdown, .mobile-menu-panel, main, main section, footer, article, form, aside, .direction-section, .footer-disclaimer, .footer-meta, .footer-nav-grid) {
   border-color: var(--line) !important;
   background-color: var(--white) !important;
   background-image: none !important;
@@ -629,8 +629,8 @@ a {
 }
 
 
-.prices-hero-grid > *,
-.prices-layout > *,
+.service-detail-grid > *,
+.detail-layout > *,
 .service-cta-grid > * {
   min-width: 0;
 }
@@ -932,6 +932,12 @@ h1 {
   line-height: 1.58;
 }
 
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
 .branch {
   min-width: 0;
   display: grid;
@@ -1178,6 +1184,54 @@ textarea:focus {
   gap: 12px;
 }
 
+.direction-nav {
+  position: sticky;
+  top: 108px;
+  display: grid;
+  gap: 6px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--wash);
+}
+
+.direction-nav a {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  border-radius: var(--radius);
+  color: var(--text);
+  font-weight: 800;
+  transition: background 160ms var(--ease-out), color 160ms var(--ease-out), transform 150ms var(--ease-out);
+}
+
+.direction-nav a:hover,
+.direction-nav a.active {
+  background: #fff;
+  color: var(--green-deep);
+}
+
+.direction-nav a:active {
+  transform: scale(.98);
+}
+
+.direction-content {
+  display: grid;
+  gap: 18px;
+}
+
+.direction-content > * {
+  min-width: 0;
+}
+
+.direction-section {
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+}
+
 .cosmetology-price-group {
   scroll-margin-top: 104px;
   overflow: hidden;
@@ -1256,6 +1310,195 @@ textarea:focus {
   border-color: var(--line);
 }
 
+.service-detail-hero {
+  padding: 58px 0 48px;
+  background:
+    linear-gradient(90deg, rgba(247, 250, 251, .98) 0%, rgba(247, 250, 251, .95) 55%, rgba(247, 250, 251, .72) 100%),
+    image-set(
+      url("../../assets/card-cosmetology-960.webp") 1x,
+      url("../../assets/card-cosmetology-1672.webp") 2x
+    ) right center / 48% auto no-repeat;
+  border-bottom: 1px solid var(--line);
+}
+
+.service-detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 380px;
+  gap: 58px;
+  align-items: end;
+}
+
+.detail-appointment-card {
+  padding: 22px;
+  border: 1px solid rgba(220, 231, 236, .92);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, .94);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+}
+
+.small-label {
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.detail-appointment-card b {
+  display: block;
+  margin-top: 10px;
+  font-size: 24px;
+  line-height: 1.16;
+}
+
+.detail-appointment-card p {
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.detail-appointment-card .button {
+  width: 100%;
+}
+
+.detail-body {
+  padding-top: 44px;
+}
+
+.detail-layout {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.reason-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.reason-grid div {
+  min-height: 150px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--wash);
+}
+
+.reason-grid i {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 16px;
+  border-radius: var(--radius);
+  background: var(--mint);
+  color: var(--green);
+}
+
+.reason-grid b,
+.reason-grid span {
+  display: block;
+}
+
+.reason-grid b {
+  font-size: 17px;
+  line-height: 1.25;
+}
+
+.reason-grid span {
+  margin-top: 8px;
+  color: var(--text);
+  line-height: 1.45;
+}
+
+.check-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.check-list span {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--wash);
+  color: var(--text);
+  font-weight: 700;
+}
+
+.check-list i {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  flex: 0 0 28px;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--mint);
+  color: var(--green);
+  font-size: 13px;
+}
+
+.specialty-hero {
+  background:
+    radial-gradient(circle at 82% 26%, rgba(47, 181, 207, .14), transparent 24%),
+    linear-gradient(112deg, #f8fbfc 0%, #f2f9f5 56%, #edf7f8 100%);
+}
+
+.specialty-price-list {
+  margin-top: 20px;
+}
+
+.price-footnote {
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.specialty-doctor-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 28px;
+  align-items: center;
+}
+
+.specialty-doctor-card p {
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.specialty-doctor-list {
+  display: grid;
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.specialty-doctor-list .specialty-doctor-card {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--wash);
+}
+
+.specialty-doctor-card h3 {
+  margin: 6px 0 10px;
+  color: var(--ink);
+  font-size: clamp(21px, 2vw, 27px);
+  line-height: 1.15;
+}
+
+.specialty-doctor-actions {
+  display: grid;
+  justify-items: end;
+  gap: 14px;
+}
+
 .doctors-body {
   padding-top: 44px;
 }
@@ -1278,6 +1521,25 @@ textarea:focus {
 
 .doctor-card.is-hidden {
   display: none;
+}
+
+.doctor-meta {
+  display: grid;
+  gap: 8px;
+  margin-top: auto;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.doctor-meta span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.doctor-meta i {
+  color: var(--green);
 }
 
 .doctor-empty {
@@ -1401,138 +1663,9 @@ textarea:focus {
   font-weight: 700;
 }
 
-.prices-hero {
-  padding: 58px 0 46px;
-  background:
-    linear-gradient(90deg, rgba(247, 250, 251, .98) 0%, rgba(247, 250, 251, .95) 58%, rgba(234, 247, 239, .78) 100%);
-  border-bottom: 1px solid var(--line);
-}
-
-.prices-hero-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 420px;
-  gap: 44px;
-  align-items: center;
-}
-
-.price-hero-panel {
-  padding: 20px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: rgba(255, 255, 255, .88);
-  box-shadow: 0 20px 50px rgba(21, 35, 49, .08);
-}
-
-.price-hero-panel div {
-  display: grid;
-  gap: 4px;
-  margin-bottom: 16px;
-}
-
-.price-hero-panel span {
-  color: var(--muted);
-  font-weight: 800;
-  font-size: 13px;
-}
-
-.price-hero-panel a:not(.button) {
-  color: var(--text);
-  font-size: 24px;
-  font-weight: 900;
-}
-
 .prices-page {
   padding-top: 44px;
   background: #fff;
-}
-
-.prices-layout {
-  display: grid;
-  grid-template-columns: 270px minmax(0, 1fr);
-  gap: 28px;
-  align-items: start;
-}
-
-.price-sidebar {
-  position: sticky;
-  top: 108px;
-  display: grid;
-  gap: 8px;
-  max-height: calc(100vh - 132px);
-  overflow-y: auto;
-  padding: 14px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--wash);
-}
-
-.price-sidebar a,
-.price-sidebar button {
-  width: 100%;
-  min-width: 0;
-  min-height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 0 12px;
-  border: 0;
-  border-radius: var(--radius);
-  background: transparent;
-  color: var(--text);
-  font: inherit;
-  font-size: 14px;
-  font-weight: 800;
-  line-height: 1.3;
-  text-align: left;
-  cursor: pointer;
-  transition: background 160ms var(--ease-out), color 160ms var(--ease-out), transform 150ms var(--ease-out);
-}
-
-.price-sidebar button span {
-  min-width: 0;
-  overflow-wrap: anywhere;
-}
-
-.price-sidebar button small {
-  flex: 0 0 auto;
-  min-width: 34px;
-  padding: 4px 7px;
-  border-radius: 999px;
-  background: rgba(0, 145, 81, .08);
-  color: var(--green-deep);
-  font-size: 11px;
-  font-weight: 900;
-  text-align: center;
-}
-
-.price-sidebar a:hover,
-.price-sidebar a.active,
-.price-sidebar button:hover,
-.price-sidebar button.active {
-  background: #fff;
-  color: var(--green-deep);
-}
-
-.price-sidebar i,
-.price-sidebar button i {
-  width: 20px;
-  color: var(--green);
-  text-align: center;
-}
-
-.price-content {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 18px;
-  min-width: 0;
-}
-
-.price-groups {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 18px;
-  min-width: 0;
 }
 
 .price-loading {
@@ -1552,90 +1685,6 @@ textarea:focus {
   border-radius: var(--radius);
   background: #fff;
   text-align: center;
-}
-
-.price-tools {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 16px;
-  align-items: center;
-  padding: 14px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: #f7fbf9;
-}
-
-.price-search {
-  min-width: 0;
-  min-height: 50px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 0 14px;
-  border: 1px solid #cfe0e6;
-  border-radius: 8px;
-  background: #fff;
-}
-
-.price-search i {
-  color: var(--muted);
-}
-
-.price-search input {
-  min-width: 0;
-  width: 100%;
-  border: 0;
-  outline: 0;
-  color: var(--text);
-  background: transparent;
-  font: inherit;
-  font-weight: 700;
-}
-
-.price-search input::placeholder {
-  color: #7a8793;
-}
-
-.price-doc-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.price-doc-links a {
-  min-height: 44px;
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  padding: 10px 12px;
-  border: 1px solid #cfe0e6;
-  border-radius: 8px;
-  background: #fff;
-  color: var(--text);
-  font-weight: 800;
-}
-
-.price-doc-links a:hover {
-  color: var(--green-deep);
-  border-color: #b7d7c5;
-}
-
-.price-empty {
-  margin: 0;
-  padding: 18px;
-  border: 1px dashed #b9cbd2;
-  border-radius: var(--radius);
-  color: var(--muted);
-  background: #f7fbf9;
-  font-weight: 800;
-}
-
-.price-results {
-  min-height: 22px;
-  margin: -4px 4px 0;
-  color: var(--muted);
-  font-size: 14px;
-  font-weight: 800;
 }
 
 .price-group {
@@ -1712,60 +1761,36 @@ textarea:focus {
   display: none;
 }
 
-.ultrasound-hub-links {
-  padding: 42px 0 8px;
-  background: #fff;
-}
-
-.ultrasound-hub-grid {
+.ultrasound-page-links {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
-  gap: 12px;
-}
-
-.ultrasound-hub-card {
-  min-height: 154px;
-  display: grid;
-  grid-template-rows: auto auto 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
   gap: 10px;
-  padding: 22px;
+}
+
+.ultrasound-page-links a,
+.ultrasound-page-links span {
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  padding: 13px 15px;
   border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: #f8fbfa;
-  color: var(--text);
-  transition: border-color 160ms var(--ease-out), transform 160ms var(--ease-out), background 160ms var(--ease-out);
-}
-
-.ultrasound-hub-card:hover {
-  transform: translateY(-2px);
-  border-color: #9bcfb0;
-  background: #fff;
-}
-
-.ultrasound-hub-card > span {
-  color: var(--green);
-  font-size: 13px;
+  border-radius: 8px;
   font-weight: 800;
-  letter-spacing: .08em;
+  line-height: 1.35;
 }
 
-.ultrasound-hub-card > b {
-  font-size: 18px;
-  line-height: 1.2;
+.ultrasound-page-links a {
+  background: #fff;
+  color: var(--green-deep);
 }
 
-.ultrasound-hub-card > small {
-  align-self: end;
-  color: var(--muted);
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.45;
+.ultrasound-page-links a:hover {
+  border-color: #9bcfb0;
+  background: #f6fbf8;
 }
 
-.price-documents {
-  padding: 26px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background:
-    linear-gradient(135deg, rgba(236, 249, 241, .76), rgba(255, 255, 255, .96));
+.ultrasound-page-links span[aria-current="page"] {
+  border-color: #9bcfb0;
+  background: var(--mint);
+  color: var(--green-deep);
 }

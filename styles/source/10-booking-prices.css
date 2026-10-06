@@ -813,6 +813,90 @@
   display: none;
 }
 
+.ultrasound-hub-links {
+  padding: 42px 0 8px;
+  background: #fff;
+}
+
+.ultrasound-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 12px;
+}
+
+.ultrasound-hub-card {
+  min-height: 154px;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  gap: 10px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #f8fbfa;
+  color: var(--text);
+  transition: border-color 160ms var(--ease-out), transform 160ms var(--ease-out), background 160ms var(--ease-out);
+}
+
+.ultrasound-hub-card:hover {
+  transform: translateY(-2px);
+  border-color: #9bcfb0;
+  background: #fff;
+}
+
+.ultrasound-hub-card > span {
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.ultrasound-hub-card > b {
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.ultrasound-hub-card > small {
+  align-self: end;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.ultrasound-page-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
+  gap: 10px;
+}
+
+.ultrasound-page-links a,
+.ultrasound-page-links span {
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  padding: 13px 15px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.ultrasound-page-links a {
+  background: #fff;
+  color: var(--green-deep);
+}
+
+.ultrasound-page-links a:hover {
+  border-color: #9bcfb0;
+  background: #f6fbf8;
+}
+
+.ultrasound-page-links span[aria-current="page"] {
+  border-color: #9bcfb0;
+  background: var(--mint);
+  color: var(--green-deep);
+}
+
 .price-documents {
   padding: 26px;
   border: 1px solid var(--line);

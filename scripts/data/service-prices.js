@@ -2,14 +2,14 @@
 export const servicePriceCatalog = {
   "updatedAt": "2026-09-17",
   "source": "Услуги (1).xlsx",
-  "total": 942,
+  "total": 937,
   "categories": [
     {
       "id": "gynecology",
       "label": "Акушерство и гинекология",
       "eyebrow": "Женское здоровье",
       "href": "gynecology.html",
-      "count": 88
+      "count": 87
     },
     {
       "id": "therapy",
@@ -65,7 +65,7 @@ export const servicePriceCatalog = {
       "label": "Косметология",
       "eyebrow": "Процедуры и уход",
       "href": "cosmetology.html",
-      "count": 159
+      "count": 156
     },
     {
       "id": "endocrinology",
@@ -79,7 +79,7 @@ export const servicePriceCatalog = {
       "label": "Ультразвуковая диагностика",
       "eyebrow": "УЗИ",
       "href": "ultrasound.html",
-      "count": 67
+      "count": 66
     },
     {
       "id": "surgery",
@@ -269,11 +269,6 @@ export const servicePriceCatalog = {
       "price": 100
     },
     {
-      "name": "УЗИ контроль после м/а",
-      "category": "ultrasound",
-      "price": 0
-    },
-    {
       "name": "тест на беременность",
       "category": "gynecology",
       "price": 100
@@ -297,11 +292,6 @@ export const servicePriceCatalog = {
       "name": "Кольпоскопия",
       "category": "gynecology",
       "price": 1600
-    },
-    {
-      "name": "Второй прием таблетки (м/а)",
-      "category": "gynecology",
-      "price": 0
     },
     {
       "name": "Консультативный прием врача-узиста",
@@ -1784,11 +1774,6 @@ export const servicePriceCatalog = {
       "price": 1265
     },
     {
-      "name": "Осмотр после лазерного удаления",
-      "category": "cosmetology",
-      "price": 0
-    },
-    {
       "name": "Посев из зева на флору с определением чувствительности к антибиотикам",
       "category": "laboratory",
       "price": 1100
@@ -2462,16 +2447,6 @@ export const servicePriceCatalog = {
       "name": "Витамин В2 (рибофлавин)",
       "category": "laboratory",
       "price": 2650
-    },
-    {
-      "name": "Осмотр после ботулинотерапии",
-      "category": "cosmetology",
-      "price": 0
-    },
-    {
-      "name": "Осмотр после контурной пластики",
-      "category": "cosmetology",
-      "price": 0
     },
     {
       "name": "Удаление серной пробки (без консультации врача), сложное",

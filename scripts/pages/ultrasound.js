@@ -50,6 +50,18 @@ function getGroupId(serviceName) {
   return ultrasoundGroups.find(({ pattern }) => pattern.test(name))?.id || 'other';
 }
 
+const ultrasoundLandingPages = [
+  { pattern: /сердца|эхокг/, href: 'echocardiography.html' },
+  { pattern: /матки и придатков|малого таза|фолликул/, href: 'ultrasound-pelvis.html' },
+  { pattern: /почек|надпочечников|мочевого пузыря/, href: 'ultrasound-kidneys.html' },
+  { pattern: /брюшной полости|гепатобилиар|печени|желчного пузыря|селезёнки|поджелудочной/, href: 'ultrasound-abdomen.html' },
+];
+
+function getLandingPage(serviceName) {
+  const normalizedName = normalize(serviceName);
+  return ultrasoundLandingPages.find(({ pattern }) => pattern.test(normalizedName))?.href || 'appointment.html';
+}
+
 function createFilterButton(group, count, isAll = false) {
   const button = document.createElement('button');
   button.type = 'button';
@@ -95,7 +107,7 @@ function createUltrasoundSection(group, services) {
   table.className = 'price-table';
   services.forEach((service) => {
     const row = document.createElement('a');
-    row.href = 'appointment.html';
+    row.href = getLandingPage(service.name);
     row.dataset.ultrasoundItem = '';
     row.dataset.searchText = normalize(service.name);
     const name = document.createElement('span');

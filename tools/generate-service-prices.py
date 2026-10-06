@@ -106,6 +106,10 @@ def generate(source_path: Path, output_path: Path) -> None:
         if not isinstance(price_raw, (int, float)) or isinstance(price_raw, bool):
             raise ValueError(f"Invalid price in source row {row_number}: {price_raw!r}")
         price = int(price_raw) if float(price_raw).is_integer() else float(price_raw)
+        # Услуги без подтвержденной цены временно не публикуются и не входят
+        # в рабочее семантическое ядро. Исходный файл клиники не изменяется.
+        if price <= 0:
+            continue
         category_slug = CATEGORY_CONFIG[specialty][0]
         services.append({
             "name": name,

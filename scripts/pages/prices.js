@@ -12,6 +12,12 @@ function normalize(value) {
     .trim();
 }
 
+function displayServiceName(value) {
+  return String(value || '')
+    .replaceAll('Власова А.В.', 'Мясникова А.В.')
+    .replaceAll('Власова А. В.', 'Мясникова А.В.');
+}
+
 function formatPrice(price) {
   return `${priceFormatter.format(price)} ₽`;
 }
@@ -73,13 +79,14 @@ function createPriceSection(category, services) {
   table.className = 'price-table';
 
   services.forEach((service) => {
+    const serviceName = displayServiceName(service.name);
     const row = document.createElement('a');
     row.href = category.href;
     row.dataset.priceItem = '';
-    row.dataset.searchText = normalize(`${service.name} ${category.label}`);
+    row.dataset.searchText = normalize(`${serviceName} ${category.label}`);
 
     const name = document.createElement('span');
-    name.textContent = service.name;
+    name.textContent = serviceName;
     const price = document.createElement('b');
     price.textContent = formatPrice(service.price);
     row.append(name, price);

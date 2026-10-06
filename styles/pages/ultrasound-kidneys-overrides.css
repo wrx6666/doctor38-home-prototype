@@ -1,0 +1,94 @@
+/* Homepage mobile density pass */
+@media (max-width: 900px) {
+
+  .appointment {
+    padding: 56px 0;
+  }
+}
+
+@media (max-width: 620px) {
+
+  .footer-contact-bar {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 26px 0 28px;
+  }
+
+  .footer-logo {
+    grid-column: auto;
+  }
+
+  .footer-logo img {
+    width: 176px;
+  }
+
+  .footer-contact-primary {
+    justify-items: start;
+  }
+
+  .footer-phone {
+    font-size: 20px;
+  }
+
+  .footer-cta {
+    width: 100%;
+    justify-content: space-between;
+    justify-self: stretch;
+    padding: 0 22px;
+  }
+
+  .footer-nav-grid {
+    gap: 30px 18px;
+    padding: 32px 0 34px;
+  }
+
+  .footer-column {
+    gap: 10px;
+  }
+
+  .footer-column b {
+    min-height: 38px;
+    margin-bottom: 3px;
+    font-size: 13px;
+  }
+
+  .footer-column a {
+    font-size: 14px;
+  }
+
+  .footer-branches p {
+    display: none;
+  }
+
+  .footer-meta {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 22px 0 26px;
+  }
+
+  .footer-meta-contact {
+    grid-column: auto;
+  }
+
+  .footer-disclaimer {
+    min-height: 70px;
+    padding: 15px 18px;
+    font-size: 12px;
+    letter-spacing: .01em;
+  }
+}
+
+/* Doctor profile: keep mobile text independent from the portrait contrast */
+@media (max-width: 620px) {
+
+  .doctor-profile-photo-wrap {
+    width: 100%;
+    min-height: 0;
+    aspect-ratio: 4 / 5;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+/* Homepage doctors */
